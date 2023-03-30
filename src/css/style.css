@@ -1,10 +1,12 @@
 html {  
     position: relative;  
     min-height: 100%;  
+    /* margin-top: -5%; */
 }  
 body {  
     padding-top: 4.5rem;  
     margin-bottom: 4.5rem;  
+    padding-left: 15.5rem;
 } 
 .navbar-brand{
   padding-left: 20px;
@@ -18,8 +20,12 @@ body {
   background-color: #ccc;  
 }  
 .bg-dark {  
-    background-color: #041854!important;  
+    background-color: #041854!important;
 }  
+/* .bg-dark {  
+  background-color: #041854!important;
+  margin-right: 65.6rem;
+} */
 .nav-link:hover {  
   transition: all 0.4s;  
 }  
@@ -61,5 +67,8 @@ body {
   .footer {  
     width: calc(100% - 230px);  
     margin-left: 230px;  
-  }  
+  }
+  .fa-solid{
+    padding-right: 6px;
+  }
 } 
