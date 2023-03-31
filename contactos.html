@@ -5,11 +5,150 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
     <title>Contactos</title>
+    <style>
+    #left {
+    background-color: #dbe1db;
+    }
+    .contact .card {
+        background-color: #131212;
+        height: 90px;
+    }
+    .rounded-pill{
+        margin-right: 10px;
+    }
+    .d-flex{
+        margin-top: -10px;
+    }
+    </style>
 </head>
 <body>
+    <!--navbar-->
     <script src="./src/js/nav.js"></script>
-    <h1>Este es la hoja de contactos.</h1>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-8 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.1s">
+                <div class="card text-center">
+                    <div class="grow">
+                        <img width="50" src="./src/images/contactos.png" alt="">
+                    </div>
+                    <div class="card-body cajas">
+                        <p>Contactos 1</p>
+                        <a href="#" class="btn btn-primary">Agregar contactos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.2s">
+                <div class="card text-center">
+                    <div class="grow">
+                        <img width="50" src="./src/images/grupos.webp" alt="">
+                    </div>
+                    <div class="card-body cajas">
+                        <p>Grupos 6</p>
+                        <a href="#" class="btn btn-primary">Crear grupos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.2s">
+                <div class="card text-center">
+                    <div class="grow">
+                        <img width="50" src="./src/images/grupos.webp" alt="">
+                    </div>
+                    <div class="card-body cajas">
+                        <p>Importar</p>
+                        <a href="#" class="btn btn-primary">Copiar y pegar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.3s">
+                <div class=" text-right">
+                    <div class="grow">
+                        <a href=""><img width="30" src="./src/images/trespuntos.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <!--j-->
+    <div class="col-4" id="left">
+        <ul class="contact list-unstyled mb-0 mt-2">
+            <li class="p-2 card ">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div>
+                            <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/women/56.jpg">
+                        </div><br>
+                        <div>
+                            <p class="fw-bold mb-0 text-light">Alex Alexis</p>
+                            <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
+                        </div>
+                        <div>
+                            <p class="small text-muted">31/03/2023</p>
+                            <span class="badge bg-danger rounded-pill ">2</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="p-2 card mt-2">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div>
+                            <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/men/96.jpg">
+                        </div>
+                        <div>
+                            <p class="fw-bold mb-0 text-light">Eli Barrett</p>
+                            <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
+                        </div>
+                        <div>
+                            <p class="small text-muted">31/03/2023</p>
+                            <span class="badge bg-danger rounded-pill float-end">2</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="p-2 card mt-2">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div>
+                            <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/men/17.jpg">
+                        </div>
+                        <div>
+                            <p class="fw-bold mb-0 text-light">Ramon Reed</p>
+                            <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
+                        </div>
+                        <div>
+                            <p class="small text-muted">31/03/2023</p>
+                            <span class="badge bg-danger rounded-pill float-end">1</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="p-2 card mt-2">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div>
+                            <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/women/83.jpg">
+                        </div>
+                        <div>
+                            <p class="fw-bold mb-0 text-light">Kylie Young</p>
+                            <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
+                        </div>
+                        <div>
+                            <p class="small text-muted">23/03/2023</p>
+                            <span class="badge bg-danger rounded-pill float-end">4</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    
+    </div>
+    </div>
 </body>
 </html>
