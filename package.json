@@ -17,6 +17,7 @@
   "license": "CC0-1.0",
   "dependencies": {
     "bootstrap": "4.2.1",
+    "electron-chartjs": "^1.0.0",
     "express": "^4.18.2",
     "jquery": "3.3.1",
     "qrcode-terminal": "^0.12.0",

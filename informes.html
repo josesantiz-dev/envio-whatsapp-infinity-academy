@@ -12,6 +12,57 @@
 </head>
 <body>
     <script src="./src/js/nav.js"></script>
-    <h1>Este es la hoja de informes.</h1>
+
+    <div class="container-fluid">
+
+      <div id="contentAjax"></div>
+      <div class="wrapper">
+        <div class="col-sm-6">
+          <h2 class="m-0">Informe de campañas</h2>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <!-- <h4 class="card-title">Listado de grados</h4> -->
+                  <p class="card-text">
+                    <table id="table" class="table table-bordered table-striped table-hover table-sm">
+                      <thead>
+                        <tr>
+                          <th width="7%">#</th>
+                          <th>Nombre campaña</th>
+                          <th>Enviados</th>
+                          <th>Proceso</th>
+                          <th>Pendientes</th>
+                          <th width="18%">Fecha envío</th>
+                          <th width="7%">Estatus</th>
+                          <th width="17%">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Campaña 1</td>
+                          <td>1</td>
+                          <td>3</td>
+                          <td>2</td>
+                          <td>02/04/2023 01:59 a.m.</td>
+                          <td><span class="badge bg-success rounded-pill ">✓</span></td>
+                          <td><button>Ver</button></td>
+                        </tr>
+                      </tbody>
+  
+                    </table>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+  
+    </div>
 </body>
 </html>

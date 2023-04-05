@@ -17,34 +17,93 @@
 <body>
 
   <script src="./src/js/nav.js"></script>
-  <h1>Este es la hoja de campañas</h1>
 
-  <!-- Page Content -->
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Node.js Desktop Application Template</h1>
-        <p class="lead">Built on Node.jS, Electron and Bootstrap.</p>
-        <ul class="list-unstyled">
-          <li>Bootstrap 4.2.1</li>
-          <li>jQuery 3.3.1</li>
-          <li>Node 9.4.0</li>
-          <li>Electron 4.0.4</li>
-        </ul>
+  <div class="container-fluid">
+
+    <div id="contentAjax"></div>
+    <div class="wrapper">
+
+      <div class="row mb-1">
+        <div class="col-sm-6">
+          <h2 class="m-0">Listado de campañas</h2>
+        </div>
+        <div class="col-sm-6">
+            <div class="text-right">
+              <a href="#" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Nueva campaña</a>
+            </div>
+        </div>
+      </div><br>
+      
+      <div class="content">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <!-- <h4 class="card-title">Listado de grados</h4> -->
+                <p class="card-text">
+                  <table id="table" class="table table-bordered table-striped table-hover table-sm">
+                    <thead>
+                      <tr>
+                        <th width="7%">#</th>
+                        <th>Nombre campaña</th>
+                        <th>Enviados</th>
+                        <th>Proceso</th>
+                        <th>Pendientes</th>
+                        <th width="18%">Fecha creación</th>
+                        <th width="7%">Estatus</th>
+                        <th width="17%">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Campaña 1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>02/04/2023 01:59 a.m.</td>
+                        <td><span class="badge bg-success rounded-pill ">✓</span></td>
+                        <td>
+                          <div class="text-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-layer-group"></i> &nbsp; Acciones
+                              </button>
+                              <div class="dropdown-menu">
+                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#ModalFormVer" title="Ver"> &nbsp;&nbsp; 
+                                  <i class="fas fa-eye icono-azul"></i> &nbsp; Ver
+                                </button>
+                                <div class="dropdown-divider"></div>
+                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
+                                  <i class="fas fa-pencil-alt"></i> &nbsp; Editar
+                                </button>
+                                <div class="dropdown-divider"></div>
+                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Eliminar"> &nbsp;&nbsp;
+                                  <i class="far fa-trash-alt "></i> &nbsp; Eliminar
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div> -->
+    <br>
 
-  <!-- <script>
-    $(document).ready(function() {  
-      $('.nav-link-collapse').on('click', function() {  
-        $('.nav-link-collapse').not(this).removeClass('nav-link-show');  
-        $(this).toggleClass('nav-link-show');  
-      });  
-    });
-  </script> -->
+  </div>
+
+  
 
    <!-- Bootstrap core JavaScript -->
+   <script src="./vendor/jquery/jquery.slim.min.js"></script>
    <script src="vendor/jquery/jquery.min.js"></script>
    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script>

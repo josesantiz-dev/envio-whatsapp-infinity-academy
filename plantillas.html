@@ -12,6 +12,37 @@
 </head>
 <body>
     <script src="./src/js/nav.js"></script>
-    <h1>Este es la hoja de plantillas.</h1>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-6 wow fadeInRight animated" data-wow-delay="0.1s">
+                <div class="card text-center">
+                    <div class="grow">
+                        <img width="50" src="./src/images/misPlantillas.png" alt="">
+                    </div>
+                        <a href="#misPlantillas" class="button btn btn-primary">Mis plantillas</a>
+                </div>
+            </div>
+            <div class="col-sm-6 wow fadeInRight animated" data-wow-delay="0.2s">
+                <div class="card text-center">
+                    <div class="grow">
+                        <i class="fa-solid fa-plus"><img width="50" src="./src/images/misPlantillas.png" alt=""></i>
+                    </div>
+                        <a href="#crearPlantillas" class="button btn btn-primary btn-lg">Crear plantillas</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+   <script src="./vendor/jquery/jquery.slim.min.js"></script>
+   <script src="./vendor/jquery/jquery.min.js"></script>
+   <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //load in node libraries
+        require('./renderer.js')
+    </script>
 </body>
 </html>
