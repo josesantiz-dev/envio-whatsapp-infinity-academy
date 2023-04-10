@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo grupo</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Nombre grupo</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" required>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label>Telefono Celular</label>
+                        <input type="text" id="txtTelCelNuevo" name="txtTelCelNuevo" class="form-control" placeholder="Telefono celular" maxlength="10" autocomplete="off" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                      </div>
+                </div><br>
+
+                <a class="btn btn-secondary btn-inline" href="#" data-dismiss="modal" id="dimissModalNuevo"><i class="fa fa-fw fa-lg fa-times-circle icono-azul"></i>Cancelar</a>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-fw fa-lg fa-check-circle icono-azul"></i>Guardar contacto</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.slim.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

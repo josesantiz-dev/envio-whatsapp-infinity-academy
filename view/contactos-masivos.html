@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos masivos csv</title>
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="./src/css/style.css"> -->
+    <link rel="stylesheet" href="../src/fontawesome/css/all.min.css">
+    <style>
+    .seleccionarfile input[type="file"]{
+        display: block!important;
+        overflow: hidden!important;
+        border: 1px solid #ced4da ;
+        padding-top: 2px;
+        padding-left: 0%;
+        text-align: left;
+    }
+    </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <h2>Importar contactos masivos</h2><br>
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <h6>Formato de ontactos</h6>
+        <a class="text-decoration-underline" href="">Descargar formato</a>
+      </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="seleccionarfile mb-3">
+          <input class="form-control" type="file" id="excel-input" required>
+        </div>
+    </div>
+    </div>
+
+    <p>Contactos importadas</p>
+    <table class="table table-sm table-striped table-hover" id="excel-table">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td> -->
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.slim.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script>
+        require('../renderer.js')
+    </script> -->
+    <script>
+        require('../src/js/contacto.js')
+    </script>
+</body>
+</html>

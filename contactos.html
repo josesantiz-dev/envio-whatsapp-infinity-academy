@@ -43,7 +43,7 @@
                     </div>
                     <div class="card-body cajas">
                         <p>Contactos 1</p>
-                        <a href="#" class="button btn btn-primary">Agregar contactos</a>
+                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaNuevoContacto">Agregar contactos</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="card-body cajas">
                         <p>Grupos 6</p>
-                        <a href="#" class="button btn btn-primary">Crear grupos</a>
+                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaNuevoGrupos">Crear grupos</a>
                     </div>
                 </div>
             </div>
@@ -64,8 +64,8 @@
                         <img width="40" src="./src/images/copiarypegar.png" alt="">
                     </div>
                     <div class="card-body cajas">
-                        <p class="p">Importar</p>
-                        <a href="#" class="button btn btn-primary">Copiar y pegar</a>
+                        <p class="p">Copiados</p>
+                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaCopiarPegar">Copiar y pegar</a>
                     </div>
                 </div>
             </div>
@@ -75,8 +75,8 @@
                         <img width="40" src="./src/images/copiarypegar.png" alt="">
                     </div>
                     <div class="card-body cajas">
-                        <p>Iniciar sesión con</p>
-                        <a href="#" class="button btn btn-primary">Agregar csv</a>
+                        <p>Importados</p>
+                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaContactosMasivos">Agregar csv</a>
                     </div>
                 </div>
             </div>
@@ -308,8 +308,10 @@
    <script src="./vendor/jquery/jquery.min.js"></script>
    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script>
-     //load in node libraries
      require('./renderer.js')
-  </script>
+    </script>
+    <script>
+        require('./src/js/contacto.js')
+    </script>
 </body>
 </html>
