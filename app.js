@@ -3,6 +3,7 @@ const express = require('express');
 const { body, validationResult } = require('express-validator');
 const socketIO = require('socket.io');
 const qrcode = require('qrcode');
+//const qrcode = require('qrcode-terminal');
 const http = require('http');
 const fs = require('fs');
 const cors = require('cors');
@@ -21,39 +22,12 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
-app.use(cors());
-
-/**
- * BASED ON MANY QUESTIONS
- * Actually ready mentioned on the tutorials
- * 
- * Many people confused about the warning for file-upload
- * So, we just disabling the debug for simplicity.
- */
+app.use(cors()); 
 app.use(fileUpload({
   debug: false
 }));
 
-
-
-const client = new Client({
-  restartOnAuthFail: true,
-  puppeteer: {
-    headless: true,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-accelerated-2d-canvas',
-      '--no-first-run',
-      '--no-zygote',
-      '--single-process', // <- this one doesn't works in Windows
-      '--disable-gpu'
-    ],
-  },
-  authStrategy: new LocalAuth()
-});
-
+const client = new Client();
 client.on('message', msg => {
   if (msg.body == '!ping') {
     msg.reply('pong');
@@ -75,53 +49,13 @@ client.on('message', msg => {
       }
     });
   }
-
-  // NOTE!
-  // UNCOMMENT THE SCRIPT BELOW IF YOU WANT TO SAVE THE MESSAGE MEDIA FILES
-  // Downloading media
-  // if (msg.hasMedia) {
-  //   msg.downloadMedia().then(media => {
-  //     // To better understanding
-  //     // Please look at the console what data we get
-  //     console.log(media);
-
-  //     if (media) {
-  //       // The folder to store: change as you want!
-  //       // Create if not exists
-  //       const mediaPath = './downloaded-media/';
-
-  //       if (!fs.existsSync(mediaPath)) {
-  //         fs.mkdirSync(mediaPath);
-  //       }
-
-  //       // Get the file extension by mime-type
-  //       const extension = mime.extension(media.mimetype);
-        
-  //       // Filename: change as you want! 
-  //       // I will use the time for this example
-  //       // Why not use media.filename? Because the value is not certain exists
-  //       const filename = new Date().getTime();
-
-  //       const fullFilename = mediaPath + filename + '.' + extension;
-
-  //       // Save to file
-  //       try {
-  //         fs.writeFileSync(fullFilename, media.data, { encoding: 'base64' }); 
-  //         console.log('File downloaded successfully!', fullFilename);
-  //       } catch (err) {
-  //         console.log('Failed to save the file:', err);
-  //       }
-  //     }
-  //   });
-  // }
 });
 
 client.initialize();
 
 // Socket IO
 io.on('connection', function(socket) {
-  socket.emit('message', 'Connecting...');
-
+  socket.emit('message', 'Conectando...');
   client.on('qr', (qr) => {
     console.log('QR RECEIVED', qr);
     qrcode.toDataURL(qr, (err, url) => {
@@ -157,7 +91,11 @@ const checkRegisteredNumber = async function(number) {
   const isRegistered = await client.isRegisteredUser(number);
   return isRegistered;
 }
-
+app.get('/', (req, res) => {
+  res.send({
+      data: 'Hola mundo'
+  })
+})
 //Get all contacts
 app.get('/get-contacts',async(req,res) =>{
     const contactos = client.getContacts();
