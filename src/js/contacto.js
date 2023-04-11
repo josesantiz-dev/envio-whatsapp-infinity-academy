@@ -24,7 +24,7 @@ const path = require('path');
 
 const btnCrearContacto = document.getElementById("btnAbrirVentanaNuevoContacto");
 const btnCrearGrupos = document.getElementById("btnAbrirVentanaNuevoGrupos");
-const btnCopiarPegar = document.getElementById("btnAbrirVentanaCopiarPegar");
+/* const btnCopiarPegar = document.getElementById("btnAbrirVentanaCopiarPegar"); */
 const btnContactosMasivos = document.getElementById("btnAbrirVentanaContactosMasivos");
 
 btnCrearContacto.addEventListener('click',(event) =>{
@@ -35,9 +35,9 @@ btnCrearGrupos.addEventListener('click',(event) =>{
 	ipc.send('abrirventana','crearGrupos')
 })
 
-btnCopiarPegar.addEventListener('click',(event) =>{
+/* btnCopiarPegar.addEventListener('click',(event) =>{
 	ipc.send('abrirventana','copiar-pegar')
-})
+}) */
 
 btnContactosMasivos.addEventListener('click',(event) =>{
 	ipc.send('abrirventana','contactos-masiva')
@@ -60,10 +60,9 @@ function crearContacto(nombreContacto,apellidoPatContacto,apellidoMatContacto,te
 }
 
 
-const excelInput = document.getElementById('excel-input')
-//console.log(excelInput);
+/* const excelInput = document.getElementById('excel-input')
 excelInput.addEventListener('change', async function(){
     const content = await readXlsxFile(excelInput.files[0]) 
     const excel = new Excel(content)
     console.log(ExcelPrinter.print('excel-table',excel))
-})
+}) */

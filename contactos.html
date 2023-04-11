@@ -34,8 +34,25 @@
     <script src="./src/js/nav.js"></script>
 
     <div class="container-fluid">
+        <div class="row mb-1">
+            <div class="col-sm-6">
+              <h3>Contactos</h3>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-right">
+                    <div class="tab-pane fade show active" id="tableContactos" role="tabpanel" aria-labelledby="tableContactos-tab">
+                        <a href="#" type="submit" id="btnAbrirVentanaNuevoContacto" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Agregar contacto</a>
+                        <a href="#" type="submit" id="btnAbrirVentanaContactosMasivos" class="button btn btn-primary"><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i>Subir csv</a>
+                    </div>
+                    <div class="tab-pane fade" id="tableGrupos" role="tabpanel" aria-labelledby="tableGrupos-tab">
+                        <a href="#" type="submit" id="btnAbrirVentanaNuevoGrupos" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Crear grupos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-8 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.1s">
                 <div class="card text-center">
                     <div class="grow">
@@ -80,15 +97,15 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.3s">
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.3s">
                 <div class=" text-right">
                     <div class="grow">
                         <a href=""><img width="30" src="./src/images/trespuntos.png" alt=""></a>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div><br>
-        <hr>
+        <hr> -->
     
 
         <!--j-->
@@ -180,13 +197,13 @@
                         <div class="card-body">
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="tableContactos" role="tabpanel" aria-labelledby="tableContactos-tab">
+                                    <h6 class="card-title">Listado de contactos</h6>
                                     <table class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Nombre contacto</th>
-                                                <th>Correo</th>
-                                                <th>Último envío</th>
+                                                <th>Nombre</th>
+                                                <th>Número</th>
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
@@ -194,8 +211,7 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>Contacto 1</td>
-                                                <td>john@example.com</td>
-                                                <td>02/04/2023 10:18 pm</td>
+                                                <td>967 123 4556</td>
                                                 <td>
                                                     <div class="text-center">
                                                         <div class="btn-group">
@@ -203,10 +219,6 @@
                                                                 <i class="fas fa-layer-group"></i> &nbsp; Acciones
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#ModalFormVer" title="Ver"> &nbsp;&nbsp; 
-                                                                    <i class="fas fa-eye icono-azul"></i> &nbsp; Ver
-                                                                </button>
-                                                                <div class="dropdown-divider"></div>
                                                                 <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
                                                                     <i class="fas fa-pencil-alt"></i> &nbsp; Editar
                                                                 </button>
@@ -223,13 +235,14 @@
                                     </table>
                                 </div>
                                 <div class="tab-pane fade" id="tableGrupos" role="tabpanel" aria-labelledby="tableGrupos-tab">
+                                    <h6 class="card-title">Listado de grupos</h6>
                                     <table class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Nombre grupo</th>
-                                                <th>Contactos</th>
-                                                <th>Último envío</th>
+                                                <th>Nombre</th>
+                                                <th>Número participantes</th>
+                                                <th>Estatus</th>
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
@@ -238,7 +251,7 @@
                                                 <td>1</td>
                                                 <td>Grupo 1</td>
                                                 <td>3</td>
-                                                <td>02/04/2023 10:18 pm</td>
+                                                <td>P</td>
                                                 <td>
                                                     <div class="text-center">
                                                         <div class="btn-group">
@@ -246,10 +259,6 @@
                                                                 <i class="fas fa-layer-group"></i> &nbsp; Acciones
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" title="Ver"> &nbsp;&nbsp; 
-                                                                    <i class="fas fa-eye icono-azul"></i> &nbsp; Ver
-                                                                </button>
-                                                                <div class="dropdown-divider"></div>
                                                                 <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
                                                                     <i class="fas fa-pencil-alt"></i> &nbsp; Editar
                                                                 </button>
@@ -264,9 +273,9 @@
                                             </tr>
                                             <tr>
                                                 <td>1</td>
-                                                <td>Grupo 1</td>
+                                                <td>Grupo 2</td>
                                                 <td>3</td>
-                                                <td>02/04/2023 10:18 pm</td>
+                                                <td>P</td>
                                                 <td>
                                                     <div class="text-center">
                                                         <div class="btn-group">
@@ -274,10 +283,6 @@
                                                                 <i class="fas fa-layer-group"></i> &nbsp; Acciones
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" title="Ver"> &nbsp;&nbsp; 
-                                                                    <i class="fas fa-eye icono-azul"></i> &nbsp; Ver
-                                                                </button>
-                                                                <div class="dropdown-divider"></div>
                                                                 <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
                                                                     <i class="fas fa-pencil-alt"></i> &nbsp; Editar
                                                                 </button>

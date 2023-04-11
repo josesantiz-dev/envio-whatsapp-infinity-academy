@@ -25,7 +25,7 @@ var navbar = `
     </button>  
     <div class="collapse navbar-collapse" id="navbarCollapse">  
       <ul class="navbar-nav mr-auto sidenav" id="navAccordion">  
-        <li class="nav-item active">  
+        <li class="nav-item">  
           <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i> Home</a>  
         </li>  
         <li class="nav-item">  

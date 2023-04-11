@@ -19,13 +19,14 @@
   <script src="./src/js/nav.js"></script>
 
   <div class="container-fluid">
+    
 
     <div id="contentAjax"></div>
     <div class="wrapper">
 
       <div class="row mb-1">
         <div class="col-sm-6">
-          <h2 class="m-0">Listado de campañas</h2>
+          <h3>Campañas</h3>
         </div>
         <div class="col-sm-6">
             <div class="text-right">
@@ -39,17 +40,18 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                <!-- <h4 class="card-title">Listado de grados</h4> -->
+                <h6 class="card-title">Listado de campañas</h6>
                 <p class="card-text">
                   <table id="table" class="table table-bordered table-striped table-hover table-sm">
                     <thead>
                       <tr>
                         <th width="7%">#</th>
-                        <th>Nombre campaña</th>
+                        <th>Nombre</th>
                         <th>Enviados</th>
                         <th>Proceso</th>
                         <th>Pendientes</th>
                         <th width="18%">Fecha creación</th>
+                        <th width="18%">Fecha enviado</th>
                         <th width="7%">Estatus</th>
                         <th width="17%">Acciones</th>
                       </tr>
@@ -62,7 +64,8 @@
                         <td>3</td>
                         <td>2</td>
                         <td>02/04/2023 01:59 a.m.</td>
-                        <td><span class="badge bg-success rounded-pill ">✓</span></td>
+                        <td>02/04/2023 01:59 a.m.</td>
+                        <td>Creado</td>
                         <td>
                           <div class="text-center">
                             <div class="btn-group">
@@ -104,8 +107,8 @@
 
    <!-- Bootstrap core JavaScript -->
    <script src="./vendor/jquery/jquery.slim.min.js"></script>
-   <script src="vendor/jquery/jquery.min.js"></script>
-   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="./vendor/jquery/jquery.min.js"></script>
+   <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script>
      //load in node libraries
      /* require('./renderer.js') */

@@ -50,9 +50,9 @@ ipcMain.on('abrirventana', (event, message) => {
       case 'crearGrupos':
           crearGrupos();
           break;
-      case 'copiar-pegar':
+      /* case 'copiar-pegar':
           crearContactosCopiarPegar();
-          break;
+          break; */
       case 'contactos-masiva':
           importaContactosMasivos();
           break;
@@ -119,7 +119,7 @@ function crearGrupos(){
 }
 
 //Copiar y pegar
-function crearContactosCopiarPegar(){
+/* function crearContactosCopiarPegar(){
   copiarPegarContactos = new BrowserWindow({
       width:1200,
       height:820,
@@ -142,7 +142,7 @@ function crearContactosCopiarPegar(){
   copiarPegarContactos.on('closed',() =>{
       copiarPegarContactos = null;
   });
-}
+} */
 
 //Contactos masivos csv
 function importaContactosMasivos(){
