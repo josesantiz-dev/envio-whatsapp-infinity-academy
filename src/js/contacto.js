@@ -45,7 +45,7 @@ btnContactosMasivos.addEventListener('click',(event) =>{
 
 
 
-var listContactos = [];
+/* var listContactos = [];
 
 function crearContacto(nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto,emailContacto){
     var nuevoContacto = {
@@ -57,7 +57,7 @@ function crearContacto(nombreContacto,apellidoPatContacto,apellidoMatContacto,te
     };
     console.log(crearContacto);
     listContactos.push(crearContacto);
-}
+} */
 
 
 /* const excelInput = document.getElementById('excel-input')
@@ -66,3 +66,21 @@ excelInput.addEventListener('change', async function(){
     const excel = new Excel(content)
     console.log(ExcelPrinter.print('excel-table',excel))
 }) */
+
+/* const txtNombreContacto = document.getElementById("txtNombreContacto");
+const txtApellidoPatContacto = document.getElementById("txtApellidoPatContacto");
+const txtApellidoMatContacto = document.getElementById("txtApellidoMatContacto");
+const txtTelefonoNuevo = document.getElementById("txtTelefonoNuevo");
+const btnGuardarContacto = document.getElementById("btnGuardarContacto");
+
+btnGuardarContacto.onclick = function (){
+    const nombreContacto = txtNombreContacto.value;
+    const apellidoPaterno = txtApellidoPatContacto.value;
+    const apellidoMaterno = txtApellidoMatContacto.value;
+    const telefonoContacto = txtTelefonoNuevo.value;
+
+    console.log(nombreContacto);
+    console.log(apellidoPaterno);
+    console.log(apellidoMaterno);
+    console.log(telefonoContacto);
+} */

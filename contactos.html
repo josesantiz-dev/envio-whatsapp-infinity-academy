@@ -306,7 +306,77 @@
             </div>
         </section>
 
+
+
+
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Nombre</label>
+                    <input type="text" class="form-control" id="txtNombreContacto" placeholder="Nombre" required>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="formGroupExampleInput">Apellido paterno</label>
+                        <input type="text" class="form-control" id="txtApellidoPatContacto" placeholder="Apellido paterno" required>
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Apellido materno</label>
+                        <input type="text" class="form-control" id="txtApellidoMatContacto" placeholder="Apellido materno" required>
+                    </div>
+                </div><br>
+                <div class="form-row">
+                    <div class="col">
+                        <label>Telefono Celular</label>
+                        <input type="text" id="txtTelefonoNuevo" name="txtTelefonoNuevo" class="form-control" placeholder="Telefono celular" maxlength="10" autocomplete="off" required>
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="txtEmailNuevoContacto" placeholder="Email" required>
+                    </div> -->
+                </div><br>
+
+                <a class="btn btn-secondary btn-inline" href="#" data-dismiss="modal" id="dimissModalNuevo"><i class="fa fa-fw fa-lg fa-times-circle icono-azul"></i>Cancelar</a>
+                <button type="button" class="btn btn-primary" id="btnGuardarContacto"><i class="fa fa-fw fa-lg fa-check-circle icono-azul"></i>Guardar contacto</button>
+            </form>
+        </div>
+
+        <div id="tableContactos"></div>
+
     </div>
+
+
+
+    <script type="text/JavaScript">
+        const txtNombreContacto = document.getElementById("txtNombreContacto");
+        const txtApellidoPatContacto = document.getElementById("txtApellidoPatContacto");
+        const txtApellidoMatContacto = document.getElementById("txtApellidoMatContacto");
+        const txtTelefonoNuevo = document.getElementById("txtTelefonoNuevo");
+        const btnGuardarContacto = document.getElementById("btnGuardarContacto");
+        const tableContactos = document.getElementById("tableContactos");
+
+        btnGuardarContacto.onclick = function (){
+            const nombreContacto = txtNombreContacto.value;
+            const apellidoPaterno = txtApellidoPatContacto.value;
+            const apellidoMaterno = txtApellidoMatContacto.value;
+            const telefonoContacto = txtTelefonoNuevo.value;
+
+            if (nombreContacto && apellidoPaterno && apellidoMaterno && telefonoContacto) {
+                localStorage.setItem(nombreContacto, apellidoPaterno, apellidoMaterno, telefonoContacto);
+                location.reload();
+            }
+        }
+
+        for (let i = 0; i < localStorage.length; i++) {
+            const nombreContacto = localStorage.key(i);
+            const apellidoPaterno = localStorage.getItem(nombreContacto);
+            const apellidoMaterno = localStorage.getItem(apellidoPaterno);
+            const telefonoContacto = localStorage.getItem(apellidoMaterno);
+
+            tableContactos.innerHTML +=`${nombreContacto},${apellidoPaterno},${apellidoMaterno},${telefonoContacto}<br />`;
+            
+        }
+    </script>
     
     <!-- Bootstrap core JavaScript -->
    <script src="./vendor/jquery/jquery.slim.min.js"></script>
