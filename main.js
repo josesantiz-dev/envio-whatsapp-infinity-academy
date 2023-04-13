@@ -7,8 +7,8 @@ let mainWindow
 
 function createWindow () {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1800,
+    height: 820,
     webPreferences: {
       nodeIntegration: true
     }
@@ -79,7 +79,7 @@ function crearContacto(){
           enableRemoteModule: true
       }
   });
-  nuevoContacto.setMenu(null);
+  /* nuevoContacto.setMenu(null); */
   nuevoContacto.loadURL(url.format({
       pathname:path.join(__dirname,'./view/nuevoContacto.html'),
       protocol:'file',

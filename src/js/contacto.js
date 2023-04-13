@@ -45,20 +45,23 @@ btnContactosMasivos.addEventListener('click',(event) =>{
 
 
 
-/* var listContactos = [];
+var listContactos = [];
 
-function crearContacto(nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto,emailContacto){
-    var nuevoContacto = {
-        nombre : nombreContacto,
-        apellidoPaterno : apellidoPatContacto,
-        apellidoMaterno : apellidoMatContacto,
-        telefono : telefonoContacto,
-        email : emailContacto
-    };
-    console.log(crearContacto);
-    listContactos.push(crearContacto);
-} */
+function crearContacto(id,nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto){
+    /* var nuevoContacto = { */
+    var idf =    id
+    var     nombre =nombreContacto
+     var   apellidoPaterno  = apellidoPatContacto
+     var    apellidoMaterno = apellidoMatContacto
+     var   telefono = telefonoContacto
+    
+    /* console.log(nuevoContacto); */
+    listContactos.push(idf,nombre,apellidoPaterno,apellidoMaterno,telefono);
+}
 
+function getObtenerListaContactos(){
+    return listContactos;
+}
 
 /* const excelInput = document.getElementById('excel-input')
 excelInput.addEventListener('change', async function(){
