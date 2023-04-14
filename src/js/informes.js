@@ -1,0 +1,1 @@
+document.getElementById("menu-informes").classList.add("active");

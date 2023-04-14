@@ -12,7 +12,7 @@ var navbar = `
 <body>
     
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">  
-    <a class="navbar-brand" href="index.html"> My App </a>  
+    <a class="navbar-brand" href="index.html"> Whatsapp academy </a>  
     <button  
       class="navbar-toggler"  
       type="button"  
@@ -25,22 +25,22 @@ var navbar = `
     </button>  
     <div class="collapse navbar-collapse" id="navbarCollapse">  
       <ul class="navbar-nav mr-auto sidenav" id="navAccordion">  
-        <li class="nav-item">  
+        <li class="nav-item" id="menu-home">  
           <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i> Home</a>  
         </li>  
-        <li class="nav-item">  
+        <li class="nav-item" id="menu-cuenta">  
           <a class="nav-link" href="cuenta.html"><i class="fa-solid fa-user" style="color: #ffffff;"></i> Cuenta </a>  
         </li>  
-        <li class="nav-item">  
+        <li class="nav-item" id="menu-contactos">  
           <a class="nav-link" href="contactos.html"><i class="fa-solid fa-address-book" style="color: #ffffff;"></i> Contactos </a>  
         </li>  
-        <li class="nav-item">  
+        <li class="nav-item" id="menu-plantillas">  
           <a class="nav-link" href="plantillas.html"><i class="fa-sharp fa-solid fa-file-invoice" style="color: #ffffff;"></i> Plantillas </a> 
         </li>  
-        <li class="nav-item">  
+        <li class="nav-item" id="menu-campanias">  
           <a class="nav-link" href="campanas.html"><i class="fa-solid fa-flag-checkered" style="color: #ffffff;"></i> Campañas </a>  
         </li>  
-        <li class="nav-item">  
+        <li class="nav-item" id="menu-informes">  
           <a class="nav-link" href="informes.html"><i class="fa-solid fa-chart-simple" style="color: #ffffff;"></i> Informes </a>  
         </li>
       </ul>   

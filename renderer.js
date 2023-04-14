@@ -1,6 +1,6 @@
 //Make Node.js API calls in this file
 
-document.querySelector('#btnGuardarContacto').addEventListener('click', guardarContacto);
+//document.querySelector('#btnGuardarContacto').addEventListener('click', guardarContacto);
 
 function guardarContacto(){
     var id = document.querySelector('#intId').value,

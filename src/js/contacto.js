@@ -26,6 +26,7 @@ const btnCrearContacto = document.getElementById("btnAbrirVentanaNuevoContacto")
 const btnCrearGrupos = document.getElementById("btnAbrirVentanaNuevoGrupos");
 /* const btnCopiarPegar = document.getElementById("btnAbrirVentanaCopiarPegar"); */
 const btnContactosMasivos = document.getElementById("btnAbrirVentanaContactosMasivos");
+document.getElementById("menu-contactos").classList.add("active");
 
 btnCrearContacto.addEventListener('click',(event) =>{
 	ipc.send('abrirventana','crearContactos')

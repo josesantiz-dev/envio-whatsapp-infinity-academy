@@ -24,8 +24,8 @@
                 <div class="card" style="width: 100%; height: 32rem;">
                     <div class="card-body">  
                         <div class="text-center">
-                            <img width="25%" src="./src/images/qr.png" alt=""><br>
-                            <h4 class="title-what">Escanea el código para poder usar</h4>
+                            <img width="25%" src="./src/images/loading-buffering.gif" alt="" id="imagen-qr"><br>
+                            <h4 class="title-what" id="mensaje-cuenta">Espere por favor ...</h4>
                             <h4><b>Whatsapp academy</b></h4>
                             <!-- <h5>Escanea el código para poder usar Whatsapp academy</h5> -->
                         </div>
@@ -46,6 +46,7 @@
     <script>
         //load in node libraries
         require('./renderer.js')
+        require('./src/js/cuenta.js');
     </script>
 </body>
 </html>
