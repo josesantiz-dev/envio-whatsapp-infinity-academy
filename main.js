@@ -2,6 +2,7 @@ const {app, BrowserWindow, ipcMain} = require('electron')
 const url = require('url');
 const path = require('path');
 const { dialog } = require('electron')
+const server = require('./app');
 
 let mainWindow
 
