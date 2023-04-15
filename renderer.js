@@ -2,13 +2,12 @@
 
 //document.querySelector('#btnGuardarContacto').addEventListener('click', guardarContacto);
 
-function guardarContacto(){
+/* function guardarContacto(){
     var id = document.querySelector('#intId').value,
         nombreContacto = document.querySelector('#txtNombreContacto').value,
         apellidoPatContacto = document.querySelector('#txtApellidoPatContacto').value,
         apellidoMatContacto = document.querySelector('#txtApellidoMatContacto').value,
         telefonoContacto = document.querySelector('#txtTelefonoNuevo').value
-        /* emailContacto = document.querySelector('#txtEmailNuevoContacto').value */
 
     crearContacto(id,nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto);
 }
@@ -41,7 +40,7 @@ function ObtenerListaContactos(){
 
         tbody.appendChild(row);
     }
-}
+} */
 
 
 /* document.querySelector('#btnGuardarContacto').addEventListener('click',(event) =>{

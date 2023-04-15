@@ -48,6 +48,9 @@ ipcMain.on('abrirventana', (event, message) => {
       case 'crearContactos':
           crearContacto();
           break;
+      case 'editarContactos':
+          EditarContacto();
+          break;
       case 'crearGrupos':
           crearGrupos();
           break;
@@ -90,6 +93,32 @@ function crearContacto(){
   nuevoContacto.setResizable(false);
   nuevoContacto.on('closed',() =>{
       nuevoContacto = null;
+  });
+}
+
+//Editar contacto
+function EditarContacto(){
+  editarContacto = new BrowserWindow({
+      width:1200,
+      height:820,
+      title:'Editar contacto',
+      webPreferences: {
+          contextIsolation: false,
+          nodeIntegration: true,
+          nodeIntegrationInWorker: true,
+          enableRemoteModule: true
+      }
+  });
+  /* nuevoContacto.setMenu(null); */
+  editarContacto.loadURL(url.format({
+      pathname:path.join(__dirname,'./view/EditarContacto.html'),
+      protocol:'file',
+      slashes:true
+  }))
+  editarContacto.center();
+  editarContacto.setResizable(false);
+  editarContacto.on('closed',() =>{
+      editarContacto = null;
   });
 }
 
