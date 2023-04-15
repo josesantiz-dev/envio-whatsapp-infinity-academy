@@ -51,6 +51,9 @@ ipcMain.on('abrirventana', (event, message) => {
       case 'crearGrupos':
           crearGrupos();
           break;
+      case 'plantillas':
+          crearGrupos();
+          break;
       /* case 'copiar-pegar':
           crearContactosCopiarPegar();
           break; */
