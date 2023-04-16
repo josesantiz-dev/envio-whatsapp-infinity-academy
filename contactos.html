@@ -9,24 +9,6 @@
     <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
     <title>Contactos</title>
-    <!-- <style>
-    #left {
-    background-color: #dbe1db;
-    }
-    .contact .card {
-        background-color: #dbe1db;
-        height: 90px;
-    }
-    .rounded-pill{
-        margin-right: 10px;
-    }
-    .d-flex{
-        margin-top: -10px;
-    }
-    .btn-primary{
-        padding: 5px 22px;
-    }
-    </style> -->
 </head>
 <body>
 
@@ -40,147 +22,83 @@
             </div>
             <div class="col-sm-6">
                 <div class="text-right">
-                    <div class="tab-pane fade show active" id="tableContactos" role="tabpanel" aria-labelledby="tableContactos-tab">
+                    <!-- <div class="tab-pane fade show active" id="nav-contactos" role="tabpanel" aria-labelledby="nav-contactos-tab"> -->
                         <a href="#" type="submit" id="btnAbrirVentanaNuevoContacto" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Agregar contacto</a>
                         <a href="#" type="submit" id="btnAbrirVentanaContactosMasivos" class="button btn btn-primary"><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i>Subir csv</a>
-                    </div>
-                    <div class="tab-pane fade" id="tableGrupos" role="tabpanel" aria-labelledby="tableGrupos-tab">
+                    <!-- </div> -->
+                    <!-- <div class="tab-pane fade" id="nav-grupos" role="tabpanel" aria-labelledby="nav-grupos-tab"> -->
                         <a href="#" type="submit" id="btnAbrirVentanaNuevoGrupos" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Crear grupos</a>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
         <hr>
 
-        <!-- <div class="row">
-            <div class="col-sm-8 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.1s">
-                <div class="card text-center">
-                    <div class="grow">
-                        <img width="40" src="./src/images/contactos.png" alt="">
-                    </div>
-                    <div class="card-body cajas">
-                        <p>Contactos 1</p>
-                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaNuevoContacto">Agregar contactos</a>
+        <!-- <div class="card-body">
+            <form>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="formGroupExampleInput">Nombre</label>
+                        <input type="text" class="form-control" id="txtNombreContacto" name="txtNombreContacto" placeholder="Nombre" required>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.2s">
-                <div class="card text-center">
-                    <div class="grow">
-                        <img width="40" src="./src/images/grupos.webp" alt="">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="formGroupExampleInput">Apellido paterno</label>
+                        <input type="text" class="form-control" id="txtApellidoPatContacto" name="txtApellidoPatContacto" placeholder="Apellido paterno" required>
                     </div>
-                    <div class="card-body cajas">
-                        <p>Grupos 6</p>
-                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaNuevoGrupos">Crear grupos</a>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Apellido materno</label>
+                        <input type="text" class="form-control" id="txtApellidoMatContacto" name="txtApellidoMatContacto" placeholder="Apellido materno" required>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.2s">
-                <div class="card text-center">
-                    <div class="grow">
-                        <img width="40" src="./src/images/copiarypegar.png" alt="">
+                </div><br>
+                <div class="form-row">
+                    <div class="col">
+                        <label>Telefono Celular</label>
+                        <input type="text" id="txtTelefonoNuevo" name="txtTelefonoNuevo" class="form-control" placeholder="Telefono celular" maxlength="10" autocomplete="off" required>
                     </div>
-                    <div class="card-body cajas">
-                        <p class="p">Copiados</p>
-                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaCopiarPegar">Copiar y pegar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.2s">
-                <div class="card text-center">
-                    <div class="grow">
-                        <img width="40" src="./src/images/copiarypegar.png" alt="">
-                    </div>
-                    <div class="card-body cajas">
-                        <p>Importados</p>
-                        <a href="#" class="button btn btn-primary" type="submit" id="btnAbrirVentanaContactosMasivos">Agregar csv</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 wow fadeInRight animated" data-wow-delay="0.3s">
-                <div class=" text-right">
-                    <div class="grow">
-                        <a href=""><img width="30" src="./src/images/trespuntos.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div><br>
-        <hr> -->
-    
+                </div><br>
 
-        <!--j-->
-        <!-- <div class="col-4" id="left">
-            <ul class="contact list-unstyled mb-0 mt-2">
-                <li class="p-2 card ">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div>
-                                <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/women/56.jpg">
-                            </div><br>
-                            <div>
-                                <p class="fw-bold mb-0 text-light">Alex Alexis</p>
-                                <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
-                            </div>
-                            <div>
-                                <p class="small text-muted">31/03/2023</p>
-                                <span class="badge bg-danger rounded-pill ">2</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-2 card mt-2">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div>
-                                <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/men/96.jpg">
-                            </div>
-                            <div>
-                                <p class="fw-bold mb-0 text-light">Eli Barrett</p>
-                                <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
-                            </div>
-                            <div>
-                                <p class="small text-muted">31/03/2023</p>
-                                <span class="badge bg-danger rounded-pill float-end">2</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-2 card mt-2">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div>
-                                <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/men/17.jpg">
-                            </div>
-                            <div>
-                                <p class="fw-bold mb-0 text-light">Ramon Reed</p>
-                                <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
-                            </div>
-                            <div>
-                                <p class="small text-muted">31/03/2023</p>
-                                <span class="badge bg-danger rounded-pill float-end">1</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-2 card mt-2">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div>
-                                <img class="rounded-pill me-3" width="40" src="https://randomuser.me/api/portraits/women/83.jpg">
-                            </div>
-                            <div>
-                                <p class="fw-bold mb-0 text-light">Kylie Young</p>
-                                <p class="small text-muted">Lorem ipsum dolor sit amet...</p>
-                            </div>
-                            <div>
-                                <p class="small text-muted">23/03/2023</p>
-                                <span class="badge bg-danger rounded-pill float-end">4</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                <a class="btn btn-secondary btn-inline" href="#" data-dismiss="modal" id="dimissModalNuevo"><i class="fa fa-fw fa-lg fa-times-circle icono-azul"></i>Cancelar</a>
+                <button type="button" class="btn btn-primary" id="btnGuardarContacto" onclick="fnAgregarContactos()"><i class="fa fa-fw fa-lg fa-check-circle icono-azul"></i>Guardar contacto</button>
+            </form>
         </div> -->
+
+
+
+        <!-- <section class="container py-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Tabs</h2>
+                    <ul id="tabsJustified" class="nav nav-tabs nav-fill">
+                        <li class="nav-item"><a href="" data-target="#home1" data-toggle="tab" class="nav-link small text-uppercase">Home</a></li>
+                        <li class="nav-item"><a href="" data-target="#profile1" data-toggle="tab" class="nav-link small text-uppercase active">Profile</a></li>
+                        <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase">Messages</a></li>
+                    </ul>
+                    <br>
+                    <div id="tabsJustifiedContent" class="tab-content">
+                        <div id="home1" class="tab-pane fade">
+                            <div class="list-group"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">51</span> Home Link</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Link 2</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Link 3</a> <a href="" class="list-group-item d-inline-block text-muted">Link n..</a></div>
+                        </div>
+                        <div id="profile1" class="tab-pane fade active show">
+                            <div class="row pb-2">
+                                <div class="col-md-7">
+                                    <p>Tabs can be used to contain a variety of content &amp; elements. They are a good way to group <a href="" class="link">relevant content</a>. Display initial content in context to the user. Enable the user to flow through <a href="" class="link">more</a> information as needed. </p>
+                                </div>
+                                <div class="col-md-5"><img src="//dummyimage.com/1005x559.png/5fa2dd/ffffff" class="float-right img-fluid img-rounded"></div>
+                            </div>
+                        </div>
+                        <div id="messages1" class="tab-pane fade">
+                            <div class="list-group"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">44</span> Message 1</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Message 2</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Message 3</a> <a href="" class="list-group-item d-inline-block text-muted">Message n..</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+
+        
+
 
 
         <section id="tabs" class="project-tab">
@@ -188,55 +106,43 @@
                 <div class="col-md-12">
                     <nav>
                         <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="tableContactos-tab" data-toggle="tab" href="#tableContactos" role="tab" aria-controls="tableContactos" aria-selected="true"><i class="fa-solid fa-user"></i>Contactos</a>
-                            <a class="nav-item nav-link" id="tableGrupos-tab" data-toggle="tab" href="#tableGrupos" role="tab" aria-controls="tableGrupos" aria-selected="false"><i class="fa-solid fa-users"></i>Grupos</a>
+                            <a class="nav-item nav-link active" id="nav-contactos-tab" onclick="ocultarButton()" data-toggle="tab" href="#nav-contactos" role="tab" aria-controls="nav-contactos" aria-selected="true"><i class="fa-solid fa-user"></i>Contactos</a>
+                            <a class="nav-item nav-link" id="nav-grupos-tab" onclick="mostrarButton()" data-toggle="tab" href="#nav-grupos" role="tab" aria-controls="nav-grupos" aria-selected="false"><i class="fa-solid fa-users"></i>Grupos</a>
+
+
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                       <div class="card">
                         <div class="card-body">
                             <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="tableContactos" role="tabpanel" aria-labelledby="tableContactos-tab">
+
+                                <div class="tab-pane fade show active" id="nav-contactos" role="tabpanel" aria-labelledby="nav-contactos-tab">
                                     <h6 class="card-title">Listado de contactos</h6>
-                                    <table id="tableContactos" class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
+                                    <table class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
+                                                <!-- <th>#</th><th>Nombre</th><th>Número</th><th>Acciones</th> -->
                                                 <th>Nombre</th>
+                                                <th>Apellido paterno</th>
+                                                <th>Apellido materno</th>
                                                 <th>Número</th>
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!-- <tr>
-                                                <td>1</td>
-                                                <td>Contacto 1</td>
-                                                <td>967 123 4556</td>
-                                                <td>
-                                                    <div class="text-center">
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <i class="fas fa-layer-group"></i> &nbsp; Acciones
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
-                                                                    <i class="fas fa-pencil-alt"></i> &nbsp; Editar
-                                                                </button>
-                                                                <div class="dropdown-divider"></div>
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Eliminar"> &nbsp;&nbsp;
-                                                                    <i class="far fa-trash-alt "></i> &nbsp; Eliminar
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr> -->
+
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="tab-pane fade" id="tableGrupos" role="tabpanel" aria-labelledby="tableGrupos-tab">
+
+                                
+
+
+                                
+                                <div class="tab-pane fade" id="nav-grupos" role="tabpanel" aria-labelledby="nav-grupos-tab">
                                     <h6 class="card-title">Listado de grupos</h6>
-                                    <table class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
+                                    <table  class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -298,6 +204,7 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                
                             </div>
                         </div>
                       </div>
@@ -307,6 +214,25 @@
         </section>
 
     </div>
+
+
+    <script type="text/javascript">
+        let botonGrupo = document.getElementById('btnAbrirVentanaNuevoGrupos');
+        /* let tabActiva = document.getElementById('.active'); */
+        botonGrupo.style.display = "none";
+
+        function ocultarButton(){
+            document.getElementById("btnAbrirVentanaNuevoContacto").style.display = "inline";
+            document.getElementById("btnAbrirVentanaContactosMasivos").style.display = "inline";
+            document.getElementById("btnAbrirVentanaNuevoGrupos").style.display = "none";
+        }
+
+        function mostrarButton(){
+            document.getElementById("btnAbrirVentanaNuevoGrupos").style.display = "inline";
+            document.getElementById("btnAbrirVentanaNuevoContacto").style.display = "none";
+            document.getElementById("btnAbrirVentanaContactosMasivos").style.display = "none";
+        }
+    </script>
 
 
 

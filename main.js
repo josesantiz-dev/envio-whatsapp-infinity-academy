@@ -73,6 +73,8 @@ ipcMain.on('abrirventana', (event, message) => {
 //Crear contacto
 function crearContacto(){
   nuevoContacto = new BrowserWindow({
+    parent: mainWindow,
+    modal: true,
       width:1200,
       height:820,
       title:'Nuevo contacto',
@@ -99,6 +101,8 @@ function crearContacto(){
 //Editar contacto
 function EditarContacto(){
   editarContacto = new BrowserWindow({
+    parent: mainWindow,
+    modal: true,
       width:1200,
       height:820,
       title:'Editar contacto',
@@ -125,6 +129,8 @@ function EditarContacto(){
 //Crear Grupos
 function crearGrupos(){
   nuevoGrupos = new BrowserWindow({
+    parent: mainWindow,
+    modal: true,
       width:1200,
       height:820,
       title:'Nuevo grupo',
@@ -177,6 +183,8 @@ function crearGrupos(){
 //Contactos masivos csv
 function importaContactosMasivos(){
   contactoMasivos = new BrowserWindow({
+    parent: mainWindow,
+    modal: true,
       width:1200,
       height:820,
       title:'Contactos masivos',
@@ -203,6 +211,8 @@ function importaContactosMasivos(){
 //Nueva platilla
 function nuevaPlantilla(){
   crearPlantilla = new BrowserWindow({
+    parent: mainWindow,
+    modal: true,
     width:1200,
     height:820,
     title:'Nueva plantilla',
@@ -229,6 +239,8 @@ function nuevaPlantilla(){
 //Nueva campanas
 function crearCampana(){
   nuevaCampana = new BrowserWindow({
+    parent: mainWindow,
+    modal: true,
     width:1200,
     height:820,
     title:'Nueva campaña',

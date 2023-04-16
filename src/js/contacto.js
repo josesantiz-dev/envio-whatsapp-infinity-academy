@@ -107,14 +107,6 @@ function recuperarDatos(){
 
     var arr = [nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto];
     return arr;
-
-    /* const nuContacto = {
-        nombre: nombreContacto,
-        apPat: apellidoPatContacto,
-        apMat: apellidoMatContacto,
-        tel: telefonoContacto
-    };
-    ipcRenderer.send('contacto:new', nuContacto); */
 }
 
 //Datos en localStorage
