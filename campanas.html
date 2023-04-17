@@ -1,121 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Node.js Desktop Application Template</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Node.js Desktop Application Template</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
 </head>
 
 <body>
+    <script src="./src/js/nav.js"></script>
+    <div class="container-fluid">
+        <div id="contentAjax"></div>
+        <div class="wrapper">
+            <div class="row mb-1">
+                <div class="col-sm-6">
+                    <h3>Campañas</h3>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-right">
+                        <a href="#" id="btnNuevaCampana" class="button btn btn-primary" data-toggle="modal"
+                            data-target="#modal-nueva-campania"><i class="fa-solid fa-plus"
+                                style="color: #ffffff;"></i>Nueva campaña</a>
+                    </div>
+                </div>
+            </div><br>
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Listado de campañas</h6>
+                                <p class="card-text">
+                                <table id="tableCampanias"
+                                    class="table table-bordered table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th width="7%">#</th>
+                                            <th>Nombre</th>
+                                            <th>Enviados</th>
+                                            <th>Proceso</th>
+                                            <th>Pendientes</th>
+                                            <th width="18%">Fecha creación</th>
+                                            <th width="18%">Fecha enviado</th>
+                                            <th width="7%">Estatus</th>
+                                            <th width="17%">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
-  <script src="./src/js/nav.js"></script>
+                                    </tbody>
 
-  <div class="container-fluid">
-    
-
-    <div id="contentAjax"></div>
-    <div class="wrapper">
-
-      <div class="row mb-1">
-        <div class="col-sm-6">
-          <h3>Campañas</h3>
-        </div>
-        <div class="col-sm-6">
-            <div class="text-right">
-              <a href="#" id="btnNuevaCampana" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Nueva campaña</a>
-            </div>
-        </div>
-      </div><br>
-      
-      <div class="content">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-body">
-                <h6 class="card-title">Listado de campañas</h6>
-                <p class="card-text">
-                  <table id="table" class="table table-bordered table-striped table-hover table-sm">
-                    <thead>
-                      <tr>
-                        <th width="7%">#</th>
-                        <th>Nombre</th>
-                        <th>Enviados</th>
-                        <th>Proceso</th>
-                        <th>Pendientes</th>
-                        <th width="18%">Fecha creación</th>
-                        <th width="18%">Fecha enviado</th>
-                        <th width="7%">Estatus</th>
-                        <th width="17%">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Campaña 1</td>
-                        <td>1</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>02/04/2023 01:59 a.m.</td>
-                        <td>02/04/2023 01:59 a.m.</td>
-                        <td>Creado</td>
-                        <td>
-                          <div class="text-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-layer-group"></i> &nbsp; Acciones
-                              </button>
-                              <div class="dropdown-menu">
-                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#ModalFormVer" title="Ver"> &nbsp;&nbsp; 
-                                  <i class="fas fa-eye icono-azul"></i> &nbsp; Ver
-                                </button>
-                                <div class="dropdown-divider"></div>
-                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
-                                  <i class="fas fa-pencil-alt"></i> &nbsp; Editar
-                                </button>
-                                <div class="dropdown-divider"></div>
-                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Eliminar"> &nbsp;&nbsp;
-                                  <i class="far fa-trash-alt "></i> &nbsp; Eliminar
-                                </button>
-                              </div>
+                                </table>
+                                </p>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-
-                  </table>
-                </p>
-              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+        <br>
     </div>
-    <br>
 
-  </div>
+    <!-- Modal nueva platilla -->
+    <div class="modal fade" id="modal-nueva-campania" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nueva campaña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="card-body p-0">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Nombre</label>
+                                        <input type="text" class="form-control" id="txtNombreCampania"
+                                            placeholder="Nombre">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Grupo de contactos</label>
+                                    <select class="custom-select" id="selectGrrupoContactos">
+                                        <option value="" selected>Seleccionar...</option>
+                                        <option value="1">Grupo 1</option>
+                                        <option value="2">Grupo 2</option>
+                                        <option value="3">Grupo 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Intervalo en segundos</label>
+                                        <input type="number" class="form-control" id="numeroIntervalo" placeholder="0">
+                                    </div>
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Hora envio</label>
+                                        <input type="datetime-local" class="form-control" id="horaEnvio">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnGuardarCampania">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  
+    <!-- Modal nueva platilla -->
+    <div class="modal fade" id="modal-editar-campania" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar campaña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="card-body p-0">
+                            <form>
+                                <input type="hidden" id="idCampaniaEdit">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Nombre</label>
+                                        <input type="text" class="form-control" id="txtNombreCampaniaEdit" placeholder="Nombre">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Grupo de contactos</label>
+                                    <select class="custom-select" id="selectGrrupoContactosEdit">
+                                        <option value="" selected>Seleccionar...</option>
+                                        <option value="1">Grupo 1</option>
+                                        <option value="2">Grupo 2</option>
+                                        <option value="3">Grupo 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Intervalo en segundos</label>
+                                        <input type="number" class="form-control" id="numeroIntervaloEdit" placeholder="0">
+                                    </div>
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Hora envio</label>
+                                        <input type="datetime-local" class="form-control" id="horaEnvioEdit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnActualizarCampania">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-   <!-- Bootstrap core JavaScript -->
-   <script src="./vendor/jquery/jquery.slim.min.js"></script>
-   <script src="./vendor/jquery/jquery.min.js"></script>
-   <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-   <script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.slim.min.js"></script>
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
      //load in node libraries
-     /* require('./renderer.js') */
-  </script>
-  <script>
-    require('./src/js/campanas.js')
-</script>
+        /* require('./renderer.js') */
+    </script>
+    <script>
+        require('./src/js/campanas.js')
+    </script>
 </body>
 
 </html>

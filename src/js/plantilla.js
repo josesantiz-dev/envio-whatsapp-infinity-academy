@@ -10,6 +10,7 @@ const tablePlantillas = document.querySelector('#tbl-plantillas tbody');
 const txtNombre = document.getElementById("txtNombreContacto");
 let txtDescripcion = document.getElementById("txtDescripcion");
 const btnGuardar = document.getElementById("btnGuardarContacto");
+const btnActualizar = document.getElementById("btnEditarPlantilla");
 
 document.getElementById("menu-plantillas").classList.add("active");
 
@@ -17,6 +18,9 @@ document.getElementById("menu-plantillas").classList.add("active");
 document.addEventListener("DOMContentLoaded", function () {
     fnMostrarPlantillas(obtenerPlantillas());
     $("#txtDescripcion").emojioneArea({
+        pickerPosition: "bottom"
+    });
+   $("#txtDescripcionEdit").emojioneArea({
         pickerPosition: "bottom"
     });
 })
@@ -32,7 +36,6 @@ function fnMostrarPlantillas(plantillas){
     let rows = "";
     let count = 0;
     plantillas.forEach(element => {
-        console.log(element)
         count += 1;
         let estatus =(element.estatus == 1)?"Activo":"Innactivo";
         let acciones = `<div class="text-center">
@@ -46,7 +49,7 @@ function fnMostrarPlantillas(plantillas){
                     </button>
                     <div class="dropdown-divider">
                     </div>
-                    <button id="btn-editar-plantilla" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-plantilla" title="Editar"> &nbsp;&nbsp;
+                    <button id="btn-editar-plantilla" data-id="${element.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-plantilla" title="Editar"> &nbsp;&nbsp;
                         <i class="fas fa-pencil-alt"></i> &nbsp; Editar
                     </button>
                     <div class="dropdown-divider">
@@ -65,32 +68,46 @@ function fnMostrarPlantillas(plantillas){
 
 btnGuardar.addEventListener("click",function(){
     let plantillasActuales = obtenerPlantillas();
-    let nuevoId = plantillasActuales.length + 1;
+    let id = plantillasActuales.length + 1;
     let nombre = txtNombre.value;
     let descripcion = txtDescripcion.textContent;
     if(nombre == "" || descripcion == ""){
         return false;
     }
-    plantillas.setPlantilla(nuevoId,nombre,descripcion); 
-    let plantillasGuardar = plantillasActuales.concat(plantillas.getPlantillas());
-    plantillasGuardar = JSON.stringify(plantillasGuardar);
-    localStorage.setItem("plantillas",plantillasGuardar);
+    //plantillas.setPlantilla(id,nombre,descripcion); 
+    plantillasActuales.push({
+        id:id,
+        nombre:nombre,
+        descripcion:descripcion,
+        estatus:1,
+        fechaCreacion:new Date(),
+        fechaModificacion:""
+    });
+    localStorage.setItem("plantillas",JSON.stringify(plantillasActuales));
+    //let plantillasGuardar = plantillasActuales.concat(plantillas.getPlantillas());
+    //plantillasGuardar = JSON.stringify(plantillasGuardar);
+    //localStorage.setItem("plantillas",plantillasGuardar);
     $("#modal-nueva-plantilla").modal("hide");
     fnMostrarPlantillas(obtenerPlantillas());
 })
 
 btnNuevaPlantilla.addEventListener('click', (event) =>{
     txtNombre.value = "";
-    $(".emojionearea-editor").html('Hola, 🖐.');
+    $("#txtDescripcion")[0].emojioneArea.setText("Hola, 🖐.");
  })
 
  tablePlantillas.addEventListener('click', function (e) {
     const btn = e.target.closest('button'); 
+    if(btn == null){
+        return false;
+    }
     let tipoBoton = btn.id;
-    console.log(tipoBoton)
     switch (tipoBoton) {
         case "btn-ver-plantilla":
             fnVerPlantilla(btn);
+            break;
+        case "btn-editar-plantilla":
+            fnEditarPlantilla(btn);
             break;
         case "btn-eliminar-plantila":
             fnEliminarPlantilla(btn);
@@ -98,9 +115,6 @@ btnNuevaPlantilla.addEventListener('click', (event) =>{
         default:
             break;
     }
-    /*if(btn != null){
-        fnVerPlantilla(btn)
-    } */
 });
 
 function fnVerPlantilla(value){
@@ -113,6 +127,17 @@ function fnVerPlantilla(value){
     }
 }
 
+function fnEditarPlantilla(value){
+    let id = Number(value.dataset.id);
+    let plantillas = obtenerPlantillas();
+    let plantilla = plantillas.filter(x => x.id == id);
+    if(plantilla.length > 0){
+        document.getElementById("idPlantillaEdit").value = plantilla[0].id;
+        document.getElementById("txtNombreContactoEdit").value = plantilla[0].nombre;
+        $("#txtDescripcionEdit")[0].emojioneArea.setText(plantilla[0].descripcion);
+    }
+}
+
 function fnEliminarPlantilla(value){
     let id = Number(value.dataset.id);
     let plantillas = obtenerPlantillas();
@@ -120,3 +145,20 @@ function fnEliminarPlantilla(value){
     localStorage.setItem("plantillas",JSON.stringify(plantilla));
     fnMostrarPlantillas(obtenerPlantillas());
 }
+
+btnActualizar.addEventListener("click",function(){
+    let plantillasActuales = obtenerPlantillas();
+    let id = document.getElementById("idPlantillaEdit").value;
+    let nombre = document.getElementById("txtNombreContactoEdit").value;
+    let descripcion = document.getElementById("txtDescripcionEdit").textContent;
+    if(id == "" || nombre == "" || descripcion == ""){
+        return false;
+    }
+    let plantilla = plantillasActuales.filter(x => x.id == id);
+    plantilla[0].nombre = nombre;
+    plantilla[0].descripcion = descripcion;
+    localStorage.setItem("plantillas",JSON.stringify(plantillasActuales));
+    $("#modal-editar-plantilla").modal("hide");
+    fnMostrarPlantillas(obtenerPlantillas());
+})
+
