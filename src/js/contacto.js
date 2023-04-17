@@ -21,6 +21,7 @@ app.on('ready', () => {
 const ipc = require('electron').ipcRenderer;
 const url = require('url');
 const path = require('path');
+var listContactos = [];
 
 const btnCrearContacto = document.getElementById("btnAbrirVentanaNuevoContacto");
 const btnCrearGrupos = document.getElementById("btnAbrirVentanaNuevoGrupos");
@@ -47,8 +48,7 @@ btnContactosMasivos.addEventListener('click',(event) =>{
 
 
 
-/* function crearContacto(id,nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto){
-    var listContactos = [];
+function crearNuevoContacto(id,nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto){
     var nuevoContacto = {
         id:id,
         nombre:nombreContacto,
@@ -56,14 +56,24 @@ btnContactosMasivos.addEventListener('click',(event) =>{
         apellidoMaterno:apellidoMatContacto,
         telefono:telefonoContacto
     }
-    console.log(listContactos);
     console.log(nuevoContacto);
-    listContactos.push(nuevoContacto);    
+    listContactos.push(nuevoContacto);
+    localStorageListaContactos(listContactos);
 }
 
 function getObtenerListaContactos(){
+    var storageListaCont = localStorage.getItem('localListaContactos');
+    if(storageListaCont == null){
+        listContactos = [];
+    }else{
+        listContactos = JSON.parse(storageListaCont);
+    }
     return listContactos;
-} */
+}
+
+function localStorageListaContactos(listContactos){
+    localStorage.setItem('localListaContactos', JSON.stringify(listContactos));
+}
 
 /* const excelInput = document.getElementById('excel-input')
 excelInput.addEventListener('change', async function(){
@@ -91,7 +101,7 @@ btnGuardarContacto.onclick = function (){
 } */
 
 
-//Variable global
+/* //Variable global
 function fnAgregarContactos(){
     var datosIngresados = recuperarDatos();
     var leerDatos = leerDatosLocalStorage(datosIngresados);
@@ -159,4 +169,4 @@ function fntEditContactos(){
 //Eliminar contactos
 function fntDelContactos(){
     console.log("Del Contactos");
-}
+} */
