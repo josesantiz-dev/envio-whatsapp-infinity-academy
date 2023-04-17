@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo contacto</title>
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="./src/css/style.css"> -->
+    <link rel="stylesheet" href="../src/fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="card-body">
+            <form>
+                <div class="form-row"> <!-- class="form-group" -->
+                    <div class="col">
+                        <label for="formGroupExampleInput">Id</label>
+                        <input type="text" id="intId" name="intId" class="form-control" placeholder="Id"  autocomplete="off" required>
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Nombre</label>
+                        <input type="text" class="form-control" id="txtNombreContacto" name="txtNombreContacto" placeholder="Nombre" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="formGroupExampleInput">Apellido paterno</label>
+                        <input type="text" class="form-control" id="txtApellidoPatContacto" name="txtApellidoPatContacto" placeholder="Apellido paterno" required>
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Apellido materno</label>
+                        <input type="text" class="form-control" id="txtApellidoMatContacto" name="txtApellidoMatContacto" placeholder="Apellido materno" required>
+                    </div>
+                </div><br>
+                <div class="form-row">
+                    <div class="col">
+                        <label>Telefono Celular</label>
+                        <input type="text" id="txtTelefonoNuevo" name="txtTelefonoNuevo" class="form-control" placeholder="Telefono celular" maxlength="10" autocomplete="off" required>
+                    </div>
+                </div><br>
+
+                <a class="btn btn-secondary btn-inline" href="#" data-dismiss="modal" id="dimissModalNuevo"><i class="fa fa-fw fa-lg fa-times-circle icono-azul"></i>Cancelar</a>
+                <button type="button" class="btn btn-primary" id="btnEditarContacto" ><i class="fa fa-fw fa-lg fa-check-circle icono-azul"></i>Actualizar contacto</button>
+            </form>
+        </div>
+
+        <div class="tab-pane fade show active" id="tableContactos" role="tabpanel" aria-labelledby="tableContactos-tab">
+            <h6 class="card-title">Listado de contactos</h6>
+            <table id="tableContactos" class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido paterno</th>
+                        <th>Apellido materno</th>
+                        <th>Número</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.slim.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="../renderer.js"></script>
+    <script src="../src/js/contacto.js"></script>
+</body>
+</html>

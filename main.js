@@ -115,7 +115,7 @@ function EditarContacto(){
   });
   /* nuevoContacto.setMenu(null); */
   editarContacto.loadURL(url.format({
-      pathname:path.join(__dirname,'./view/EditarContacto.html'),
+      pathname:path.join(__dirname,'./view/editarContacto.html'),
       protocol:'file',
       slashes:true
   }))
