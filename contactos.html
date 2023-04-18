@@ -23,11 +23,14 @@
             <div class="col-sm-6">
                 <div class="text-right">
                     <!-- <div class="tab-pane fade show active" id="nav-contactos" role="tabpanel" aria-labelledby="nav-contactos-tab"> -->
-                        <a href="#" type="submit" id="btnAbrirVentanaNuevoContacto" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Agregar contacto</a>
-                        <a href="#" type="submit" id="btnAbrirVentanaContactosMasivos" class="button btn btn-primary"><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i>Subir csv</a>
+                        <a href="#" type="submit" id="btnAbrirVentanaNuevoContacto" class="button btn btn-primary" data-toggle="modal"
+                        data-target="#modal-nuevo-contacto"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Agregar contacto</a>
+                        <a href="#" type="submit" id="btnAbrirVentanaContactosMasivos" class="button btn btn-primary"data-toggle="modal"
+                        data-target="#modal-subir-csv"><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i>Subir csv</a>
                     <!-- </div> -->
                     <!-- <div class="tab-pane fade" id="nav-grupos" role="tabpanel" aria-labelledby="nav-grupos-tab"> -->
-                        <a href="#" type="submit" id="btnAbrirVentanaNuevoGrupos" class="button btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Crear grupos</a>
+                        <a href="#" type="submit" id="btnAbrirVentanaNuevoGrupos" class="button btn btn-primary" data-toggle="modal"
+                        data-target="#modal-nuevo-grupo"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>Crear grupos</a>
                     <!-- </div> -->
                 </div>
             </div>
@@ -88,10 +91,10 @@
                                             <tr>
                                                 <!-- <th>#</th><th>Nombre</th><th>Número</th><th>Acciones</th> -->
                                                 <th>#</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido paterno</th>
-                                                <th>Apellido materno</th>
-                                                <th>Número</th>
+                                                <th>Nombres</th>
+                                                <!-- <th>Apellido paterno</th>
+                                                <th>Apellido materno</th> -->
+                                                <th>Número de teléfono</th>
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
@@ -100,10 +103,6 @@
                                         </tbody>
                                     </table>
                                 </div>
-
-                                
-
-
                                 
                                 <div class="tab-pane fade" id="nav-grupos" role="tabpanel" aria-labelledby="nav-grupos-tab">
                                     <h6 class="card-title">Listado de grupos</h6>
@@ -118,54 +117,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Grupo 1</td>
-                                                <td>3</td>
-                                                <td>P</td>
-                                                <td>
-                                                    <div class="text-center">
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <i class="fas fa-layer-group"></i> &nbsp; Acciones
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
-                                                                    <i class="fas fa-pencil-alt"></i> &nbsp; Editar
-                                                                </button>
-                                                                <div class="dropdown-divider"></div>
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Eliminar"> &nbsp;&nbsp;
-                                                                    <i class="far fa-trash-alt "></i> &nbsp; Eliminar
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Grupo 2</td>
-                                                <td>3</td>
-                                                <td>P</td>
-                                                <td>
-                                                    <div class="text-center">
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <i class="fas fa-layer-group"></i> &nbsp; Acciones
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Editar"> &nbsp;&nbsp;
-                                                                    <i class="fas fa-pencil-alt"></i> &nbsp; Editar
-                                                                </button>
-                                                                <div class="dropdown-divider"></div>
-                                                                <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" title="Eliminar"> &nbsp;&nbsp;
-                                                                    <i class="far fa-trash-alt "></i> &nbsp; Eliminar
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -178,6 +130,269 @@
             </div>
         </section>
 
+    </div>
+
+
+    <!-- Modal nuevo contacto -->
+    <div class="modal fade" id="modal-nuevo-contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo contacto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    
+                        <div class="card card-secondary p-0">
+                            <form id="formContactos" name="formContactos">
+                                <div class="card-body">
+                                <div class="form-group">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Nombre</label>
+                                        <input type="text" class="form-control" id="txtNombreContacto" placeholder="Nombre contacto">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Apellido paterno</label>
+                                        <input type="text" class="form-control" id="txtApPatContacto" placeholder="Apellido paterno">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Apellido materno</label>
+                                        <input type="text" class="form-control" id="txtApMatContacto" placeholder="Apellido materno">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Teléfono</label>
+                                        <input type="text" id="txtTelNuevo" name="txtTelNuevo" class="form-control form-control-sm" placeholder="Telefono celular" onkeypress="return validarNumeroInput(event)" maxlength="10" autocomplete="off">
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="btnGuardarContactos">Guardar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal editar contacto -->
+    <div class="modal fade" id="modal-editar-contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar contacto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card card-secondary p-0">
+                        <form>
+                            <input type="hidden" id="idContactosEdit">
+                            <div class="card-body">
+                            <div class="form-group">
+                                <div class="col">
+                                    <label for="formGroupExampleInput">Nombre</label>
+                                    <input type="text" class="form-control" id="txtNombreContactoEdit" placeholder="Nombre contacto">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col">
+                                    <label for="formGroupExampleInput">Apellido paterno</label>
+                                    <input type="text" class="form-control" id="txtApPatContactoEdit" placeholder="Apellido paterno">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col">
+                                    <label for="formGroupExampleInput">Apellido materno</label>
+                                    <input type="text" class="form-control" id="txtApMatContactoEdit" placeholder="Apellido materno">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col">
+                                    <label for="formGroupExampleInput">Teléfono</label>
+                                    <input type="text" id="txtTelNuevoEdit" name="txtTelNuevoEdit" class="form-control form-control-sm" placeholder="Telefono celular" onkeypress="return validarNumeroInput(event)" maxlength="10" autocomplete="off">
+                                </div>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnActualizarContactos">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal nuevo grupo -->
+    <div class="modal fade bd-example-modal-lg" id="modal-nuevo-grupo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo grupo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    
+                        <div class="card card-secondary p-0">
+                            <form id="formgrupos" name="formgrupos">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">Nombre grupo</label>
+                                            <input type="text" class="form-control" id="txtNombregrupo" placeholder="Nombre grupo">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">Contactos</label>
+                                            <table id="tableContactosGrup" class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Nombres</th>
+                                                        <th>Número de teléfono</th>
+                                                        <th>Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </form>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="btnGuardarGrupos">Guardar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal editar grupo -->
+    <div class="modal fade bd-example-modal-lg" id="modal-editar-grupo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar grupo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    
+                        <div class="card card-secondary p-0">
+                            <form>
+                                <input type="hidden" id="idGruposEdit">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">Nombre grupo</label>
+                                            <input type="text" class="form-control" id="txtNombregrupoEdit" placeholder="Nombre grupo">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">Contactos</label>
+                                            <table id="tableContactosGrupEdit" class="table table-bordered table-striped table-hover table-sm" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Nombres</th>
+                                                        <th>Número de teléfono</th>
+                                                        <th>Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> -->
+                                    <div class="form-group">
+                                        <label>Estatus <span class="required">*</span></label>
+                                        <select class="custom-select" id="listEstatusGrupEdit" name="listEstatusGrupEdit" required>
+                                        <option value="1">Activo</option>
+                                        <option value="2">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="btnActualizarGrupos">Actualizar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal nuevo contacto -->
+    <div class="modal fade" id="modal-subir-csv" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Subir CSV</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    
+                        <div class="card card-secondary p-0">
+                            <form id="formSubirCSV" name="formSubirCSV">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <!-- <div class="col">
+                                            <label for="formGroupExampleInput">Nombre</label>
+                                            <input type="text" class="form-control" id="txtNombreContacto" placeholder="Nombre contacto">
+                                        </div> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="seleccionarfile mb-3">
+                                            <input class="form-control" type="file" id="excel-input" required>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </form>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="btnSubirCSV">Guardar</button>
+                    </div>
+            </div>
+        </div>
     </div>
 
 
@@ -196,6 +411,13 @@
             document.getElementById("btnAbrirVentanaNuevoGrupos").style.display = "inline";
             document.getElementById("btnAbrirVentanaNuevoContacto").style.display = "none";
             document.getElementById("btnAbrirVentanaContactosMasivos").style.display = "none";
+        }
+
+        function validarNumeroInput(event){
+            if(event.charCode >= 48 && event.charCode <= 57){
+                return true;
+            }
+            return false;
         }
     </script>
 

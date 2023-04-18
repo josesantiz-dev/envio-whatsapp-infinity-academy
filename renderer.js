@@ -1,6 +1,6 @@
 //Make Node.js API calls in this file
 
-document.querySelector('#btnGuardarContacto').addEventListener('click', guardarContacto);
+/* document.querySelector('#btnGuardarContacto').addEventListener('click', guardarContacto);
 
 function guardarContacto(){
     var id = document.querySelector('#intId').value,
@@ -59,11 +59,11 @@ function ObtenerListaContactos(){
         inputAcciones.type = 'button';
         inputAcciones.value = listaContactos[i].id;
         accionCel.appendChild(inputAcciones); */
-        accionCel.value = listaContactos[i].id;
+        /*accionCel.value = listaContactos[i].id;
 
         tbody.appendChild(row);
     }
-}
+} */
 
 
 /* document.querySelector('#btnGuardarContacto').addEventListener('click',(event) =>{
