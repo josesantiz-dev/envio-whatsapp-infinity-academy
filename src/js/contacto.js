@@ -1,73 +1,20 @@
 const ipc = require('electron').ipcRenderer;
 const url = require('url');
 const path = require('path');
-
-
-/* var listContactos = [];
-
-const btnCrearContacto = document.getElementById("btnAbrirVentanaNuevoContacto");
-const btnCrearGrupos = document.getElementById("btnAbrirVentanaNuevoGrupos");
-const btnContactosMasivos = document.getElementById("btnAbrirVentanaContactosMasivos");
-
-btnCrearContacto.addEventListener('click',(event) =>{
-	ipc.send('abrirventana','crearContactos')
-})
-
-btnCrearGrupos.addEventListener('click',(event) =>{
-	ipc.send('abrirventana','crearGrupos')
-})
-
-btnContactosMasivos.addEventListener('click',(event) =>{
-	ipc.send('abrirventana','contactos-masiva')
-})
-
-
-
-
-
-function crearNuevoContacto(id,nombreContacto,apellidoPatContacto,apellidoMatContacto,telefonoContacto){
-    var nuevoContacto = {
-        id:id,
-        nombre:nombreContacto,
-        apellidoPaterno:apellidoPatContacto,
-        apellidoMaterno:apellidoMatContacto,
-        telefono:telefonoContacto
-    }
-    console.log(nuevoContacto);
-    listContactos.push(nuevoContacto);
-    localStorageListaContactos(listContactos);
-}
-
-function getObtenerListaContactos(){
-    var storageListaCont = localStorage.getItem('localListaContactos');
-    if(storageListaCont == null){
-        listContactos = [];
-    }else{
-        listContactos = JSON.parse(storageListaCont);
-    }
-    return listContactos;
-}
-
-function localStorageListaContactos(listContactos){
-    localStorage.setItem('localListaContactos', JSON.stringify(listContactos));
-}
-
-
-
-//Editar contactos
-function fntEditContactos(){
-    ipc.send('abrirventana','editarContactos')
-} */
-
 //Contactos
 const btnGuardarContactos = document.getElementById("btnGuardarContactos");
 const actualizarContactos = document.getElementById("btnActualizarContactos");
 const tableContactos = document.querySelector('#tableContactos tbody');
+const tablePersonasAgregar = document.querySelector("#table-personas-agregar tbody");
+const tablePersonasVerGrupo = document.querySelector("#table-participantes-ver tbody");
+document.getElementById("menu-contactos").classList.add("active");
+
 
 //Grupos
 const btnGuardarGrupos = document.getElementById("btnGuardarGrupos");
 const actualizarGrupos = document.getElementById("btnActualizarGrupos");
 const tableGrupos = document.querySelector('#tableGrupos tbody');
+const btnBuscarParticipantes = document.getElementById("btnBuscarParticipantes");
 
 
 //Guardar Contactos
@@ -127,11 +74,11 @@ function fnMostrarListaContactos(){
                                         <i class="fas fa-layer-group"></i> &nbsp; Acciones
                                     </button>
                                     <div class="dropdown-menu">
-                                        <button id="btnEditarContacto" data-id="${contactos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-contacto" onClick="fnEditContactos(this,${contactos.id})" title="Editar"> &nbsp;&nbsp;
+                                        <button id="btnEditarContacto" data-id="${contactos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-contacto" title="Editar"> &nbsp;&nbsp;
                                         <i class="fas fa-pencil-alt"></i> &nbsp; Editar
                                         </button>
                                         <div class="dropdown-divider"></div>
-                                        <button id="btnEliminarContacto" data-id="${contactos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" onClick="fnDelContactos(this,${contactos.id})" title="Eliminar"> &nbsp;&nbsp;
+                                        <button id="btnEliminarContacto" data-id="${contactos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat"  title="Eliminar"> &nbsp;&nbsp;
                                         <i class="far fa-trash-alt "></i> &nbsp; Eliminar
                                         </button>
                                     </div>
@@ -141,54 +88,8 @@ function fnMostrarListaContactos(){
             rows += row;
         });
         tableContactos.innerHTML = rows;
-
-
-        
-
-        /* var listaContactos = getObtenerListaContactos(),
-        tbody = document.querySelector('#tableContactos tbody');
-    
-        tbody.innerHTML = '';
-    
-        for (var i = 0; i < listaContactos.length; i++) {
-            var row = tbody.insertRow(i),
-                idcel = row.insertCell(0);
-                nombreContactoCel = row.insertCell(1),
-                apellidoPatContactoCel = row.insertCell(2),
-                apellidoMatContacto = row.insertCell(3),
-                telefonoContactoCel = row.insertCell(4);
-                accionCel = row.insertCell(5);
-    
-            idcel.innerHTML = listaContactos[i].id;
-            nombreContactoCel.innerHTML = listaContactos[i].nombre;
-            apellidoPatContactoCel.innerHTML = listaContactos[i].apellidoPaterno;
-            apellidoMatContacto.innerHTML = listaContactos[i].apellidoMaterno;
-            telefonoContactoCel.innerHTML = listaContactos[i].telefono;
-            accionCel.innerHTML = `<div class="text-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-layer-group"></i> &nbsp; Acciones
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" onClick="fntEditContactos(this)" title="Editar"> &nbsp;&nbsp;
-                                                <i class="fas fa-pencil-alt"></i> &nbsp; Editar
-                                            </button>
-                                            <div class="dropdown-divider"></div>
-                                            <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" onClick="fntDelContactos(this)" title="Eliminar"> &nbsp;&nbsp;
-                                                <i class="far fa-trash-alt "></i> &nbsp; Eliminar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>`;
-    
-            /* var inputAcciones = document.createElement('input');
-            inputAcciones.type = 'button';
-            inputAcciones.value = listaContactos[i].id;
-            accionCel.appendChild(inputAcciones); */
-            /*accionCel.value = listaContactos[i].id;
-    
-            tbody.appendChild(row);
-        } */
+    }else{
+        tableContactos.innerHTML = "";
     }
 };
 
@@ -242,7 +143,7 @@ function fnDelContactos(value){
 
 //Guardar Grupos
 btnGuardarGrupos.addEventListener("click",function(){
-    let formGrupos = document.querySelector("#formGrupos");
+    let formGrupos = document.querySelector("#formgrupos");
     let nombreGrupo = document.getElementById("txtNombregrupo").value;
     if(nombreGrupo == ""){
         return false;
@@ -285,6 +186,8 @@ function fnMostrarListaGrupos(){
         let rows = "";
         let count = 0;
         listaGrupos.forEach(grupos =>{
+            let participantes = (grupos.participantes != undefined)?grupos.participantes:[];
+            let estatus = (grupos.estatus == 1)?"Activo":"Eliminado";
             count += 1;
             let btnAcciones = `<div class="text-center">
                                     <div class="btn-group">
@@ -292,8 +195,14 @@ function fnMostrarListaGrupos(){
                                         <i class="fas fa-layer-group"></i> &nbsp; Acciones
                                     </button>
                                     <div class="dropdown-menu">
-                                        <button id="btnEditarGrupo" data-id="${grupos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-grupo" onClick="fnEditGrupos(this,${grupos.id})" title="Editar"> &nbsp;&nbsp;
+                                        <button id="btnEditarGrupo" data-id="${grupos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-grupo" title="Editar"> &nbsp;&nbsp;
                                         <i class="fas fa-pencil-alt"></i> &nbsp; Editar
+                                        </button>
+                                        <button id="btnAgregarParticipante" data-id="${grupos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-agregar-participante-grupo" title="Editar"> &nbsp;&nbsp;
+                                        <i class="fas fa-add"></i> &nbsp; Agregar participante
+                                        </button>
+                                        <button id="btnVerParticipantes" data-id="${grupos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-ver-participantes-grupo" title="Editar"> &nbsp;&nbsp;
+                                        <i class="fas fa-eye"></i> &nbsp; Ver participantes
                                         </button>
                                         <div class="dropdown-divider"></div>
                                         <button id="btnEliminarGrupo" data-id="${grupos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" onClick="fnDelGrupos(this,${grupos.id})" title="Eliminar"> &nbsp;&nbsp;
@@ -302,10 +211,12 @@ function fnMostrarListaGrupos(){
                                     </div>
                                     </div>
                                 </div>`;
-            let row = `<tr><td>${count}</td><td>${grupos.nombre}</td><td>0</td><td>${grupos.estatus}</td><td>${btnAcciones}</td></tr>`;
+            let row = `<tr><td>${count}</td><td>${grupos.nombre}</td><td>${participantes.length}</td><td>${estatus}</td><td>${btnAcciones}</td></tr>`;
             rows += row;
         });
         tableGrupos.innerHTML = rows;
+    }else{
+        tableGrupos.innerHTML = "";
     }
 };
 
@@ -342,4 +253,150 @@ function fnDelGrupos(value){
     let grupos  = listaGrupos.filter(x => x.id != id);
     localStorage.setItem("grupo",JSON.stringify(grupos));
     fnMostrarListaGrupos();
+}
+
+
+
+tableContactos.addEventListener('click', function (e) {
+    const btn = e.target.closest('button'); 
+    if(btn == null){
+        return false;
+    }
+    let tipoBoton = btn.id;
+    switch (tipoBoton) {
+        case "btnEditarContacto":
+            fnEditContactos(btn);
+            break;
+        case "btnEliminarContacto":
+            fnDelContactos(btn);
+            break;
+        default:
+            break;
+    }
+});
+
+tableGrupos.addEventListener('click', function (e) {
+    const btn = e.target.closest('button'); 
+    if(btn == null){
+        return false;
+    }
+    let tipoBoton = btn.id;
+    switch (tipoBoton) {
+        case "btnEditarGrupo":
+            fnEditGrupos(btn);
+            break;
+        case "btnEliminarGrupo":
+            fnDelGrupos(btn);
+            break;
+        case "btnAgregarParticipante":
+            fnAgregarParticipante(btn);
+            break;
+        case "btnVerParticipantes":
+            fnVerParticipantesGrupo(btn);
+            break;
+        default:
+            break;
+    }
+});
+
+function fnAgregarParticipante(value){
+    let idGrupo = value.dataset.id;
+    document.getElementById("idGrupoAgregarParticipante").value = idGrupo;
+    document.getElementById("nombreParticipanteGrupo").value = "";
+    tablePersonasAgregar.innerHTML = "";
+}
+
+function buscarParticipantes(){
+    let contactos = localStorage.getItem("contacto");
+    if(contactos == null || contactos == "[]"){
+        contactos = [];
+    }else{
+        contactos = JSON.parse(contactos);
+    }
+    return contactos;
+}
+
+btnBuscarParticipantes.addEventListener("click",function(){
+    let idGrupo = document.getElementById("idGrupoAgregarParticipante").value;
+    let valor = document.getElementById("nombreParticipanteGrupo").value;
+    let participantesActuales = buscarParticipantes();
+    let resultado = participantesActuales.filter(x => (x.nombre+" "+x.apellidoPat+" "+x.apellidoMat).includes(valor));
+    if(resultado.length > 0){
+        let rows = "";
+        let count = 0;
+        resultado.forEach(part => {
+            count += 1;
+            let estatus = '<button type="button" data-id="'+part.id+'" data-grupo="'+idGrupo+'" data-nombre="'+part.nombre+'" data-apellidop="'+part.apellidoPat+'" data-apellidom="'+part.apellidoMat+'" data-telefono="'+part.telefono+'" id="btnAgregarParticipante" class="btn btn-primary">Agregar</button>';
+            let row = `<tr><td>${count}</td><td>${part.nombre} ${part.apellidoPat} ${part.apellidoMat}</td><td>${estatus}</td></tr>`;
+            rows += row;
+        });
+        tablePersonasAgregar.innerHTML = rows;
+    }else{
+        tablePersonasAgregar.innerHTML = "";
+    }
+});
+
+tablePersonasAgregar.addEventListener('click', function (e) {
+    const btn = e.target.closest('button'); 
+    if(btn == null){
+        return false;
+    }
+    let tipoBoton = btn.id;
+    switch (tipoBoton) {
+        case "btnAgregarParticipante":
+            fnAgregarParticipanteGrupo(btn);
+            break;
+        default:
+            break;
+    }
+});
+
+function fnAgregarParticipanteGrupo(value){
+    let datos = value.dataset;
+    let idGrupo = datos.grupo;
+    let idContacto = datos.id;
+    let nombreContacto = datos.nombre;
+    let apellidoP = datos.apellidop;
+    let apellidoM = datos.apellidom;
+    let telefono = datos.telefono;
+    let gruposActuales = obtenerListaGrupos();
+    let grupo = gruposActuales.filter(x => x.id == idGrupo);
+    let participantes = (grupo[0].participantes != undefined)?grupo[0].participantes:[];
+    let isExistParticipante = participantes.filter(x => x.idContacto == idContacto);
+    if(isExistParticipante.length > 0){
+        alert("El contacto ya existe en este grupo!!");
+        return false;
+    }
+    participantes.push({
+        idContacto:idContacto,
+        nombre: nombreContacto,
+        appellidoP: apellidoP,
+        apellidoM: apellidoM,
+        telefono: telefono
+    })
+    grupo[0].participantes = participantes;
+    localStorage.setItem("grupo",JSON.stringify(gruposActuales));
+    $("#modal-agregar-participante-grupo").modal("hide");
+    fnMostrarListaGrupos();
+}
+
+function fnVerParticipantesGrupo(value){
+    let datos = value.dataset;
+    let idGrupo = datos.id;
+    let grupo = obtenerListaGrupos().filter(x => x.id == idGrupo);
+    let participantes = (grupo[0].participantes != undefined)?grupo[0].participantes:[];
+    if(participantes.length > 0){
+        let count = 0;
+        let rows = "";
+        participantes.forEach(participante => {
+            count += 1;
+            let nombre = (participante.nombre != undefined)?participante.nombre:"" + " " + (participante.apellidoP != undefined)?participante.apellidoP:"" + " " + (participante.apellidoM != undefined)?participante.apellidoM:"";
+            let telefono = (participante.telefono != undefined)?participante.telefono:"";
+            let row = `<tr><td>${count}</td><td>${nombre}</td><td>${telefono}</td></tr>`;
+            rows += row;
+        }); 
+        tablePersonasVerGrupo.innerHTML = rows;
+    }else{
+        tablePersonasVerGrupo.innerHTML = "";
+    }
 }
