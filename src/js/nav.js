@@ -40,9 +40,9 @@ var navbar = `
         <li class="nav-item" id="menu-campanias">  
           <a class="nav-link" href="campanas.html"><i class="fa-solid fa-flag-checkered" style="color: #ffffff;"></i> Campañas </a>  
         </li>  
-        <li class="nav-item" id="menu-informes">  
+        <!--<li class="nav-item" id="menu-informes">  
           <a class="nav-link" href="informes.html"><i class="fa-solid fa-chart-simple" style="color: #ffffff;"></i> Informes </a>  
-        </li>
+        </li>-->
       </ul>   
     </div>  
   </nav>   
