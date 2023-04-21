@@ -1,6 +1,7 @@
 const ipc = require('electron').ipcRenderer;
 const url = require('url');
 const path = require('path');
+const { error } = require('console');
 const API = 'http://127.0.0.1:8000';
 const btnCampaniaNueva = document.getElementById("btnNuevaCampana");
 const guardarCampania = document.getElementById("btnGuardarCampania");
@@ -53,7 +54,21 @@ function fnMostrarCampaniasActuales(){
                 </div>
             </div>
             </div>`;
-            let row = `<tr><td>${count}</td><td>${campania.nombre}</td><td>0</td><td>0</td><td>0</td><td>${campania.fechaCreacion}</td><td>${new Date()}</td><td>${campania.estatus}</td><td>${acciones}</td></tr>`;
+            let estatus = "";
+            switch (campania.estatus) {
+                case 1:
+                    estatus = "Sin enviar";
+                    break;
+                case 2:
+                    estatus = "En proceso";
+                    break;
+                case 3:
+                    estatus = "Enviado";
+                    break;
+                default:
+                    break;
+            }
+            let row = `<tr><td>${count}</td><td>${campania.nombre}</td><td id="tdenviados${campania.id}">0</td><td id="tderrores${campania.id}">0</td><td id="tdpendientes${campania.id}">0</td><td>${campania.fechaCreacion.split("T")[0]}</td><td></td><td>${estatus}</td><td>${acciones}</td></tr>`;
             rows += row;
         });
         tableCampanias.innerHTML = rows;
@@ -243,14 +258,43 @@ actualizarCampania.addEventListener("click",function(){
     if(campania.length > 0){
         let grupo = obtenerListaGrupos().filter(x => x.id == Number(campania[0].idGrupo));
         let plantilla = obtenerPlantillas().filter(x => x.id == Number(campania[0].idPlantilla));
+        let intervalo = Number(campania[0].intervalo) * 1000; //milisegundos
         if(grupo.length > 0){
             if(plantilla.length > 0){
                 let participantes = (grupo[0].participantes != undefined)?grupo[0].participantes:[];
+                let totalPaticipantes = participantes.length;
+                let enviados = 0;
+                let pendientes = totalPaticipantes - enviados;
+                let errores = 0;
+                let idTdEnviados = `tdenviados${campania[0].id}`;
+                let idTdPendientes = `tdpendientes${campania[0].id}`;
+                let idTdErrores = `tderrores${campania[0].id}`;
+                console.log(idTdEnviados)
+                document.getElementById(idTdEnviados).innerHTML = enviados;
+                document.getElementById(idTdPendientes).innerHTML = pendientes;
+                document.getElementById(idTdErrores).innerHTML = errores;
                 if(participantes.length > 0){
-                    participantes.forEach(participante => {
+                    participantes.forEach(async participante => {
                         let numeroTelefono = participante.telefono;
                         let mensaje = plantilla[0].descripcion;
-                        fnEnviarMensajeContacto(numeroTelefono,mensaje);
+                        setTimeout(async function(){
+                            let promise = new Promise(async (resolve) =>{
+                                let response = await fnEnviarMensajeContacto(numeroTelefono,mensaje);
+                                resolve({
+                                    data:response
+                                })
+                            });
+                            let respuesta = await promise;
+                            if(!respuesta.data.data.error){
+                                enviados += 1;
+                                pendientes = totalPaticipantes - (enviados + errores);
+                                document.getElementById(idTdEnviados).innerHTML = enviados;
+                                document.getElementById(idTdPendientes).innerHTML = pendientes;
+                            }else{
+                                errores += 1;
+                                document.getElementById(idTdErrores).innerHTML = errores;
+                            }
+                        },intervalo);
                     });
                 }else{
                     alert("No hay contacto agregado en el grupo!!!");
@@ -271,32 +315,29 @@ actualizarCampania.addEventListener("click",function(){
  }
 
  async function fnEnviarMensajeContacto(telefono,mensaje){
-    /* let promise = new Promise((resolve) =>{
-        fetch(`${API}`).then(res => res.json()).then(res =>{
-            resolve({
-                data:res
-            })
-        })
-    });
-    let respuesta = await promise;
-    console.log(respuesta) */
     let promise = new Promise((resolve) =>{
         fetch(`${API}/send-message`,{
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                number:"+529611111111",
+                number:telefono,
                 message: mensaje
             }),
         }).then(res => res.json()).then(res =>{
             resolve({
-                data:res
+                data:res,
+                error:false
+            })
+        }).catch(err =>{
+            resolve({
+                data:err,
+                error:true
             })
         })
     });
     let respuesta = await promise;
-    console.log(respuesta)
- }
+    return respuesta;
+}
 /*  async function getAllContactos(){
     let promise = new Promise((resolve) =>{
         fetch(`${API}/get-contacts`).then(res => res.json()).then(res =>{
