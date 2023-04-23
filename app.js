@@ -56,6 +56,12 @@ client.initialize();
 // Socket IO
 io.on('connection', function(socket) {
   socket.emit('message', 'Conectando...');
+  
+  client.on('loading_screen', (percent, message) => {
+    //console.log('LOADING SCREEN', percent, message);
+    socket.emit('message', message);
+  });
+  
   client.on('qr', (qr) => {
     console.log('QR RECEIVED', qr);
     qrcode.toDataURL(qr, (err, url) => {
@@ -81,6 +87,7 @@ io.on('connection', function(socket) {
 
   client.on('disconnected', (reason) => {
     socket.emit('message', 'Whatsapp ha sido desconectado!');
+    socket.emit('disconnected', 'Whatsapp ha sido desconectado!');
     client.destroy();
     client.initialize();
   });

@@ -49,6 +49,7 @@ var navbar = `
 
 </body>
 </html>`;
-
-        // inserting navbar in beginning of body
-        document.body.insertAdjacentHTML("afterbegin", navbar);
+// inserting navbar in beginning of body
+document.body.insertAdjacentHTML("afterbegin", navbar);
+let isConnect = false;
+isConnect = (localStorage.getItem("connect") == null)?false:Boolean(localStorage.getItem("connect"));

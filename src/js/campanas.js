@@ -252,6 +252,10 @@ actualizarCampania.addEventListener("click",function(){
  }
 
  function fnEnviarCampania(value){
+    if(!isConnect){
+        alert("Conecta con una cuenta de Whatsapp!!")
+        return false;
+    }
     let datos = value.dataset;
     let idCampania = datos.id;
     let campania = obtenerCampaniasActuales().filter(x => x.id == idCampania);
