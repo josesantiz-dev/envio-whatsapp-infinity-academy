@@ -1,6 +1,8 @@
 const ipc = require('electron').ipcRenderer;
 const url = require('url');
 const path = require('path');
+const reader = require('xlsx')
+
 //Contactos
 const btnGuardarContactos = document.getElementById("btnGuardarContactos");
 const actualizarContactos = document.getElementById("btnActualizarContactos");
@@ -16,15 +18,18 @@ const actualizarGrupos = document.getElementById("btnActualizarGrupos");
 const tableGrupos = document.querySelector('#tableGrupos tbody');
 const btnBuscarParticipantes = document.getElementById("btnBuscarParticipantes");
 
+const excelInput = document.getElementById("excel-input");
+const btnSubirMasivoContacto = document.getElementById("btnSubirCSV");
+
 
 //Guardar Contactos
-btnGuardarContactos.addEventListener("click",function(){
+btnGuardarContactos.addEventListener("click", function () {
     let formContactos = document.querySelector("#formContactos");
     let nombreContacto = document.getElementById("txtNombreContacto").value;
     let apePatContacto = document.getElementById("txtApPatContacto").value;
     let apeMatContacto = document.getElementById("txtApMatContacto").value;
     let teleContacto = document.getElementById("txtTelNuevo").value;
-    if(nombreContacto == "" || apePatContacto == "" || apeMatContacto == "" ||teleContacto == ""){
+    if (nombreContacto == "" || apePatContacto == "" || apeMatContacto == "" || teleContacto == "") {
         return false;
     }
     let listaContactos = obtenerListaContactos();
@@ -46,27 +51,28 @@ btnGuardarContactos.addEventListener("click",function(){
 });
 
 //Obtener Lista de Contactos
-function obtenerListaContactos(){
+function obtenerListaContactos() {
     let contactos = localStorage.getItem("contacto");
-    if(contactos == null || contactos == "[]"){
+    if (contactos == null || contactos == "[]") {
         contactos = [];
-    }else{
+    } else {
         contactos = JSON.parse(contactos);
     }
     return contactos;
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     fnMostrarListaContactos();
 });
 
 //Mostrar Lista de contactos en un tabla
-function fnMostrarListaContactos(){
+function fnMostrarListaContactos() {
     let listaContactos = obtenerListaContactos();
-    if (listaContactos.length > 0){
+    if (listaContactos.length > 0) {
         let rows = "";
         let count = 0;
-        listaContactos.forEach(contactos =>{
+        listaContactos.forEach(contactos => {
+            console.log(contactos)
             count += 1;
             let btnAcciones = `<div class="text-center">
                                     <div class="btn-group">
@@ -84,17 +90,17 @@ function fnMostrarListaContactos(){
                                     </div>
                                     </div>
                                 </div>`;
-            let row = `<tr><td>${count}</td><td>${contactos.nombre +' '+ contactos.apellidoPat +' '+ contactos.apellidoMat}</td><td>${contactos.telefono}</td><td>${btnAcciones}</td></tr>`;
+            let row = `<tr><td>${count}</td><td>${contactos.nombre + ' ' + contactos.appellidoP + ' ' + contactos.apellidoM}</td><td>${contactos.telefono}</td><td>${btnAcciones}</td></tr>`;
             rows += row;
         });
         tableContactos.innerHTML = rows;
-    }else{
+    } else {
         tableContactos.innerHTML = "";
     }
 };
 
 //Editar contactos
-function fnEditContactos(value){
+function fnEditContactos(value) {
     $('#modal-editar-contacto').modal('show');
     let id = Number(value.dataset.id);
     let listaContactos = obtenerListaContactos();
@@ -107,13 +113,13 @@ function fnEditContactos(value){
 }
 
 //Actulizar contactos
-actualizarContactos.addEventListener("click", function(){
-    let id =document.getElementById("idContactosEdit").value;
-    let nombre =document.getElementById("txtNombreContactoEdit").value;
-    let apellidoPat =document.getElementById("txtApPatContactoEdit").value;
-    let apellidoMat =document.getElementById("txtApMatContactoEdit").value;
-    let telefono =document.getElementById("txtTelNuevoEdit").value;
-    if(nombre == "" || apellidoPat == "" || apellidoMat == "" || telefono == ""){
+actualizarContactos.addEventListener("click", function () {
+    let id = document.getElementById("idContactosEdit").value;
+    let nombre = document.getElementById("txtNombreContactoEdit").value;
+    let apellidoPat = document.getElementById("txtApPatContactoEdit").value;
+    let apellidoMat = document.getElementById("txtApMatContactoEdit").value;
+    let telefono = document.getElementById("txtTelNuevoEdit").value;
+    if (nombre == "" || apellidoPat == "" || apellidoMat == "" || telefono == "") {
         return false;
     }
     let listaContactos = obtenerListaContactos();
@@ -123,17 +129,17 @@ actualizarContactos.addEventListener("click", function(){
     contacto[0].apellidoMat = apellidoMat;
     contacto[0].telefono = telefono;
     contacto[0].fechaActualizacion = new Date();
-    localStorage.setItem("contacto",JSON.stringify(listaContactos));
+    localStorage.setItem("contacto", JSON.stringify(listaContactos));
     $("#modal-editar-contacto").modal("hide");
     fnMostrarListaContactos();
 });
 
 //Eliminar contactos
-function fnDelContactos(value){
+function fnDelContactos(value) {
     let id = Number(value.dataset.id);
     let listaContactos = obtenerListaContactos();
-    let contactos  = listaContactos.filter(x => x.id != id);
-    localStorage.setItem("contacto",JSON.stringify(contactos));
+    let contactos = listaContactos.filter(x => x.id != id);
+    localStorage.setItem("contacto", JSON.stringify(contactos));
     fnMostrarListaContactos();
 }
 
@@ -142,10 +148,10 @@ function fnDelContactos(value){
 
 
 //Guardar Grupos
-btnGuardarGrupos.addEventListener("click",function(){
+btnGuardarGrupos.addEventListener("click", function () {
     let formGrupos = document.querySelector("#formgrupos");
     let nombreGrupo = document.getElementById("txtNombregrupo").value;
-    if(nombreGrupo == ""){
+    if (nombreGrupo == "") {
         return false;
     }
     let listaGrupos = obtenerListaGrupos();
@@ -165,29 +171,29 @@ btnGuardarGrupos.addEventListener("click",function(){
 });
 
 //Obtener Lista de grupos
-function obtenerListaGrupos(){
+function obtenerListaGrupos() {
     let grupos = localStorage.getItem("grupo");
-    if(grupos == null || grupos == "[]"){
+    if (grupos == null || grupos == "[]") {
         grupos = [];
-    }else{
+    } else {
         grupos = JSON.parse(grupos);
     }
     return grupos;
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     fnMostrarListaGrupos();
 });
 
 //Mostrar Lista de grupos en un tabla
-function fnMostrarListaGrupos(){
+function fnMostrarListaGrupos() {
     let listaGrupos = obtenerListaGrupos();
-    if (listaGrupos.length > 0){
+    if (listaGrupos.length > 0) {
         let rows = "";
         let count = 0;
-        listaGrupos.forEach(grupos =>{
-            let participantes = (grupos.participantes != undefined)?grupos.participantes:[];
-            let estatus = (grupos.estatus == 1)?"Activo":"Eliminado";
+        listaGrupos.forEach(grupos => {
+            let participantes = (grupos.participantes != undefined) ? grupos.participantes : [];
+            let estatus = (grupos.estatus == 1) ? "Activo" : "Eliminado";
             count += 1;
             let btnAcciones = `<div class="text-center">
                                     <div class="btn-group">
@@ -215,13 +221,13 @@ function fnMostrarListaGrupos(){
             rows += row;
         });
         tableGrupos.innerHTML = rows;
-    }else{
+    } else {
         tableGrupos.innerHTML = "";
     }
 };
 
 //Editar grupos
-function fnEditGrupos(value){
+function fnEditGrupos(value) {
     $('#modal-editar-grupo').modal('show');
     let id = Number(value.dataset.id);
     let listaGrupos = obtenerListaGrupos();
@@ -231,35 +237,35 @@ function fnEditGrupos(value){
 }
 
 //Actulizar grupos
-actualizarGrupos.addEventListener("click", function(){
-    let id =document.getElementById("idGruposEdit").value;
-    let nombre =document.getElementById("txtNombregrupoEdit").value;
-    if(nombre == ""){
+actualizarGrupos.addEventListener("click", function () {
+    let id = document.getElementById("idGruposEdit").value;
+    let nombre = document.getElementById("txtNombregrupoEdit").value;
+    if (nombre == "") {
         return false;
     }
     let listaGrupos = obtenerListaGrupos();
     let grupo = listaGrupos.filter(x => x.id == id);
     grupo[0].nombre = nombre;
     grupo[0].fechaActualizacion = new Date();
-    localStorage.setItem("grupo",JSON.stringify(listaGrupos));
+    localStorage.setItem("grupo", JSON.stringify(listaGrupos));
     $("#modal-editar-grupo").modal("hide");
     fnMostrarListaGrupos();
 });
 
 //Eliminar grupos
-function fnDelGrupos(value){
+function fnDelGrupos(value) {
     let id = Number(value.dataset.id);
     let listaGrupos = obtenerListaGrupos();
-    let grupos  = listaGrupos.filter(x => x.id != id);
-    localStorage.setItem("grupo",JSON.stringify(grupos));
+    let grupos = listaGrupos.filter(x => x.id != id);
+    localStorage.setItem("grupo", JSON.stringify(grupos));
     fnMostrarListaGrupos();
 }
 
 
 
 tableContactos.addEventListener('click', function (e) {
-    const btn = e.target.closest('button'); 
-    if(btn == null){
+    const btn = e.target.closest('button');
+    if (btn == null) {
         return false;
     }
     let tipoBoton = btn.id;
@@ -276,8 +282,8 @@ tableContactos.addEventListener('click', function (e) {
 });
 
 tableGrupos.addEventListener('click', function (e) {
-    const btn = e.target.closest('button'); 
-    if(btn == null){
+    const btn = e.target.closest('button');
+    if (btn == null) {
         return false;
     }
     let tipoBoton = btn.id;
@@ -299,46 +305,46 @@ tableGrupos.addEventListener('click', function (e) {
     }
 });
 
-function fnAgregarParticipante(value){
+function fnAgregarParticipante(value) {
     let idGrupo = value.dataset.id;
     document.getElementById("idGrupoAgregarParticipante").value = idGrupo;
     document.getElementById("nombreParticipanteGrupo").value = "";
     tablePersonasAgregar.innerHTML = "";
 }
 
-function buscarParticipantes(){
+function buscarParticipantes() {
     let contactos = localStorage.getItem("contacto");
-    if(contactos == null || contactos == "[]"){
+    if (contactos == null || contactos == "[]") {
         contactos = [];
-    }else{
+    } else {
         contactos = JSON.parse(contactos);
     }
     return contactos;
 }
 
-btnBuscarParticipantes.addEventListener("click",function(){
+btnBuscarParticipantes.addEventListener("click", function () {
     let idGrupo = document.getElementById("idGrupoAgregarParticipante").value;
     let valor = document.getElementById("nombreParticipanteGrupo").value;
     let participantesActuales = buscarParticipantes();
-    let resultado = participantesActuales.filter(x => (x.nombre+" "+x.apellidoPat+" "+x.apellidoMat).includes(valor));
-    if(resultado.length > 0){
+    let resultado = participantesActuales.filter(x => (x.nombre + " " + x.apellidoPat + " " + x.apellidoMat).includes(valor));
+    if (resultado.length > 0) {
         let rows = "";
         let count = 0;
         resultado.forEach(part => {
             count += 1;
-            let estatus = '<button type="button" data-id="'+part.id+'" data-grupo="'+idGrupo+'" data-nombre="'+part.nombre+'" data-apellidop="'+part.apellidoPat+'" data-apellidom="'+part.apellidoMat+'" data-telefono="'+part.telefono+'" id="btnAgregarParticipante" class="btn btn-primary">Agregar</button>';
+            let estatus = '<button type="button" data-id="' + part.id + '" data-grupo="' + idGrupo + '" data-nombre="' + part.nombre + '" data-apellidop="' + part.apellidoPat + '" data-apellidom="' + part.apellidoMat + '" data-telefono="' + part.telefono + '" id="btnAgregarParticipante" class="btn btn-primary">Agregar</button>';
             let row = `<tr><td>${count}</td><td>${part.nombre} ${part.apellidoPat} ${part.apellidoMat}</td><td>${estatus}</td></tr>`;
             rows += row;
         });
         tablePersonasAgregar.innerHTML = rows;
-    }else{
+    } else {
         tablePersonasAgregar.innerHTML = "";
     }
 });
 
 tablePersonasAgregar.addEventListener('click', function (e) {
-    const btn = e.target.closest('button'); 
-    if(btn == null){
+    const btn = e.target.closest('button');
+    if (btn == null) {
         return false;
     }
     let tipoBoton = btn.id;
@@ -351,7 +357,7 @@ tablePersonasAgregar.addEventListener('click', function (e) {
     }
 });
 
-function fnAgregarParticipanteGrupo(value){
+function fnAgregarParticipanteGrupo(value) {
     let datos = value.dataset;
     let idGrupo = datos.grupo;
     let idContacto = datos.id;
@@ -361,42 +367,88 @@ function fnAgregarParticipanteGrupo(value){
     let telefono = datos.telefono;
     let gruposActuales = obtenerListaGrupos();
     let grupo = gruposActuales.filter(x => x.id == idGrupo);
-    let participantes = (grupo[0].participantes != undefined)?grupo[0].participantes:[];
+    let participantes = (grupo[0].participantes != undefined) ? grupo[0].participantes : [];
     let isExistParticipante = participantes.filter(x => x.idContacto == idContacto);
-    if(isExistParticipante.length > 0){
+    if (isExistParticipante.length > 0) {
         alert("El contacto ya existe en este grupo!!");
         return false;
     }
     participantes.push({
-        idContacto:idContacto,
+        idContacto: idContacto,
         nombre: nombreContacto,
         appellidoP: apellidoP,
         apellidoM: apellidoM,
         telefono: telefono
     })
     grupo[0].participantes = participantes;
-    localStorage.setItem("grupo",JSON.stringify(gruposActuales));
+    localStorage.setItem("grupo", JSON.stringify(gruposActuales));
     $("#modal-agregar-participante-grupo").modal("hide");
     fnMostrarListaGrupos();
 }
 
-function fnVerParticipantesGrupo(value){
+function fnVerParticipantesGrupo(value) {
     let datos = value.dataset;
     let idGrupo = datos.id;
     let grupo = obtenerListaGrupos().filter(x => x.id == idGrupo);
-    let participantes = (grupo[0].participantes != undefined)?grupo[0].participantes:[];
-    if(participantes.length > 0){
+    let participantes = (grupo[0].participantes != undefined) ? grupo[0].participantes : [];
+    if (participantes.length > 0) {
         let count = 0;
         let rows = "";
         participantes.forEach(participante => {
             count += 1;
-            let nombre = (participante.nombre != undefined)?participante.nombre:"" + " " + (participante.apellidoP != undefined)?participante.apellidoP:"" + " " + (participante.apellidoM != undefined)?participante.apellidoM:"";
-            let telefono = (participante.telefono != undefined)?participante.telefono:"";
+            let nombre = (participante.nombre != undefined) ? participante.nombre : "" + " " + (participante.apellidoP != undefined) ? participante.apellidoP : "" + " " + (participante.apellidoM != undefined) ? participante.apellidoM : "";
+            let telefono = (participante.telefono != undefined) ? participante.telefono : "";
             let row = `<tr><td>${count}</td><td>${nombre}</td><td>${telefono}</td></tr>`;
             rows += row;
-        }); 
+        });
         tablePersonasVerGrupo.innerHTML = rows;
-    }else{
+    } else {
         tablePersonasVerGrupo.innerHTML = "";
     }
+}
+
+btnSubirMasivoContacto.addEventListener('click', async function (e) {
+    const filePath = excelInput.files[0].path;
+    const file = reader.readFile(filePath)
+    let data = []
+    const sheets = file.SheetNames
+    const temp = reader.utils.sheet_to_json(
+        file.Sheets[file.SheetNames[0]])
+    
+    temp.forEach((res) => {
+        data.push(res)
+    })
+    fnGuardarMasivoContacto(data);    
+   /*  for(let i = 0; i < sheets.length; i++)
+    {
+       const temp = reader.utils.sheet_to_json(
+            file.Sheets[file.SheetNames[i]])
+       temp.forEach((res) => {
+          data.push(res)
+       })
+    } */
+      
+    // Printing data
+});
+
+function fnGuardarMasivoContacto(data){
+    let contactosActuales = obtenerListaContactos();
+    let count = 0;
+    data.forEach(element => {
+        count += 1;
+        let nombre = element.Nombre;
+        let apellidosPaterno = element.ApellidoPaterno;
+        let apellidosMaterno = element.ApellidoMaterno;
+        let telefono = element.Telefono;
+        contactosActuales.push({
+            idContacto: new Date().getTime() + count,
+            nombre: nombre,
+            appellidoP: apellidosPaterno,
+            apellidoM: apellidosMaterno,
+            telefono: telefono
+        });
+    });
+    localStorage.setItem("contacto",JSON.stringify(contactosActuales));
+    $("#modal-subir-csv").modal("hide");
+    fnMostrarListaContactos();
 }

@@ -52,4 +52,4 @@ var navbar = `
 // inserting navbar in beginning of body
 document.body.insertAdjacentHTML("afterbegin", navbar);
 let isConnect = false;
-isConnect = (localStorage.getItem("connect") == null)?false:Boolean(localStorage.getItem("connect"));
+isConnect = (localStorage.getItem("connect") == null || localStorage.getItem("connect") == "false")?false:Boolean(localStorage.getItem("connect"));

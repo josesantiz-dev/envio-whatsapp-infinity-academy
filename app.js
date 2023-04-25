@@ -86,8 +86,8 @@ io.on('connection', function(socket) {
   });
 
   client.on('disconnected', (reason) => {
-    socket.emit('message', 'Whatsapp ha sido desconectado!');
     socket.emit('disconnected', 'Whatsapp ha sido desconectado!');
+    socket.emit('message', 'Whatsapp ha sido desconectado!');
     client.destroy();
     client.initialize();
   });

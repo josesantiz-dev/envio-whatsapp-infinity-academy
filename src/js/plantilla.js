@@ -11,6 +11,7 @@ const txtNombre = document.getElementById("txtNombreContacto");
 let txtDescripcion = document.getElementById("txtDescripcion");
 const btnGuardar = document.getElementById("btnGuardarContacto");
 const btnActualizar = document.getElementById("btnEditarPlantilla");
+const btnAgregarImagenPlantilla = document.getElementById("agregarImagenPlantilla");
 
 document.getElementById("menu-plantillas").classList.add("active");
 
@@ -162,3 +163,10 @@ btnActualizar.addEventListener("click",function(){
     fnMostrarPlantillas(obtenerPlantillas());
 })
 
+
+btnAgregarImagenPlantilla.addEventListener("click",function(){
+    let descripcion = txtDescripcion.textContent;
+    let texto = descripcion + '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />';
+    console.log(texto)
+    $("#txtDescripcionEdit")[0].emojioneArea.setText(texto);
+})

@@ -9,6 +9,8 @@
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
+    <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+
     <title>Contactos</title>
 </head>
 
@@ -408,15 +410,13 @@
                     <div class="card card-secondary p-0">
                         <form id="formSubirCSV" name="formSubirCSV">
                             <div class="card-body">
-                                <div class="form-group">
-                                    <!-- <div class="col">
-                                            <label for="formGroupExampleInput">Nombre</label>
-                                            <input type="text" class="form-control" id="txtNombreContacto" placeholder="Nombre contacto">
-                                        </div> -->
+                                <div class="col-sm-6 col-md-6 col-lg-6 pt-2">
+                                    <a class="text-decoration-underline"
+                                      href="./Formato-masivo-nombre-contactos.xlsx">Descargar formato</a><br><br>
                                 </div>
                                 <div class="form-group">
                                     <div class="seleccionarfile mb-3">
-                                        <input class="form-control" type="file" id="excel-input" required>
+                                        <input class="form-control" type="file" id="excel-input" accept=".xlsx" required>
                                     </div>
                                 </div>
 
@@ -462,9 +462,8 @@
     <script src="./vendor/jquery/jquery.slim.min.js"></script>
     <script src="./vendor/jquery/jquery.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./renderer.js"></script>
     <script>
-      require('./src/js/main.js');
+        require('./src/js/main.js');
         require('./src/js/contacto.js')
     </script>
 </body>
