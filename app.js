@@ -168,6 +168,51 @@ app.post('/send-message', [
   });
 });
 
+app.post('/send-message-media', [
+  body('number').notEmpty(),
+  body('message').notEmpty(),
+], async (req, res) => {
+  const errors = validationResult(req).formatWith(({
+    msg
+  }) => {
+    return msg;
+  });
+
+  if (!errors.isEmpty()) {
+    return res.status(422).json({
+      status: false,
+      message: errors.mapped()
+    });
+  }
+
+  const number = phoneNumberFormatter(req.body.number);
+  const message = req.body.message;
+  const urlImagen = req.body.imagenes;
+
+  const isRegisteredNumber = await checkRegisteredNumber(number);
+
+  if (!isRegisteredNumber) {
+    return res.status(422).json({
+      status: false,
+      message: 'The number is not registered'
+    });
+  }
+  const media = await MessageMedia.fromFilePath(urlImagen);
+  client.sendMessage(number, media,{
+    caption:message
+  }).then(response => {
+    res.status(200).json({
+      status: true,
+      response: response
+    });
+  }).catch(err => {
+    res.status(500).json({
+      status: false,
+      response: err
+    });
+  });
+});
+
 // Send media
 app.post('/send-media', async (req, res) => {
   const number = phoneNumberFormatter(req.body.number);

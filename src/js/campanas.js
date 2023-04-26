@@ -273,7 +273,6 @@ actualizarCampania.addEventListener("click",function(){
                 let idTdEnviados = `tdenviados${campania[0].id}`;
                 let idTdPendientes = `tdpendientes${campania[0].id}`;
                 let idTdErrores = `tderrores${campania[0].id}`;
-                console.log(idTdEnviados)
                 document.getElementById(idTdEnviados).innerHTML = enviados;
                 document.getElementById(idTdPendientes).innerHTML = pendientes;
                 document.getElementById(idTdErrores).innerHTML = errores;
@@ -281,14 +280,17 @@ actualizarCampania.addEventListener("click",function(){
                     participantes.forEach(async participante => {
                         let numeroTelefono = participante.telefono;
                         let mensaje = plantilla[0].descripcion;
+                        let listaImagenes = plantilla[0].listImagenes;
                         setTimeout(async function(){
                             let promise = new Promise(async (resolve) =>{
-                                let response = await fnEnviarMensajeContacto(numeroTelefono,mensaje);
+                                //let response = await fnEnviarMensajeContacto(numeroTelefono,mensaje);
+                                let response = await fnEnviarMensajeMediaContacto(numeroTelefono,mensaje,listaImagenes);
                                 resolve({
                                     data:response
                                 })
                             });
                             let respuesta = await promise;
+                            console.log(respuesta)
                             if(!respuesta.data.data.error){
                                 enviados += 1;
                                 pendientes = totalPaticipantes - (enviados + errores);
@@ -326,6 +328,32 @@ actualizarCampania.addEventListener("click",function(){
             body: JSON.stringify({
                 number:telefono,
                 message: mensaje
+            }),
+        }).then(res => res.json()).then(res =>{
+            resolve({
+                data:res,
+                error:false
+            })
+        }).catch(err =>{
+            resolve({
+                data:err,
+                error:true
+            })
+        })
+    });
+    let respuesta = await promise;
+    return respuesta;
+}
+
+async function fnEnviarMensajeMediaContacto(telefono,mensaje,listImagenes){
+    let promise = new Promise((resolve) =>{
+        fetch(`${API}/send-message-media`,{
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                number:telefono,
+                message: mensaje,
+                imagenes:listImagenes[0].path
             }),
         }).then(res => res.json()).then(res =>{
             resolve({

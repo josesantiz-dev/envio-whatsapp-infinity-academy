@@ -35,10 +35,10 @@ btnGuardarContactos.addEventListener("click", function () {
     let listaContactos = obtenerListaContactos();
     let id = new Date().getTime();
     listaContactos.push({
-        id: id,
+        idContacto: id,
         nombre: nombreContacto,
-        apellidoPat: apePatContacto,
-        apellidoMat: apeMatContacto,
+        appellidoP: apePatContacto,
+        apellidoM: apeMatContacto,
         telefono: teleContacto,
         fechaCreacion: new Date(),
         fechaActualizacion: ""
@@ -72,7 +72,6 @@ function fnMostrarListaContactos() {
         let rows = "";
         let count = 0;
         listaContactos.forEach(contactos => {
-            console.log(contactos)
             count += 1;
             let btnAcciones = `<div class="text-center">
                                     <div class="btn-group">
@@ -80,11 +79,11 @@ function fnMostrarListaContactos() {
                                         <i class="fas fa-layer-group"></i> &nbsp; Acciones
                                     </button>
                                     <div class="dropdown-menu">
-                                        <button id="btnEditarContacto" data-id="${contactos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-contacto" title="Editar"> &nbsp;&nbsp;
+                                        <button id="btnEditarContacto" data-id="${contactos.idContacto}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat" data-toggle="modal" data-target="#modal-editar-contacto" title="Editar"> &nbsp;&nbsp;
                                         <i class="fas fa-pencil-alt"></i> &nbsp; Editar
                                         </button>
                                         <div class="dropdown-divider"></div>
-                                        <button id="btnEliminarContacto" data-id="${contactos.id}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat"  title="Eliminar"> &nbsp;&nbsp;
+                                        <button id="btnEliminarContacto" data-id="${contactos.idContacto}" class="dropdown-item btn btn-outline-secondary btn-sm btn-flat"  title="Eliminar"> &nbsp;&nbsp;
                                         <i class="far fa-trash-alt "></i> &nbsp; Eliminar
                                         </button>
                                     </div>
@@ -104,11 +103,11 @@ function fnEditContactos(value) {
     $('#modal-editar-contacto').modal('show');
     let id = Number(value.dataset.id);
     let listaContactos = obtenerListaContactos();
-    let contacto = listaContactos.filter(x => x.id == id);
+    let contacto = listaContactos.filter(x => x.idContacto == id);
     document.getElementById("idContactosEdit").value = id;
     document.getElementById("txtNombreContactoEdit").value = contacto[0].nombre;
-    document.getElementById("txtApPatContactoEdit").value = contacto[0].apellidoPat;
-    document.getElementById("txtApMatContactoEdit").value = contacto[0].apellidoMat;
+    document.getElementById("txtApPatContactoEdit").value = contacto[0].appellidoP;
+    document.getElementById("txtApMatContactoEdit").value = contacto[0].apellidoM;
     document.getElementById("txtTelNuevoEdit").value = contacto[0].telefono;
 }
 
@@ -123,10 +122,10 @@ actualizarContactos.addEventListener("click", function () {
         return false;
     }
     let listaContactos = obtenerListaContactos();
-    let contacto = listaContactos.filter(x => x.id == id);
+    let contacto = listaContactos.filter(x => x.idContacto == id);
     contacto[0].nombre = nombre;
-    contacto[0].apellidoPat = apellidoPat;
-    contacto[0].apellidoMat = apellidoMat;
+    contacto[0].appellidoP = apellidoPat;
+    contacto[0].apellidoM = apellidoMat;
     contacto[0].telefono = telefono;
     contacto[0].fechaActualizacion = new Date();
     localStorage.setItem("contacto", JSON.stringify(listaContactos));
@@ -138,7 +137,7 @@ actualizarContactos.addEventListener("click", function () {
 function fnDelContactos(value) {
     let id = Number(value.dataset.id);
     let listaContactos = obtenerListaContactos();
-    let contactos = listaContactos.filter(x => x.id != id);
+    let contactos = listaContactos.filter(x => x.idContacto != id);
     localStorage.setItem("contacto", JSON.stringify(contactos));
     fnMostrarListaContactos();
 }
@@ -326,14 +325,14 @@ btnBuscarParticipantes.addEventListener("click", function () {
     let idGrupo = document.getElementById("idGrupoAgregarParticipante").value;
     let valor = document.getElementById("nombreParticipanteGrupo").value;
     let participantesActuales = buscarParticipantes();
-    let resultado = participantesActuales.filter(x => (x.nombre + " " + x.apellidoPat + " " + x.apellidoMat).includes(valor));
+    let resultado = participantesActuales.filter(x => (x.nombre + " " + x.appellidoP + " " + x.apellidoM).includes(valor));
     if (resultado.length > 0) {
         let rows = "";
         let count = 0;
         resultado.forEach(part => {
             count += 1;
-            let estatus = '<button type="button" data-id="' + part.id + '" data-grupo="' + idGrupo + '" data-nombre="' + part.nombre + '" data-apellidop="' + part.apellidoPat + '" data-apellidom="' + part.apellidoMat + '" data-telefono="' + part.telefono + '" id="btnAgregarParticipante" class="btn btn-primary">Agregar</button>';
-            let row = `<tr><td>${count}</td><td>${part.nombre} ${part.apellidoPat} ${part.apellidoMat}</td><td>${estatus}</td></tr>`;
+            let estatus = '<button type="button" data-id="' + part.idContacto + '" data-grupo="' + idGrupo + '" data-nombre="' + part.nombre + '" data-apellidop="' + part.appellidoP + '" data-apellidom="' + part.apellidoM + '" data-telefono="' + part.telefono + '" id="btnAgregarParticipante" class="btn btn-primary">Agregar</button>';
+            let row = `<tr><td>${count}</td><td>${part.nombre} ${part.appellidoP} ${part.apellidoM}</td><td>${estatus}</td></tr>`;
             rows += row;
         });
         tablePersonasAgregar.innerHTML = rows;

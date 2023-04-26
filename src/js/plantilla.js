@@ -72,6 +72,21 @@ btnGuardar.addEventListener("click",function(){
     let id = plantillasActuales.length + 1;
     let nombre = txtNombre.value;
     let descripcion = txtDescripcion.textContent;
+    let listaImagenes = [];
+    let divImagenes = document.getElementById("div-imagenes");
+    let inputImagenes = divImagenes.getElementsByTagName("input");
+    if(inputImagenes.length > 0){
+        for(let i = 0; i<inputImagenes.length; i++){
+            if(inputImagenes[i].files.length > 0){
+                let path = inputImagenes[i].files[0].path;
+                let name = inputImagenes[i].files[0].name;
+                listaImagenes.push({
+                    path: path,
+                    nombre: name
+                })
+            }
+        }
+    }
     if(nombre == "" || descripcion == ""){
         return false;
     }
@@ -80,6 +95,7 @@ btnGuardar.addEventListener("click",function(){
         id:id,
         nombre:nombre,
         descripcion:descripcion,
+        listImagenes: listaImagenes,
         estatus:1,
         fechaCreacion:new Date(),
         fechaModificacion:""
@@ -163,10 +179,3 @@ btnActualizar.addEventListener("click",function(){
     fnMostrarPlantillas(obtenerPlantillas());
 })
 
-
-btnAgregarImagenPlantilla.addEventListener("click",function(){
-    let descripcion = txtDescripcion.textContent;
-    let texto = descripcion + '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />';
-    console.log(texto)
-    $("#txtDescripcionEdit")[0].emojioneArea.setText(texto);
-})

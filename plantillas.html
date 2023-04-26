@@ -13,7 +13,6 @@
     <script src="./vendor/jquery/jquery.slim.min.js"></script>
     <script src="./vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./src/plugins/emojionearea/dist/emojionearea.js"></script>
-
     <title>Plantillas</title>
 </head>
 
@@ -86,13 +85,28 @@
                                             placeholder="Nombre" required>
                                     </div>
                                 </div>
+                                <div>
+                                    <div class="row form-group">
+                                        <div class="col-12 col-md-12">
+                                            <div class="control-group" id="fields">
+                                                <label class="control-label" for="field1">
+                                                    Imagenes
+                                                </label>
+                                                <div class="controls" id="div-imagenes">
+                                                    <div class="entry input-group upload-input-group" style="margin-bottom: 10px;">
+                                                        <input class="form-control" name="fields[]" type="file" accept=".png,.jpg,.jpeg">
+                                                        <button class="btn btn-upload btn-success btn-agregar"
+                                                            type="button">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div id="div-descripcion-plantilla">
                                     <label for="formGroupExampleInput">Descripción</label>
-                                    <div class="text-right">
-                                        <button type="button" id="agregarImagenPlantilla" class="btn btn-primary btn-sm">
-                                            Agregar imagen 
-                                          </button>
-                                    </div>
                                     <div id="txtDescripcion"></div>
                                     <p></p>
                                 </div>
@@ -187,6 +201,26 @@
     </div>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
+        $(function () {
+            $(document).on('click', '.btn-agregar', function (e) {
+                e.preventDefault();
+
+                var controlForm = $('.controls:first'),
+                    currentEntry = $(this).parents('.entry:first'),
+                    newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+                newEntry.find('input').val('');
+                controlForm.find('.entry:not(:last) .btn-agregar')
+                    .removeClass('btn-agregar').addClass('btn-remove')
+                    .removeClass('btn-success').addClass('btn-danger')
+                    .html('<span class="fa fa-trash"></span>');
+            }).on('click', '.btn-remove', function (e) {
+                $(this).parents('.entry:first').remove();
+
+                e.preventDefault();
+                return false;
+            });
+        });
     </script>
     <script>
         require('./src/js/main.js');
