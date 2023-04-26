@@ -283,11 +283,17 @@ actualizarCampania.addEventListener("click",function(){
                         let listaImagenes = plantilla[0].listImagenes;
                         setTimeout(async function(){
                             let promise = new Promise(async (resolve) =>{
-                                //let response = await fnEnviarMensajeContacto(numeroTelefono,mensaje);
-                                let response = await fnEnviarMensajeMediaContacto(numeroTelefono,mensaje,listaImagenes);
-                                resolve({
-                                    data:response
-                                })
+                                if(listaImagenes.length > 0){
+                                    let response = await fnEnviarMensajeMediaContacto(numeroTelefono,mensaje,listaImagenes);
+                                    resolve({
+                                        data:response
+                                    })
+                                }else{
+                                    let response = await fnEnviarMensajeContacto(numeroTelefono,mensaje);
+                                    resolve({
+                                        data:response
+                                    })
+                                }
                             });
                             let respuesta = await promise;
                             console.log(respuesta)
