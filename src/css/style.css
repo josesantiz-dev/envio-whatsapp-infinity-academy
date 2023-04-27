@@ -1,3 +1,11 @@
+:root{
+  --colorIconoBotones: #ffffff;
+  --colorPrincipal: #041854;
+  --colorBoton: #041854;
+  --colorNavbar: #040d60;
+  --boderTopNavbar: 1px solid rgba(0, 0, 0, 0.3);
+  --coloTabs: #0062cc;
+}
 html {  
     position: relative;  
     min-height: 100%;  
@@ -12,16 +20,16 @@ html {
 .navbar-brand{
   padding-left: 20px;
 }
-.footer {  
+/* .footer {  
   position: absolute;  
   bottom: 0;  
   width: 100%;  
   height: 1.5rem;  
   line-height: 3.5rem;  
   background-color: #ccc;  
-}  
+}   */
 .bg-dark {  
-    background-color: #041854!important;
+    background-color: var(--colorPrincipal)!important;
 }  
 /* .bg-dark {  
   background-color: #041854!important;
@@ -54,9 +62,9 @@ html {
     width: 230px;  
     height: calc(100vh - 3.5rem);  
     margin-top: 3.5rem;  
-    background: #040d60;  
+    background: var(--colorNavbar);  
     box-sizing: border-box;  
-    border-top: 1px solid rgba(0, 0, 0, 0.3);  
+    border-top: var(--boderTopNavbar);  
   }  
   .navbar-expand-lg .sidenav {  
     flex-direction: column;  
@@ -75,9 +83,9 @@ html {
 } 
 
 .button {
-  background-color: #041854;
+  background-color: var(--colorBoton);
   border: none;
-  color: white;
+  color: var(--colorIconoBotones);
   padding: 3px 18px;
   text-align: center;
   text-decoration: none;
@@ -91,7 +99,7 @@ html {
 
 /*Tabs*/
 .project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-  color: #041854;
+  color: var(--colorPrincipal);
   background-color: transparent;
 
   border-bottom: 3px solid !important;
@@ -102,23 +110,25 @@ html {
   border: 1px solid transparent;
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
-  color: #0062cc;
+  color: var(--coloTabs);
   font-size: 16px;
   font-weight: 600;
 }
 .project-tab .nav-link:hover {
   border: none;
 }
-.project-tab thead{
-  /* background: #f3f3f3; */
-  color: #333;
-}
-.project-tab a{
+/* .project-tab a{
   text-decoration: none;
   color: #333;
   font-weight: 600;
+} */
+#nav-tab i{
+  color: var(--colorPrincipal);
 }
 
+.fa-solid{
+  color: var(--colorIconoBotones);
+}
 
 /*EMOGIS*/
 #div-descripcion-plantilla {
