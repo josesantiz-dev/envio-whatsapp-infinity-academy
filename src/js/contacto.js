@@ -26,10 +26,10 @@ const btnSubirMasivoContacto = document.getElementById("btnSubirCSV");
 btnGuardarContactos.addEventListener("click", function () {
     let formContactos = document.querySelector("#formContactos");
     let nombreContacto = document.getElementById("txtNombreContacto").value;
-    let apePatContacto = document.getElementById("txtApPatContacto").value;
-    let apeMatContacto = document.getElementById("txtApMatContacto").value;
+    /* let apePatContacto = document.getElementById("txtApPatContacto").value;
+    let apeMatContacto = document.getElementById("txtApMatContacto").value; */
     let teleContacto = document.getElementById("txtTelNuevo").value;
-    if (nombreContacto == "" || apePatContacto == "" || apeMatContacto == "" || teleContacto == "") {
+    if (nombreContacto == "" || teleContacto == "") {
         return false;
     }
     let listaContactos = obtenerListaContactos();
@@ -37,8 +37,8 @@ btnGuardarContactos.addEventListener("click", function () {
     listaContactos.push({
         idContacto: id,
         nombre: nombreContacto,
-        appellidoP: apePatContacto,
-        apellidoM: apeMatContacto,
+        /* appellidoP: apePatContacto,
+        apellidoM: apeMatContacto, */
         telefono: teleContacto,
         fechaCreacion: new Date(),
         fechaActualizacion: ""
@@ -89,7 +89,7 @@ function fnMostrarListaContactos() {
                                     </div>
                                     </div>
                                 </div>`;
-            let row = `<tr><td>${count}</td><td>${contactos.nombre + ' ' + contactos.appellidoP + ' ' + contactos.apellidoM}</td><td>${contactos.telefono}</td><td>${btnAcciones}</td></tr>`;
+            let row = `<tr><td>${count}</td><td>${contactos.nombre}</td><td>${contactos.telefono}</td><td>${btnAcciones}</td></tr>`;
             rows += row;
         });
         tableContactos.innerHTML = rows;
@@ -106,8 +106,8 @@ function fnEditContactos(value) {
     let contacto = listaContactos.filter(x => x.idContacto == id);
     document.getElementById("idContactosEdit").value = id;
     document.getElementById("txtNombreContactoEdit").value = contacto[0].nombre;
-    document.getElementById("txtApPatContactoEdit").value = contacto[0].appellidoP;
-    document.getElementById("txtApMatContactoEdit").value = contacto[0].apellidoM;
+    /* document.getElementById("txtApPatContactoEdit").value = contacto[0].appellidoP;
+    document.getElementById("txtApMatContactoEdit").value = contacto[0].apellidoM; */
     document.getElementById("txtTelNuevoEdit").value = contacto[0].telefono;
 }
 
@@ -115,17 +115,17 @@ function fnEditContactos(value) {
 actualizarContactos.addEventListener("click", function () {
     let id = document.getElementById("idContactosEdit").value;
     let nombre = document.getElementById("txtNombreContactoEdit").value;
-    let apellidoPat = document.getElementById("txtApPatContactoEdit").value;
-    let apellidoMat = document.getElementById("txtApMatContactoEdit").value;
+    /* let apellidoPat = document.getElementById("txtApPatContactoEdit").value;
+    let apellidoMat = document.getElementById("txtApMatContactoEdit").value; */
     let telefono = document.getElementById("txtTelNuevoEdit").value;
-    if (nombre == "" || apellidoPat == "" || apellidoMat == "" || telefono == "") {
+    if (nombre == "" || telefono == "") {
         return false;
     }
     let listaContactos = obtenerListaContactos();
     let contacto = listaContactos.filter(x => x.idContacto == id);
     contacto[0].nombre = nombre;
-    contacto[0].appellidoP = apellidoPat;
-    contacto[0].apellidoM = apellidoMat;
+    /* contacto[0].appellidoP = apellidoPat;
+    contacto[0].apellidoM = apellidoMat; */
     contacto[0].telefono = telefono;
     contacto[0].fechaActualizacion = new Date();
     localStorage.setItem("contacto", JSON.stringify(listaContactos));
@@ -431,23 +431,25 @@ btnSubirMasivoContacto.addEventListener('click', async function (e) {
 });
 
 function fnGuardarMasivoContacto(data){
+    let formSubirCSV = document.querySelector("#formSubirCSV");
     let contactosActuales = obtenerListaContactos();
     let count = 0;
     data.forEach(element => {
         count += 1;
         let nombre = element.Nombre;
-        let apellidosPaterno = element.ApellidoPaterno;
-        let apellidosMaterno = element.ApellidoMaterno;
+        /* let apellidosPaterno = element.ApellidoPaterno;
+        let apellidosMaterno = element.ApellidoMaterno; */
         let telefono = element.Telefono;
         contactosActuales.push({
             idContacto: new Date().getTime() + count,
             nombre: nombre,
-            appellidoP: apellidosPaterno,
-            apellidoM: apellidosMaterno,
+            /* appellidoP: apellidosPaterno,
+            apellidoM: apellidosMaterno, */
             telefono: telefono
         });
     });
     localStorage.setItem("contacto",JSON.stringify(contactosActuales));
+    formSubirCSV.reset();
     $("#modal-subir-csv").modal("hide");
     fnMostrarListaContactos();
 }
