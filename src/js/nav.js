@@ -11,8 +11,8 @@ var navbar = `
 </head>
 <body>
     
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">  
-    <a class="navbar-brand" href="index.html"> Whatsapp academy </a>  
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark"> 
+    <a class="navbar-brand" href="index.html"><img width="96px" src="./src/images/LOGO_HORIZONTAL.png" alt=""> </a>  
     <button  
       class="navbar-toggler"  
       type="button"  
