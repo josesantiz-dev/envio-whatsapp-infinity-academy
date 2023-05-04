@@ -37,6 +37,7 @@ function fnMostrarPlantillas(plantillas){
     let rows = "";
     let count = 0;
     plantillas.forEach(element => {
+        console.log(element);
         count += 1;
         let estatus =(element.estatus == 1)?"Activo":"Innactivo";
         let acciones = `<div class="text-center">
@@ -61,7 +62,7 @@ function fnMostrarPlantillas(plantillas){
                 </div>
             </div>
         </div>`;
-        let row = `<tr><td>${count}</td><td>${element.nombre}</td><td>${estatus}</td><td>${acciones}</td></tr>`;
+        let row = `<tr><td>${count}</td><td>${element.nombre}</td><td>img</td><td>${acciones}</td></tr>`;
         rows += row;
     });
     tablePlantillas.innerHTML = rows;
