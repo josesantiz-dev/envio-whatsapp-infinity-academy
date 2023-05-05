@@ -37,9 +37,9 @@ function fnMostrarPlantillas(plantillas){
     let rows = "";
     let count = 0;
     plantillas.forEach(element => {
-        console.log(element);
         count += 1;
         let estatus =(element.estatus == 1)?"Activo":"Innactivo";
+        let imagenes = (element.listImagenes[0].path);
         let acciones = `<div class="text-center">
             <div class="btn-group">
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -62,13 +62,14 @@ function fnMostrarPlantillas(plantillas){
                 </div>
             </div>
         </div>`;
-        let row = `<tr><td>${count}</td><td>${element.nombre}</td><td>img</td><td>${acciones}</td></tr>`;
+        let row = `<tr><td>${count}</td><td>${element.nombre}</td><td><img width="38px" class="img-circle" src="${imagenes}" style="border-radius: 50%;"></td><td>${estatus}</td><td>${acciones}</td></tr>`;
         rows += row;
     });
     tablePlantillas.innerHTML = rows;
 }
 
 btnGuardar.addEventListener("click",function(){
+    let formPlantillas = document.querySelector("#formPlantillas");
     let plantillasActuales = obtenerPlantillas();
     let id = plantillasActuales.length + 1;
     let nombre = txtNombre.value;
@@ -105,6 +106,7 @@ btnGuardar.addEventListener("click",function(){
     //let plantillasGuardar = plantillasActuales.concat(plantillas.getPlantillas());
     //plantillasGuardar = JSON.stringify(plantillasGuardar);
     //localStorage.setItem("plantillas",plantillasGuardar);
+    formPlantillas.reset();
     $("#modal-nueva-plantilla").modal("hide");
     fnMostrarPlantillas(obtenerPlantillas());
 })
