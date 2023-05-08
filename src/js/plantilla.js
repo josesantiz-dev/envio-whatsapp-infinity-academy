@@ -62,7 +62,7 @@ function fnMostrarPlantillas(plantillas){
                 </div>
             </div>
         </div>`;
-        let row = `<tr><td>${count}</td><td>${element.nombre}</td><td><img width="38px" class="img-circle" src="${imagenes}" style="border-radius: 50%;"></td><td>${estatus}</td><td>${acciones}</td></tr>`;
+        let row = `<tr><td>${count}</td><td>${element.nombre}</td><td><img width="38px" src="${imagenes}"></td><td>${estatus}</td><td>${acciones}</td></tr>`;
         rows += row;
     });
     tablePlantillas.innerHTML = rows;

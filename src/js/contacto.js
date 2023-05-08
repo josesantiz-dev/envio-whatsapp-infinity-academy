@@ -19,6 +19,7 @@ const tableGrupos = document.querySelector('#tableGrupos tbody');
 const btnBuscarParticipantes = document.getElementById("btnBuscarParticipantes");
 
 const excelInput = document.getElementById("excel-input");
+const excelInputGroup = document.getElementById("excel-input-group");
 const btnSubirMasivoContacto = document.getElementById("btnSubirCSV");
 
 
@@ -147,7 +148,7 @@ function fnDelContactos(value) {
 
 
 //Guardar Grupos
-btnGuardarGrupos.addEventListener("click", function () {
+/* btnGuardarGrupos.addEventListener("click", function () {
     let formGrupos = document.querySelector("#formgrupos");
     let nombreGrupo = document.getElementById("txtNombregrupo").value;
     if (nombreGrupo == "") {
@@ -167,7 +168,86 @@ btnGuardarGrupos.addEventListener("click", function () {
     formGrupos.reset();
     $("#modal-nuevo-grupo").modal('hide');
     fnMostrarListaGrupos();
+}); */
+
+btnGuardarGrupos.addEventListener('click', async function (e) {
+    const filePath = excelInputGroup.files[0].path;
+    const file = reader.readFile(filePath)
+    let data = []
+    const sheets = file.SheetNames
+    const temp = reader.utils.sheet_to_json(
+        file.Sheets[file.SheetNames[0]])
+    
+    temp.forEach((res) => {
+        data.push(res)
+    })
+    fnGuardarGrupo(data);
 });
+
+function fnGuardarGrupo(data){
+    let nombreGrupo = document.getElementById("txtNombregrupo").value;
+    if (nombreGrupo == "") {
+        return false;
+    }
+    let listaGrupos = obtenerListaGrupos();
+    let id = new Date().getTime();
+
+    let formgrupos = document.querySelector("#formgrupos");
+    let contactosActuales = obtenerListaContactos();
+    let count = 0;
+    data.forEach(element => {
+        count += 1;
+        let nombre = element.Nombre;
+        let telefono = element.Telefono;
+        contactosActuales.push({
+            idContacto: new Date().getTime() + count,
+            nombre: nombre,
+            telefono: telefono
+        });
+    });
+
+    listaGrupos.push({
+        id: id,
+        nombre: nombreGrupo,
+        fechaCreacion: new Date(),
+        fechaActualizacion: "",
+        estatus: 1
+
+    });
+
+    if(data){
+    localStorage.setItem("contacto",JSON.stringify(contactosActuales));
+    fnMostrarListaContactos();
+    }
+    if(listaGrupos){
+    localStorage.setItem("grupo", JSON.stringify(listaGrupos));
+    fnMostrarListaGrupos();
+    }
+
+    /* let gruposActuales = obtenerListaGrupos();
+    let grupo = gruposActuales.filter(x => x.id == id);
+    let participantes = (grupo[0].participantes != undefined) ? grupo[0].participantes : [];
+    let isExistParticipante = participantes.filter(x => x.idContacto == idContacto);
+    if (isExistParticipante.length > 0) {
+        alert("El contacto ya existe en este grupo!!");
+        return false;
+    }
+    data.forEach(element => {
+        count += 1;
+        let nombre = element.Nombre;
+        let telefono = element.Telefono;
+        contactosActuales.push({
+            idContacto: new Date().getTime() + count,
+            nombre: nombre,
+            telefono: telefono
+        });
+    });
+    grupo[0].contactosActuales = contactosActuales;
+    localStorage.setItem("grupo", JSON.stringify(gruposActuales)); */
+
+    formgrupos.reset();
+    $("#modal-nuevo-grupo").modal("hide");
+}
 
 //Obtener Lista de grupos
 function obtenerListaGrupos() {
@@ -332,7 +412,7 @@ btnBuscarParticipantes.addEventListener("click", function () {
         resultado.forEach(part => {
             count += 1;
             let estatus = '<button type="button" data-id="' + part.idContacto + '" data-grupo="' + idGrupo + '" data-nombre="' + part.nombre + '" data-apellidop="' + part.appellidoP + '" data-apellidom="' + part.apellidoM + '" data-telefono="' + part.telefono + '" id="btnAgregarParticipante" class="btn btn-primary">Agregar</button>';
-            let row = `<tr><td>${count}</td><td>${part.nombre} ${part.appellidoP} ${part.apellidoM}</td><td>${estatus}</td></tr>`;
+            let row = `<tr><td>${count}</td><td>${part.nombre}</td><td>${part.telefono}</td><td>${estatus}</td></tr>`;
             rows += row;
         });
         tablePersonasAgregar.innerHTML = rows;
@@ -358,6 +438,7 @@ tablePersonasAgregar.addEventListener('click', function (e) {
 
 function fnAgregarParticipanteGrupo(value) {
     let datos = value.dataset;
+    console.log(datos);
     let idGrupo = datos.grupo;
     let idContacto = datos.id;
     let nombreContacto = datos.nombre;
@@ -417,7 +498,7 @@ btnSubirMasivoContacto.addEventListener('click', async function (e) {
     temp.forEach((res) => {
         data.push(res)
     })
-    fnGuardarMasivoContacto(data);    
+    fnGuardarMasivoContacto(data);  
    /*  for(let i = 0; i < sheets.length; i++)
     {
        const temp = reader.utils.sheet_to_json(
