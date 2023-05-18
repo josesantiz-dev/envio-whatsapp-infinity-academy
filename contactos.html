@@ -28,14 +28,14 @@
                 <div class="text-right">
                     <!-- <div class="tab-pane fade show active" id="nav-contactos" role="tabpanel" aria-labelledby="nav-contactos-tab"> -->
                     <!-- <button onclick="exportTableToExcel('tblData', 'excel_data')">Export Table e</button> -->
-                    <a href="#" id="btnExportarContactos" class="button btn btn-secondary" onclick="exportContactosExcel(jQuery('#tableContactos'));"><i class="fa-solid fa-plus"></i>Exportar contacto</a>
+                    <a href="#" id="btnExportarContactos" class="button btn btn-secondary"><i class="fa-solid fa-plus"></i>Exportar contacto</a>
                     <a href="#" id="btnAbrirVentanaNuevoContacto" class="button btn btn-primary" data-toggle="modal"
                         data-target="#modal-nuevo-contacto"><i class="fa-solid fa-plus"></i>Agregar contacto</a>
                     <a href="#" id="btnAbrirVentanaContactosMasivos" class="button btn btn-primary" data-toggle="modal"
                         data-target="#modal-subir-csv"><i class="fa-solid fa-arrow-up-from-bracket"></i>Subir Excel</a>
                     <!-- </div> -->
                     <!-- <div class="tab-pane fade" id="nav-grupos" role="tabpanel" aria-labelledby="nav-grupos-tab"> -->
-                    <a href="#" id="btnExportarGrupos" class="button btn btn-secondary" onclick="exportGruposExcel(jQuery('#tableGrupos'));"><i class="fa-solid fa-plus"></i>Exportar grupos</a>
+                    <a href="#" id="btnExportarGrupos" class="button btn btn-secondary"><i class="fa-solid fa-plus"></i>Exportar grupos</a>
                     <a href="#" id="btnAbrirVentanaNuevoGrupos" class="button btn btn-primary" data-toggle="modal"
                         data-target="#modal-nuevo-grupo"><i class="fa-solid fa-plus"></i>Crear grupos</a>
                     <!-- </div> -->
@@ -472,39 +472,6 @@
             return false;
         }
 
-
-
-
-        //Exportar contactos
-        function exportContactosExcel(tabla) {
-            var clone = tabla.clone();
-            var trs = clone.find('tr');
-            $.each(trs, function(i, tr) {
-                $(tr).find('th:eq(3)').remove(); 
-                $(tr).find('td:eq(3)').remove(); 
-            });
-            var htmlExport = clone.prop('outerHTML');
-            var ua = window.navigator.userAgent;
-            var msie = ua.indexOf("MSIE ");
-
-            if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-                jQuery('body').append("<iframe id=\"iframeExport\" style=\"display:none\"></iframe>");
-                iframeExport.document.open("txt/html", "replace");
-                iframeExport.document.write(htmlExport);
-                iframeExport.document.close();
-                iframeExport.focus();
-                sa = iframeExport.document.execCommand("SaveAs", true, "Lista-contactos.xls");
-            }
-            else {
-                var link = document.createElement('a');
-
-                document.body.appendChild(link);
-                link.download = "Lista-contactos.xls";
-                link.href = 'data:application/vnd.ms-excel,' + escape(htmlExport);
-                link.click();
-                document.body.removeChild(link);
-            }
-        }
 
         //Exportar grupos
         function exportGruposExcel(tabla) {

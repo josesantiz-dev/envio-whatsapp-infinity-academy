@@ -2,6 +2,8 @@ const ipc = require('electron').ipcRenderer;
 const url = require('url');
 const path = require('path');
 const reader = require('xlsx')
+const ExcelJS = require('exceljs');
+
 
 //Contactos
 const btnGuardarContactos = document.getElementById("btnGuardarContactos");
@@ -534,3 +536,71 @@ function fnGuardarMasivoContacto(data){
     $("#modal-subir-csv").modal("hide");
     fnMostrarListaContactos();
 }
+
+btnExportarContactos.addEventListener('click', async function (e) {
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Sheet 1');
+
+    let contactosActuales = obtenerListaContactos();
+
+    const headers = Object.keys(contactosActuales[0]);
+    worksheet.addRow(headers);
+
+    contactosActuales.forEach(row => {
+        const rowData = Object.values(row);
+        worksheet.addRow(rowData);
+    });
+
+      // Generar el archivo Excel
+    workbook.xlsx.writeBuffer().then(function(buffer) {
+        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+        // Crear un enlace de descarga
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'Lista-contactos.xls';
+        link.click();
+
+        // Limpiar recursos después de la descarga
+        setTimeout(function() {
+        URL.revokeObjectURL(link.href);
+        }, 100);
+    });
+});
+
+btnExportarGrupos.addEventListener('click', async function (e) {
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Sheet 1');
+
+    let contactosActuales = obtenerListaContactos();
+
+    let grupoActuales = obtenerListaGrupos();
+    let participantes = grupoActuales[0].participantes;
+    contactosActuales.forEach(row => {
+        let idContacto = row.idContacto;
+        let exist = participantes.filter(x => x.idContacto == idContacto);
+    });
+/*     const headers = Object.keys(contactosActuales[0]);
+    worksheet.addRow(headers);
+
+    contactosActuales.forEach(row => {
+        const rowData = Object.values(row);
+        worksheet.addRow(rowData);
+    });
+
+      // Generar el archivo Excel
+    workbook.xlsx.writeBuffer().then(function(buffer) {
+        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+        // Crear un enlace de descarga
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'Lista-contactos.xls';
+        link.click();
+
+        // Limpiar recursos después de la descarga
+        setTimeout(function() {
+        URL.revokeObjectURL(link.href);
+        }, 100);
+    }); */
+});
