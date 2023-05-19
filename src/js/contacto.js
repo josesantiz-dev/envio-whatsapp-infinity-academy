@@ -173,16 +173,17 @@ function fnDelContactos(value) {
 }); */
 
 btnGuardarGrupos.addEventListener('click', async function (e) {
-    const filePath = excelInputGroup.files[0].path;
-    const file = reader.readFile(filePath)
     let data = []
-    const sheets = file.SheetNames
-    const temp = reader.utils.sheet_to_json(
-        file.Sheets[file.SheetNames[0]])
-    
-    temp.forEach((res) => {
-        data.push(res)
-    })
+    if(excelInputGroup.files.length > 0){
+        const filePath = excelInputGroup.files[0].path;
+        const file = reader.readFile(filePath)
+        const sheets = file.SheetNames
+        const temp = reader.utils.sheet_to_json(file.Sheets[file.SheetNames[0]])
+        temp.forEach((res) => {
+            data.push(res)
+        })
+
+    }
     fnGuardarGrupo(data);
 });
 
@@ -196,27 +197,28 @@ function fnGuardarGrupo(data){
 
     let formgrupos = document.querySelector("#formgrupos");
     let contactosActuales = obtenerListaContactos();
+    let arrContactosGrupo = [];
     let count = 0;
     data.forEach(element => {
         count += 1;
         let nombre = element.Nombre;
         let telefono = element.Telefono;
-        contactosActuales.push({
+        let newContacto = {
             idContacto: new Date().getTime() + count,
             nombre: nombre,
             telefono: telefono
-        });
+        }
+        contactosActuales.push(newContacto);
+        arrContactosGrupo.push(newContacto);
     });
-
     listaGrupos.push({
         id: id,
         nombre: nombreGrupo,
         fechaCreacion: new Date(),
         fechaActualizacion: "",
-        estatus: 1
-
+        estatus: 1,
+        participantes:arrContactosGrupo
     });
-
     if(data){
     localStorage.setItem("contacto",JSON.stringify(contactosActuales));
     fnMostrarListaContactos();
@@ -226,26 +228,6 @@ function fnGuardarGrupo(data){
     fnMostrarListaGrupos();
     }
 
-    /* let gruposActuales = obtenerListaGrupos();
-    let grupo = gruposActuales.filter(x => x.id == id);
-    let participantes = (grupo[0].participantes != undefined) ? grupo[0].participantes : [];
-    let isExistParticipante = participantes.filter(x => x.idContacto == idContacto);
-    if (isExistParticipante.length > 0) {
-        alert("El contacto ya existe en este grupo!!");
-        return false;
-    }
-    data.forEach(element => {
-        count += 1;
-        let nombre = element.Nombre;
-        let telefono = element.Telefono;
-        contactosActuales.push({
-            idContacto: new Date().getTime() + count,
-            nombre: nombre,
-            telefono: telefono
-        });
-    });
-    grupo[0].contactosActuales = contactosActuales;
-    localStorage.setItem("grupo", JSON.stringify(gruposActuales)); */
 
     formgrupos.reset();
     $("#modal-nuevo-grupo").modal("hide");
@@ -440,12 +422,9 @@ tablePersonasAgregar.addEventListener('click', function (e) {
 
 function fnAgregarParticipanteGrupo(value) {
     let datos = value.dataset;
-    console.log(datos);
     let idGrupo = datos.grupo;
     let idContacto = datos.id;
     let nombreContacto = datos.nombre;
-    let apellidoP = datos.apellidop;
-    let apellidoM = datos.apellidom;
     let telefono = datos.telefono;
     let gruposActuales = obtenerListaGrupos();
     let grupo = gruposActuales.filter(x => x.id == idGrupo);
@@ -458,8 +437,6 @@ function fnAgregarParticipanteGrupo(value) {
     participantes.push({
         idContacto: idContacto,
         nombre: nombreContacto,
-        appellidoP: apellidoP,
-        apellidoM: apellidoM,
         telefono: telefono
     })
     grupo[0].participantes = participantes;
@@ -478,7 +455,7 @@ function fnVerParticipantesGrupo(value) {
         let rows = "";
         participantes.forEach(participante => {
             count += 1;
-            let nombre = (participante.nombre != undefined) ? participante.nombre : "" + " " + (participante.apellidoP != undefined) ? participante.apellidoP : "" + " " + (participante.apellidoM != undefined) ? participante.apellidoM : "";
+            let nombre = (participante.nombre != undefined) ? participante.nombre : "";
             let telefono = (participante.telefono != undefined) ? participante.telefono : "";
             let row = `<tr><td>${count}</td><td>${nombre}</td><td>${telefono}</td></tr>`;
             rows += row;
@@ -538,69 +515,53 @@ function fnGuardarMasivoContacto(data){
 }
 
 btnExportarContactos.addEventListener('click', async function (e) {
-    const workbook = new ExcelJS.Workbook();
-    const worksheet = workbook.addWorksheet('Sheet 1');
-
     let contactosActuales = obtenerListaContactos();
-
-    const headers = Object.keys(contactosActuales[0]);
-    worksheet.addRow(headers);
-
-    contactosActuales.forEach(row => {
-        const rowData = Object.values(row);
-        worksheet.addRow(rowData);
-    });
-
-      // Generar el archivo Excel
-    workbook.xlsx.writeBuffer().then(function(buffer) {
-        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-
-        // Crear un enlace de descarga
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'Lista-contactos.xls';
-        link.click();
-
-        // Limpiar recursos después de la descarga
-        setTimeout(function() {
-        URL.revokeObjectURL(link.href);
-        }, 100);
-    });
+    exportarJSONExcel(contactosActuales,"Lista-Contactos");
 });
 
 btnExportarGrupos.addEventListener('click', async function (e) {
+    let arrContactosGrupos = [];
+    let grupoActuales = obtenerListaGrupos();
+    grupoActuales.forEach(grupo => {
+        let nombreGrupo = grupo.nombre;
+        let listaParticipantes = grupo.participantes;
+        listaParticipantes.forEach(participante => {
+            let idParticipante = participante.idContacto;
+            let nombre = participante.nombre;
+            let telefono = participante.telefono;
+            let objParticipante = {
+                idPersona: idParticipante,
+                nombrePersona: nombre,
+                telefono: telefono,
+                nombreGrupo: nombreGrupo
+            }
+            arrContactosGrupos.push(objParticipante);
+        })
+    });
+    exportarJSONExcel(arrContactosGrupos,"Lista-Grupos-Contactos")
+});
+
+
+function exportarJSONExcel(arrDatos,nombreArchivo){
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Sheet 1');
-
-    let contactosActuales = obtenerListaContactos();
-
-    let grupoActuales = obtenerListaGrupos();
-    let participantes = grupoActuales[0].participantes;
-    contactosActuales.forEach(row => {
-        let idContacto = row.idContacto;
-        let exist = participantes.filter(x => x.idContacto == idContacto);
-    });
-/*     const headers = Object.keys(contactosActuales[0]);
+    const headers = Object.keys(arrDatos[0]);
     worksheet.addRow(headers);
-
-    contactosActuales.forEach(row => {
+    arrDatos.forEach(row => {
         const rowData = Object.values(row);
         worksheet.addRow(rowData);
     });
-
-      // Generar el archivo Excel
+    // Generar el archivo Excel
     workbook.xlsx.writeBuffer().then(function(buffer) {
         const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-
         // Crear un enlace de descarga
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = 'Lista-contactos.xls';
+        link.download = nombreArchivo+ '.xls';
         link.click();
-
         // Limpiar recursos después de la descarga
         setTimeout(function() {
         URL.revokeObjectURL(link.href);
         }, 100);
-    }); */
-});
+    });
+}
