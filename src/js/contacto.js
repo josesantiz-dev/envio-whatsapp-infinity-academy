@@ -40,11 +40,10 @@ btnGuardarContactos.addEventListener("click", function () {
     listaContactos.push({
         idContacto: id,
         nombre: nombreContacto,
-        /* appellidoP: apePatContacto,
-        apellidoM: apeMatContacto, */
         telefono: teleContacto,
         fechaCreacion: new Date(),
-        fechaActualizacion: ""
+        fechaActualizacion: "",
+        estatus: 1
 
     });
     localStorage.setItem("contacto", JSON.stringify(listaContactos));
@@ -127,8 +126,6 @@ actualizarContactos.addEventListener("click", function () {
     let listaContactos = obtenerListaContactos();
     let contacto = listaContactos.filter(x => x.idContacto == id);
     contacto[0].nombre = nombre;
-    /* contacto[0].appellidoP = apellidoPat;
-    contacto[0].apellidoM = apellidoMat; */
     contacto[0].telefono = telefono;
     contacto[0].fechaActualizacion = new Date();
     localStorage.setItem("contacto", JSON.stringify(listaContactos));
@@ -146,31 +143,6 @@ function fnDelContactos(value) {
 }
 
 
-
-
-
-//Guardar Grupos
-/* btnGuardarGrupos.addEventListener("click", function () {
-    let formGrupos = document.querySelector("#formgrupos");
-    let nombreGrupo = document.getElementById("txtNombregrupo").value;
-    if (nombreGrupo == "") {
-        return false;
-    }
-    let listaGrupos = obtenerListaGrupos();
-    let id = new Date().getTime();
-    listaGrupos.push({
-        id: id,
-        nombre: nombreGrupo,
-        fechaCreacion: new Date(),
-        fechaActualizacion: "",
-        estatus: 1
-
-    });
-    localStorage.setItem("grupo", JSON.stringify(listaGrupos));
-    formGrupos.reset();
-    $("#modal-nuevo-grupo").modal('hide');
-    fnMostrarListaGrupos();
-}); */
 
 btnGuardarGrupos.addEventListener('click', async function (e) {
     let data = []
@@ -505,7 +477,8 @@ function fnGuardarMasivoContacto(data){
             nombre: nombre,
             /* appellidoP: apellidosPaterno,
             apellidoM: apellidosMaterno, */
-            telefono: telefono
+            telefono: telefono,
+            estatus: 1
         });
     });
     localStorage.setItem("contacto",JSON.stringify(contactosActuales));
@@ -524,7 +497,7 @@ btnExportarGrupos.addEventListener('click', async function (e) {
     let grupoActuales = obtenerListaGrupos();
     grupoActuales.forEach(grupo => {
         let nombreGrupo = grupo.nombre;
-        let listaParticipantes = grupo.participantes;
+        let listaParticipantes = (grupo.participantes == undefined)?[]:grupo.participantes;
         listaParticipantes.forEach(participante => {
             let idParticipante = participante.idContacto;
             let nombre = participante.nombre;

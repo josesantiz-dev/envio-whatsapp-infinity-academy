@@ -39,7 +39,7 @@ function fnMostrarPlantillas(plantillas){
     plantillas.forEach(element => {
         count += 1;
         let estatus =(element.estatus == 1)?"Activo":"Innactivo";
-        let imagenes = (element.listImagenes[0].path);
+        let imagenes = (element.listImagenes.length > 0)?element.listImagenes[0].path:"";
         let acciones = `<div class="text-center">
             <div class="btn-group">
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -89,10 +89,9 @@ btnGuardar.addEventListener("click",function(){
             }
         }
     }
-    if(nombre == "" || descripcion == ""){
-        return false;
+    if(nombre == "" || descripcion == "" || listaImagenes.length == 0){
+        alert("Los campos nombre, descripcion e  imagen , son obligatorios")
     }
-    //plantillas.setPlantilla(id,nombre,descripcion); 
     plantillasActuales.push({
         id:id,
         nombre:nombre,
@@ -103,9 +102,6 @@ btnGuardar.addEventListener("click",function(){
         fechaModificacion:""
     });
     localStorage.setItem("plantillas",JSON.stringify(plantillasActuales));
-    //let plantillasGuardar = plantillasActuales.concat(plantillas.getPlantillas());
-    //plantillasGuardar = JSON.stringify(plantillasGuardar);
-    //localStorage.setItem("plantillas",plantillasGuardar);
     formPlantillas.reset();
     $("#modal-nueva-plantilla").modal("hide");
     fnMostrarPlantillas(obtenerPlantillas());

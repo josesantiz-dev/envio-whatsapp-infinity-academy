@@ -7,7 +7,6 @@ function getGrupos(){
 function setGrupos(grupos){
     localStorage.setItem("grupo",grupos);
 }
-
 //Contactos
 function getContactos(){
     let contactos = localStorage.getItem("contactos");
