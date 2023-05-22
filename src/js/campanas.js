@@ -251,7 +251,7 @@ actualizarCampania.addEventListener("click",function(){
     fnMostrarCampaniasActuales();
  }
 
- function fnEnviarCampania(value){
+ /* function fnEnviarCampania(value){
     if(!isConnect){
         alert("Conecta con una cuenta de Whatsapp!!")
         return false;
@@ -295,6 +295,7 @@ actualizarCampania.addEventListener("click",function(){
                                     })
                                 }
                             });
+                            localStorage.setItem("listNegra",JSON.stringify(numeroTelefono));
                             let respuesta = await promise;
                             console.log(respuesta)
                             if(!respuesta.data.data.error){
@@ -324,7 +325,7 @@ actualizarCampania.addEventListener("click",function(){
         alert("Hubo un error al obtener datos!!");
         return false;
     }
- }
+ } */
 
  async function fnEnviarMensajeContacto(telefono,mensaje){
     let promise = new Promise((resolve) =>{
@@ -386,3 +387,109 @@ async function fnEnviarMensajeMediaContacto(telefono,mensaje,listImagenes){
     });
     return await promise;
 } */
+
+function fnEnviarCampania(value){
+    /* let numTel = numeroTelefono; */
+    /* console.log(numTel); */
+    if(!isConnect){
+        alert("Conecta con una cuenta de Whatsapp!!")
+        return false;
+    }
+    let datos = value.dataset;
+    let idCampania = datos.id;
+    let campania = obtenerCampaniasActuales().filter(x => x.id == idCampania);
+    if(campania.length > 0){
+        let grupo = obtenerListaGrupos().filter(x => x.id == Number(campania[0].idGrupo));
+        let plantilla = obtenerPlantillas().filter(x => x.id == Number(campania[0].idPlantilla));
+        let intervalo = Number(campania[0].intervalo) * 1000; //milisegundos
+        if(grupo.length > 0){
+            if(plantilla.length > 0){
+                let participantes = (grupo[0].participantes != undefined)?grupo[0].participantes:[];
+                let totalPaticipantes = participantes.length;
+                let enviados = 0;
+                let pendientes = totalPaticipantes - enviados;
+                let errores = 0;
+                let idTdEnviados = `tdenviados${campania[0].id}`;
+                let idTdPendientes = `tdpendientes${campania[0].id}`;
+                let idTdErrores = `tderrores${campania[0].id}`;
+                document.getElementById(idTdEnviados).innerHTML = enviados;
+                document.getElementById(idTdPendientes).innerHTML = pendientes;
+                document.getElementById(idTdErrores).innerHTML = errores;
+                if(participantes.length > 0){
+                    participantes.forEach(async participante => {
+                        let numeroTelefono = participante.telefono;
+                        let mensaje = plantilla[0].descripcion;
+                        let listaImagenes = plantilla[0].listImagenes;
+                        setTimeout(async function(){
+                            let promise = new Promise(async (resolve) =>{
+
+                                const listaNegra = obtenerListaNegra();
+                                console.log(listaNegra);
+                                if (listaNegra.includes(listaNegra)) {
+                                    console.log("El contacto está en la lista negra.");
+                                    return false;
+                                } else {
+                                    console.log("El contacto no está en la lista negra.");
+                                    
+                                if(listaImagenes.length > 0){
+                                    let response = await fnEnviarMensajeMediaContacto(numeroTelefono,mensaje,listaImagenes);
+                                    resolve({
+                                        data:response
+                                    })
+                                }else{
+                                    let response = await fnEnviarMensajeContacto(numeroTelefono,mensaje);
+                                    resolve({
+                                        data:response
+                                    })
+                                }
+
+                                return true;
+                                }
+
+                            });
+                            localStorage.setItem("listNegra",JSON.stringify(numeroTelefono));
+                            let respuesta = await promise;
+                            console.log(respuesta)
+                            if(!respuesta.data.data.error){
+                                console.log(respuesta.data);
+                                enviados += 1;
+                                pendientes = totalPaticipantes - (enviados + errores);
+                                document.getElementById(idTdEnviados).innerHTML = enviados;
+                                document.getElementById(idTdPendientes).innerHTML = pendientes;
+                            }else{
+                                errores += 1;
+                                document.getElementById(idTdErrores).innerHTML = errores;
+                            }
+                        },intervalo);
+                    });
+                }else{
+                    alert("No hay contacto agregado en el grupo!!!");
+                    return false;
+                }
+            }else{
+                alert("Error en la plantilla!!!");
+                return false;
+            }
+        }else{
+            alert("No hay grupo agreado!!");
+            return false;
+        }
+    }else{
+        alert("Hubo un error al obtener datos!!");
+        return false;
+    }
+ }
+
+
+//para obtebner lista negra
+function obtenerListaNegra() {
+    const listaNegra = localStorage.getItem('listNegra');
+    console.log(listaNegra);
+  
+    // Verificar si existe una lista negra en el almacenamiento
+    if (listaNegra) {
+        return JSON.parse(listaNegra);
+    } else {
+        return [];
+    }
+}
