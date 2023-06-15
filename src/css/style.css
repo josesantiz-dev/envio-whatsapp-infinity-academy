@@ -142,3 +142,8 @@ html {
     font-size: 1.1rem;
   }
 }
+
+
+.dataTables_wrapper .dataTables_filter input {
+  width: 500px; /* Ajusta el ancho del campo de búsqueda según tus necesidades */
+}

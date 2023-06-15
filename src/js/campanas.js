@@ -16,13 +16,16 @@ btnNuevaCampana.addEventListener('click', (event) =>{
 }) */
 
 document.addEventListener("DOMContentLoaded", function () {
+    dataTable1 = $('#tableCampanias').DataTable({
+        "pageLength": 10 // Establece el número de filas por página a 10
+    });
     fnMostrarCampaniasActuales();
 });
 
 function fnMostrarCampaniasActuales(){
     let campaniasActuales = obtenerCampaniasActuales();
     if(campaniasActuales.length > 0){
-        let rows = "";
+        //let rows = "";
         let count = 0;
         campaniasActuales.forEach(campania => {
             count += 1;
@@ -69,9 +72,13 @@ function fnMostrarCampaniasActuales(){
                     break;
             }
             let row = `<tr><td>${count}</td><td>${campania.nombre}</td><td id="tdenviados${campania.id}">0</td><td id="tderrores${campania.id}">0</td><td id="tdpendientes${campania.id}">0</td><td>${campania.fechaCreacion.split("T")[0]}</td><td></td><td>${estatus}</td><td>${acciones}</td></tr>`;
-            rows += row;
+          //  rows += row;
+
+            //var rowData = [count,campania.bnom.nombre,`<img width="38px" src="${imagenes}">`,estatus,acciones];
+            //dataTable.row.add(rowData).draw();
+            dataTable1.row.add($(row)).draw();
         });
-        tableCampanias.innerHTML = rows;
+      //  tableCampanias.innerHTML = rows;
     }
 };
 

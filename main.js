@@ -4,6 +4,7 @@ const path = require('path');
 const { dialog } = require('electron')
 const server = require('./app');
 
+
 let mainWindow
 
 function createWindow () {
@@ -15,8 +16,8 @@ function createWindow () {
     }
   })
 
-  mainWindow.loadFile('index.html')
-  
+  mainWindow.loadFile('index.html');
+
 
   mainWindow.on('closed', function () {
     mainWindow = null

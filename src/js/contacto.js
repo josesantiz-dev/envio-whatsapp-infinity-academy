@@ -64,6 +64,12 @@ function obtenerListaContactos() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    dataTableContactos = $('#tableContactos').DataTable({
+        "pageLength": 10 // Establece el número de filas por página a 10
+    });
+    dataTableGrupos = $('#tableGrupos').DataTable({
+        "pageLength": 10 // Establece el número de filas por página a 10
+    });
     fnMostrarListaContactos();
 });
 
@@ -71,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function fnMostrarListaContactos() {
     let listaContactos = obtenerListaContactos();
     if (listaContactos.length > 0) {
-        let rows = "";
+        //let rows = "";
         let count = 0;
         listaContactos.forEach(contactos => {
             count += 1;
@@ -92,9 +98,10 @@ function fnMostrarListaContactos() {
                                     </div>
                                 </div>`;
             let row = `<tr><td>${count}</td><td>${contactos.nombre}</td><td>${contactos.telefono}</td><td>${btnAcciones}</td></tr>`;
-            rows += row;
+            //rows += row;
+            dataTableContactos.row.add($(row)).draw();
         });
-        tableContactos.innerHTML = rows;
+        //tableContactos.innerHTML = rows;
     } else {
         tableContactos.innerHTML = "";
     }
@@ -224,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function fnMostrarListaGrupos() {
     let listaGrupos = obtenerListaGrupos();
     if (listaGrupos.length > 0) {
-        let rows = "";
+        //let rows = "";
         let count = 0;
         listaGrupos.forEach(grupos => {
             let participantes = (grupos.participantes != undefined) ? grupos.participantes : [];
@@ -253,9 +260,10 @@ function fnMostrarListaGrupos() {
                                     </div>
                                 </div>`;
             let row = `<tr><td>${count}</td><td>${grupos.nombre}</td><td>${participantes.length}</td><td>${estatus}</td><td>${btnAcciones}</td></tr>`;
-            rows += row;
+            //rows += row;
+            dataTableGrupos.row.add($(row)).draw();
         });
-        tableGrupos.innerHTML = rows;
+        //tableGrupos.innerHTML = rows;
     } else {
         tableGrupos.innerHTML = "";
     }

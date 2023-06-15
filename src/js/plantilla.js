@@ -17,6 +17,11 @@ document.getElementById("menu-plantillas").classList.add("active");
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    //dataTable = new DataTable('#tbl-plantillas');    
+    dataTable = $('#tbl-plantillas').DataTable({
+        "pageLength": 10 // Establece el número de filas por página a 10
+    });
+
     fnMostrarPlantillas(obtenerPlantillas());
     $("#txtDescripcion").emojioneArea({
         pickerPosition: "bottom"
@@ -34,7 +39,6 @@ function obtenerPlantillas(){
 
 
 function fnMostrarPlantillas(plantillas){
-    let rows = "";
     let count = 0;
     plantillas.forEach(element => {
         count += 1;
@@ -62,10 +66,9 @@ function fnMostrarPlantillas(plantillas){
                 </div>
             </div>
         </div>`;
-        let row = `<tr><td>${count}</td><td>${element.nombre}</td><td><img width="38px" src="${imagenes}"></td><td>${estatus}</td><td>${acciones}</td></tr>`;
-        rows += row;
+        var rowData = [count,element.nombre,`<img width="38px" src="${imagenes}">`,estatus,acciones];
+        dataTable.row.add(rowData).draw();
     });
-    tablePlantillas.innerHTML = rows;
 }
 
 btnGuardar.addEventListener("click",function(){

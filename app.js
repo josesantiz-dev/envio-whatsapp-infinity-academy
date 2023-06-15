@@ -91,6 +91,9 @@ io.on('connection', function(socket) {
     client.destroy();
     client.initialize();
   });
+  client.on('checkConnectionStatus', () => {
+    socket.emit('connectionStatus', client.getConnectionStatus());
+  });
 });
 
 
