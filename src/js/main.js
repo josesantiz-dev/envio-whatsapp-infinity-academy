@@ -5,8 +5,3 @@ socket.on("disconnected",function(msg){
     localStorage.setItem("connect","false");
 })
 
-// Asegúrate de tener la referencia a la instancia de WhatsApp Web en la variable "waWeb"
-socket.on('connectionStatus', function(status) {
-    console.log(status)
-  });
-  
