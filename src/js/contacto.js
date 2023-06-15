@@ -1,3 +1,8 @@
+//incluyecto librerias de dataTable
+const $ = require('jquery');
+require('datatables.net');
+
+
 const ipc = require('electron').ipcRenderer;
 const url = require('url');
 const path = require('path');
@@ -538,3 +543,19 @@ function exportarJSONExcel(arrDatos,nombreArchivo){
         }, 100);
     });
 }
+
+$(document).ready(function() {
+    $('#tableContactos').DataTable({
+      searching: true,
+      paging: true,
+      ordering: true,
+      pageLength: 10,  // Cambiar la cantidad de filas por página
+      language: {
+        lengthMenu: 'Mostrar _MENU_ registros por página',  // Cambiar el texto del menú de longitud
+        info: 'Mostrando página _PAGE_ de _PAGES_',  // Cambiar el texto de información de paginación
+        search: 'Buscar:',  // Cambiar el texto del campo de búsqueda
+        emptyTable: 'No se encontraron registros',  // Cambiar el mensaje cuando no hay datos en la tabla
+      },
+
+    });
+  });
