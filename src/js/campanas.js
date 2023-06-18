@@ -429,9 +429,7 @@ function fnEnviarCampania(value){
                         let listaImagenes = plantilla[0].listImagenes;
                         setTimeout(async function(){
                             let promise = new Promise(async (resolve) =>{
-
                                 const listaNegra = obtenerListaNegra();
-                                console.log(listaNegra);
                                 if (listaNegra.includes(listaNegra)) {
                                     console.log("El contacto está en la lista negra.");
                                     return false;

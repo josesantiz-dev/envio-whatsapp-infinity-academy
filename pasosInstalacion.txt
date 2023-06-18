@@ -1,0 +1,12 @@
+1. Instalar Empaquetador
+    npm install electron-packager -g
+    o
+    sudo npm install electron-packager -g
+
+
+2. electron-packager <directorio> <nombre-de-la-aplicacion> --platform=<plataforma> --arch=<arquitectura> --electron-version=<version-electron> --out=<directorio-de-salida>
+
+    Mac: electron-packager /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/front MyApp --platform=darwin --arch=x64 --electron-version=4.0.4 --out=/Users/josesantiz-dev/Desktop/
+    Win 64 bits: electron-packager /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/front MyApp --platform=win32 --arch=x64 --electron-version=4.0.4 --out=/Users/josesantiz-dev/Desktop/ --overwrite
+    Win 32 bits: electron-packager /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/front MyApp --platform=win32 --arch=ia32 --electron-version=4.0.4 --out=/Users/josesantiz-dev/Desktop/  --overwrite
+    Linux: electron-packager electron-packager /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/front MyApp --platform=linux --arch=x64 --electron-version=4.0.4 --out=/Users/josesantiz-dev/Desktop/ --overwrite
