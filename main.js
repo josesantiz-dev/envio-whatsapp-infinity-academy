@@ -3,11 +3,52 @@ const url = require('url');
 const path = require('path');
 const { dialog } = require('electron')
 const server = require('./app');
+const log = require('electron-log');
+const fs = require('fs');
+
 
 
 let mainWindow
 
+function configurarLog() {
+  const logPath = path.join(__dirname, 'logs');
+  if (!fs.existsSync(logPath)) {
+    fs.mkdirSync(logPath);
+  }
+
+  const logFilePath = path.join(logPath, 'app.log');
+  log.transports.file.file = logFilePath;
+  log.transports.console.level = 'debug';
+  log.transports.file.format = '{h}:{i}:{s} {text}';
+  log.transports.file.level = 'info';
+  // Rotación manual del archivo de log cada día
+  setInterval(() => {
+    const fileSizeInBytes = fs.statSync(logFilePath).size;
+    const fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+
+    if (fileSizeInMegabytes >= 5) {
+      // Renombrar el archivo de log actual
+      const timestamp = new Date().getTime();
+      const rotatedLogFilePath = path.join(logPath, `app_${timestamp}.log`);
+      fs.renameSync(logFilePath, rotatedLogFilePath);
+
+      // Reiniciar el transporte de archivo para que el próximo log se escriba en un archivo nuevo
+      log.transports.file.file = logFilePath;
+      log.transports.file.open();
+    }
+  }, 24 * 60 * 60 * 1000); // 24 horas (un día) en milisegundos
+
+  // Redirige la salida estándar y la salida de error a las funciones de registro de electron-log
+  console.log = log.info.bind(log);
+  console.warn = log.warn.bind(log);
+  console.error = log.error.bind(log);
+}
+
 function createWindow () {
+  
+  configurarLog();
+
+
   mainWindow = new BrowserWindow({
     width: 1800,
     height: 820,
@@ -267,3 +308,17 @@ function crearCampana(){
     nuevaCampana = null;
   });
 }
+
+ipcMain.on('log', (event, message) => {
+  switch (message.tipo) {
+      case 'error':
+        log.error(message.msg);
+          break;
+      case 'info':
+        log.info(message.msg);
+        break;
+      case 'warn':
+          log.warn(message.msg);
+          break;
+  }
+})
