@@ -36,4 +36,15 @@ function getCampanias(){
 function setCampanias(campanias){
     localStorage.setItem("campanias",campanias);
 }
-module.exports = {getGrupos,setGrupos,getContactos,setContactos,getPlantillas,setPlantillas,getCampanias,setCampanias}
+
+//Lista Negra
+function getListaNegra(){
+    let listaNegra = localStorage.getItem("listaNegra");
+    listaNegra = (listaNegra == null || listaNegra == "[]")?[]:JSON.parse(listaNegra);
+    return listaNegra;
+}
+function setListaNegra(listaNegra){
+    localStorage.setItem("listaNegra",listaNegra);
+}
+
+module.exports = {getGrupos,setGrupos,getContactos,setContactos,getPlantillas,setPlantillas,getCampanias,setCampanias,getListaNegra,setListaNegra}

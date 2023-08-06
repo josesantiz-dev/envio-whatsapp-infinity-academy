@@ -29,8 +29,6 @@ const btnSubirMasivoContacto = document.getElementById("btnSubirCSV");
 btnGuardarContactos.addEventListener("click", function () {
     let formContactos = document.querySelector("#formContactos");
     let nombreContacto = document.getElementById("txtNombreContacto").value;
-    /* let apePatContacto = document.getElementById("txtApPatContacto").value;
-    let apeMatContacto = document.getElementById("txtApMatContacto").value; */
     let teleContacto = document.getElementById("txtTelNuevo").value;
     if (nombreContacto == "" || teleContacto == "") {
         return false;
@@ -77,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function fnMostrarListaContactos() {
     let listaContactos = obtenerListaContactos();
     if (listaContactos.length > 0) {
-        //let rows = "";
         let count = 0;
+        dataTableContactos.clear().draw();
         listaContactos.forEach(contactos => {
             count += 1;
             let btnAcciones = `<div class="text-center">
@@ -98,10 +96,8 @@ function fnMostrarListaContactos() {
                                     </div>
                                 </div>`;
             let row = `<tr><td>${count}</td><td>${contactos.nombre}</td><td>${contactos.telefono}</td><td>${btnAcciones}</td></tr>`;
-            //rows += row;
             dataTableContactos.row.add($(row)).draw();
         });
-        //tableContactos.innerHTML = rows;
     } else {
         tableContactos.innerHTML = "";
     }
@@ -231,8 +227,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function fnMostrarListaGrupos() {
     let listaGrupos = obtenerListaGrupos();
     if (listaGrupos.length > 0) {
-        //let rows = "";
         let count = 0;
+        dataTableGrupos.clear().draw();
         listaGrupos.forEach(grupos => {
             let participantes = (grupos.participantes != undefined) ? grupos.participantes : [];
             let estatus = (grupos.estatus == 1) ? "Activo" : "Eliminado";
@@ -260,7 +256,6 @@ function fnMostrarListaGrupos() {
                                     </div>
                                 </div>`;
             let row = `<tr><td>${count}</td><td>${grupos.nombre}</td><td>${participantes.length}</td><td>${estatus}</td><td>${btnAcciones}</td></tr>`;
-            //rows += row;
             dataTableGrupos.row.add($(row)).draw();
         });
         //tableGrupos.innerHTML = rows;
@@ -497,7 +492,11 @@ function fnGuardarMasivoContacto(data){
 
 btnExportarContactos.addEventListener('click', async function (e) {
     let contactosActuales = obtenerListaContactos();
-    exportarJSONExcel(contactosActuales,"Lista-Contactos");
+    if(contactosActuales.length > 0){
+        exportarJSONExcel(contactosActuales,"Lista-Contactos");
+    }else{
+        alert("No hay contactos que exportar!")
+    }
 });
 
 btnExportarGrupos.addEventListener('click', async function (e) {
@@ -519,7 +518,11 @@ btnExportarGrupos.addEventListener('click', async function (e) {
             arrContactosGrupos.push(objParticipante);
         })
     });
-    exportarJSONExcel(arrContactosGrupos,"Lista-Grupos-Contactos")
+    if(arrContactosGrupos.length > 0){
+        exportarJSONExcel(arrContactosGrupos,"Lista-Grupos-Contactos")
+    }else{
+        alert("Agregar al menos un participante en un grupo ó crea un grupo con participantes!")
+    }
 });
 
 

@@ -40,6 +40,7 @@ function obtenerPlantillas(){
 
 function fnMostrarPlantillas(plantillas){
     let count = 0;
+    dataTable.clear().draw();
     plantillas.forEach(element => {
         count += 1;
         let estatus =(element.estatus == 1)?"Activo":"Innactivo";
