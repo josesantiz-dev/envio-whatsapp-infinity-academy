@@ -3412,3 +3412,16 @@
 04:02:42 (node:16060) DeprecationWarning: file property is deprecated and will be removed in v5.
 04:02:42 (node:16060) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
 04:03:36 media ID 263243643202929
+09:36:41 (node:10172) DeprecationWarning: file property is deprecated and will be removed in v5.
+09:36:41 (node:10172) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+09:40:22 media ID 627792099479224
+12:31:36 (node:14452) DeprecationWarning: file property is deprecated and will be removed in v5.
+12:31:36 (node:14452) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+12:36:51 (node:19668) DeprecationWarning: file property is deprecated and will be removed in v5.
+12:36:51 (node:19668) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+12:37:54 (node:7772) DeprecationWarning: file property is deprecated and will be removed in v5.
+12:37:54 (node:7772) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+12:38:10 media ID 318156937241229
+12:39:23 (node:8624) DeprecationWarning: file property is deprecated and will be removed in v5.
+12:39:23 (node:8624) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+12:39:31 media ID 1369296446956675

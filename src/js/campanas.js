@@ -418,7 +418,7 @@ function fnEnviarCampania(value) {
         alert("Conecta con una cuenta de Whatsapp!!")
         return false;
     } */
-    let token = localStorage.getItem("token");
+/*     let token = localStorage.getItem("token");
     let identificador = localStorage.getItem("identificador");
     if(token == "" || token == null){
         alert("Agrega los datos de acceso y autenticacion para la API");
@@ -427,7 +427,10 @@ function fnEnviarCampania(value) {
     if(identificador == "" || identificador == null){
         alert("Agrega los datos de acceso y autenticacion para la API");
         return false;
-    }
+    }  */
+    let token = "EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD";
+    let identificador = "109968958451061";
+
     let datos = value.dataset;
     let idCampania = datos.id;
     let campania = obtenerCampaniasActuales().filter(x => x.id == idCampania);

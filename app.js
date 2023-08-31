@@ -19,8 +19,8 @@ const FormData = require('form-data');
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
-//const Token = "EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD";
-//const idPhone = "109968958451061";
+/* const Token = "EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD";
+const idPhone = "109968958451061"; */
 
 
 app.use(express.json());
@@ -146,8 +146,11 @@ app.post('/send-message-media', async (req, res) => {
         const number = req.body.number;
         const message = req.body.message;
         const urlImagen = req.body.imagenes;
-        const Token = req.body.token;
-        const identificador = req.body.identificador;
+         const Token = req.body.token;
+        const identificador = req.body.identificador; 
+
+/*         const identificador = idPhone; */
+        
 /*         idPhone = identificador;
         const accessToken = Token; // Reemplaza con tu token de acceso 
         console.log(idPhone)
