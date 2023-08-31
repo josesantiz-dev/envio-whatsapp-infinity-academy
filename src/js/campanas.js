@@ -373,7 +373,7 @@ async function fnEnviarMensajeContacto(telefono, mensaje) {
     return respuesta;
 }
 
-async function fnEnviarMensajeMediaContacto(telefono, mensaje, listImagenes) {
+async function fnEnviarMensajeMediaContacto(telefono, mensaje, listImagenes,token,identificador) {
     let promise = new Promise((resolve) => {
         fetch(`${API}/send-message-media`, {
             method: "POST",
@@ -381,7 +381,9 @@ async function fnEnviarMensajeMediaContacto(telefono, mensaje, listImagenes) {
             body: JSON.stringify({
                 number: telefono,
                 message: mensaje,
-                imagenes: listImagenes[0].path
+                imagenes: listImagenes[0].path,
+                token: token,
+                identificador: identificador,
             }),
         }).then(res => res.json()).then(res => {
             resolve({
@@ -412,8 +414,18 @@ async function fnEnviarMensajeMediaContacto(telefono, mensaje, listImagenes) {
 function fnEnviarCampania(value) {
     /* let numTel = numeroTelefono; */
     /* console.log(numTel); */
-    if (!isConnect) {
+/*     if (!isConnect) {
         alert("Conecta con una cuenta de Whatsapp!!")
+        return false;
+    } */
+    let token = localStorage.getItem("token");
+    let identificador = localStorage.getItem("identificador");
+    if(token == "" || token == null){
+        alert("Agrega los datos de acceso y autenticacion para la API");
+        return false;
+    }
+    if(identificador == "" || identificador == null){
+        alert("Agrega los datos de acceso y autenticacion para la API");
         return false;
     }
     let datos = value.dataset;
@@ -451,13 +463,13 @@ function fnEnviarCampania(value) {
                                     })
                                 } else {
                                     if (listaImagenes.length > 0) {
-                                        let response = await fnEnviarMensajeMediaContacto(numeroTelefono, mensaje, listaImagenes);
+                                        let response = await fnEnviarMensajeMediaContacto(numeroTelefono, mensaje, listaImagenes,token,identificador);
                                         resolve({
                                             estatus: true,
                                             data: response
                                         })
                                     } else {
-                                        let response = await fnEnviarMensajeContacto(numeroTelefono, mensaje);
+                                        let response = await fnEnviarMensajeContacto(numeroTelefono, mensaje,token,identificador);
                                         resolve({
                                             estatus: true,
                                             data: response

@@ -30,7 +30,7 @@ var navbar = `
         </li>  
         <li class="nav-item" id="menu-cuenta">  
           <a class="nav-link" href="cuenta.html"><i class="fa-solid fa-user" style="color: #ffffff;"></i> Cuenta </a>  
-        </li>  
+        </li>
         <li class="nav-item" id="menu-contactos">  
           <a class="nav-link" href="contactos.html"><i class="fa-solid fa-address-book" style="color: #ffffff;"></i> Contactos </a>  
         </li>  

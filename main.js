@@ -6,8 +6,6 @@ const server = require('./app');
 const log = require('electron-log');
 const fs = require('fs');
 
-
-
 let mainWindow
 
 function configurarLog() {

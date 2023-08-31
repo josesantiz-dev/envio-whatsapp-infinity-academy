@@ -577,3 +577,2838 @@
 14:01:27 Whatsapp está autenticado!
 14:01:28 redireccionando...
 14:01:28 Whatsapp está listo!
+23:05:40 (node:6096) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+23:06:27 (node:6159) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+23:06:51 (node:6219) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+23:07:17 (node:6297) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+23:15:53 (node:7158) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+00:31:44 (node:7841) DeprecationWarning: file property is deprecated and will be removed in v5.
+00:35:22 (node:8301) DeprecationWarning: file property is deprecated and will be removed in v5.
+00:39:52 (node:8790) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+00:46:22 (node:9543) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+00:46:22 (node:9543) electron: The default of nativeWindowOpen is deprecated and will be changing from false to true in Electron 15.  See https://github.com/electron/electron/issues/28511 for more information.
+00:53:16 (node:10469) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+00:57:28 (node:11014) DeprecationWarning: file property is deprecated and will be removed in v5.
+(Use `Electron --trace-deprecation ...` to show where the warning was created)
+01:00:19 (node:11480) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:00:19 (node:11480) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:24:14 (node:12593) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:24:14 (node:12593) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:28:22 (node:12677) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:28:22 (node:12677) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:41:19 (node:12849) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:41:19 (node:12849) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:45:08 (node:12926) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:45:08 (node:12926) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:46:24 (node:12982) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:46:24 (node:12982) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:48:17 (node:13045) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:48:17 (node:13045) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:49:25 (node:13108) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:49:25 (node:13108) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:49:42 ReferenceError: Cannot access 'idPhone' before initialization
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/app.js:146:23
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:280:10)
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express-fileupload/lib/index.js:35:14
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+01:50:40 (node:13168) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:50:40 (node:13168) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:53:06 (node:13232) DeprecationWarning: file property is deprecated and will be removed in v5.
+01:53:06 (node:13232) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+01:53:29 {
+  message: 'Request failed with status code 400',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 400\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/messages',
+    method: 'post',
+    data: '{"messaging_product":"whatsapp","to":"529612168345","type":"image","image":{"data":"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"},"fallback_text":"Mensaje de respaldo en caso de que la imagen no se cargue"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 9055
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:04:15 (node:13385) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:04:15 (node:13385) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:04:35 {
+  message: 'Request failed with status code 500',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 500\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/media',
+    method: 'post',
+    data: '{"messaging_product":"whatsapp","file":"/Users/josesantiz-dev/Desktop/grado-academico-icon.png"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 96
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:09:17 (node:13484) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:09:17 (node:13484) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:09:37 {
+  message: 'Request failed with status code 500',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 500\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/media',
+    method: 'post',
+    data: '{"messaging_product":"whatsapp","file":"/Users/josesantiz-dev/Desktop/grado-academico-icon.png;type=image/jpeg"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 112
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:10:53 (node:13551) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:10:53 (node:13551) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:11:10 {
+  message: 'Request failed with status code 500',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 500\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/media',
+    method: 'post',
+    data: '{"messaging_product":"whatsapp","file":"/Users/josesantiz-dev/Desktop/grado-academico-icon.png;type=image/png"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 111
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:11:42 (node:13624) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:11:42 (node:13624) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:12:00 {
+  message: 'Request failed with status code 500',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 500\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/media',
+    method: 'post',
+    data: '{"messaging_product":"whatsapp","file":"@/Users/josesantiz-dev/Desktop/grado-academico-icon.png;type=image/png"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 112
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:14:58 (node:13707) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:14:58 (node:13707) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:15:17 {
+  message: 'Request failed with status code 500',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 500\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/media',
+    method: 'post',
+    data: '{"file":"@/Users/josesantiz-dev/Desktop/grado-academico-icon.png;type=image/png","messaging_product":"whatsapp"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 112
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:16:25 (node:13778) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:16:25 (node:13778) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:16:43 ReferenceError: path is not defined
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/app.js:149:27
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:280:10)
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express-fileupload/lib/index.js:35:14
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+02:17:28 (node:13835) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:17:28 (node:13835) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:17:45 {
+  message: 'Request failed with status code 500',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 500\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/media',
+    method: 'post',
+    data: '{"file":"@/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/Users/josesantiz-dev/Desktop/grado-academico-icon.png;type=image/png","messaging_product":"whatsapp"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 173
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:20:23 (node:13918) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:20:23 (node:13918) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:20:41 {
+  message: 'Request failed with status code 500',
+  name: 'Error',
+  stack: 'Error: Request failed with status code 500\n' +
+    '    at createError (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/createError.js:16:15)\n' +
+    '    at settle (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/core/settle.js:17:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/axios/lib/adapters/http.js:244:11)\n' +
+    '    at IncomingMessage.emit (events.js:327:22)\n' +
+    '    at endReadableNT (_stream_readable.js:1220:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:84:21)',
+  config: {
+    url: 'https://graph.facebook.com/v17.0/109968958451061/media',
+    method: 'post',
+    data: '{"file":"@/Users/josesantiz-dev/Desktop/grado-academico-icon.png;type=image/png","messaging_product":"whatsapp"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+      'User-Agent': 'axios/0.20.0',
+      'Content-Length': 112
+    },
+    transformRequest: [
+      '[function] function transformRequest(data, headers) {\n' +
+        "    normalizeHeaderName(headers, 'Accept');\n" +
+        "    normalizeHeaderName(headers, 'Content-Type');\n" +
+        '    if (utils.isFormData(data) ||\n' +
+        '      utils.isArrayBuffer(data) ||\n' +
+        '      utils.isBuffer(data) ||\n' +
+        '      utils.isStream(data) ||\n' +
+        '      utils.isFile(data) ||\n' +
+        '      utils.isBlob(data)\n' +
+        '    ) {\n' +
+        '      return data;\n' +
+        '    }\n' +
+        '    if (utils.isArrayBufferView(data)) {\n' +
+        '      return data.buffer;\n' +
+        '    }\n' +
+        '    if (utils.isURLSearchParams(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');\n" +
+        '      return data.toString();\n' +
+        '    }\n' +
+        '    if (utils.isObject(data)) {\n' +
+        "      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');\n" +
+        '      return JSON.stringify(data);\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    transformResponse: [
+      '[function] function transformResponse(data) {\n' +
+        '    /*eslint no-param-reassign:0*/\n' +
+        "    if (typeof data === 'string') {\n" +
+        '      try {\n' +
+        '        data = JSON.parse(data);\n' +
+        '      } catch (e) { /* Ignore */ }\n' +
+        '    }\n' +
+        '    return data;\n' +
+        '  }'
+    ],
+    timeout: 0,
+    adapter: '[function] function httpAdapter(config) {\n' +
+      '  return new Promise(function dispatchHttpRequest(resolvePromise, rejectPromise) {\n' +
+      '    var resolve = function resolve(value) {\n' +
+      '      resolvePromise(value);\n' +
+      '    };\n' +
+      '    var reject = function reject(value) {\n' +
+      '      rejectPromise(value);\n' +
+      '    };\n' +
+      '    var data = config.data;\n' +
+      '    var headers = config.headers;\n' +
+      '\n' +
+      '    // Set User-Agent (required by some servers)\n' +
+      "    // Only set header if it hasn't been set in config\n" +
+      '    // See https://github.com/axios/axios/issues/69\n' +
+      "    if (!headers['User-Agent'] && !headers['user-agent']) {\n" +
+      "      headers['User-Agent'] = 'axios/' + pkg.version;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (data && !utils.isStream(data)) {\n' +
+      '      if (Buffer.isBuffer(data)) {\n' +
+      '        // Nothing to do...\n' +
+      '      } else if (utils.isArrayBuffer(data)) {\n' +
+      '        data = Buffer.from(new Uint8Array(data));\n' +
+      '      } else if (utils.isString(data)) {\n' +
+      "        data = Buffer.from(data, 'utf-8');\n" +
+      '      } else {\n' +
+      '        return reject(createError(\n' +
+      "          'Data after transformation must be a string, an ArrayBuffer, a Buffer, or a Stream',\n" +
+      '          config\n' +
+      '        ));\n' +
+      '      }\n' +
+      '\n' +
+      '      // Add Content-Length header if data exists\n' +
+      "      headers['Content-Length'] = data.length;\n" +
+      '    }\n' +
+      '\n' +
+      '    // HTTP basic authentication\n' +
+      '    var auth = undefined;\n' +
+      '    if (config.auth) {\n' +
+      "      var username = config.auth.username || '';\n" +
+      "      var password = config.auth.password || '';\n" +
+      "      auth = username + ':' + password;\n" +
+      '    }\n' +
+      '\n' +
+      '    // Parse url\n' +
+      '    var fullPath = buildFullPath(config.baseURL, config.url);\n' +
+      '    var parsed = url.parse(fullPath);\n' +
+      "    var protocol = parsed.protocol || 'http:';\n" +
+      '\n' +
+      '    if (!auth && parsed.auth) {\n' +
+      "      var urlAuth = parsed.auth.split(':');\n" +
+      "      var urlUsername = urlAuth[0] || '';\n" +
+      "      var urlPassword = urlAuth[1] || '';\n" +
+      "      auth = urlUsername + ':' + urlPassword;\n" +
+      '    }\n' +
+      '\n' +
+      '    if (auth) {\n' +
+      '      delete headers.Authorization;\n' +
+      '    }\n' +
+      '\n' +
+      '    var isHttpsRequest = isHttps.test(protocol);\n' +
+      '    var agent = isHttpsRequest ? config.httpsAgent : config.httpAgent;\n' +
+      '\n' +
+      '    var options = {\n' +
+      "      path: buildURL(parsed.path, config.params, config.paramsSerializer).replace(/^\\?/, ''),\n" +
+      '      method: config.method.toUpperCase(),\n' +
+      '      headers: headers,\n' +
+      '      agent: agent,\n' +
+      '      agents: { http: config.httpAgent, https: config.httpsAgent },\n' +
+      '      auth: auth\n' +
+      '    };\n' +
+      '\n' +
+      '    if (config.socketPath) {\n' +
+      '      options.socketPath = config.socketPath;\n' +
+      '    } else {\n' +
+      '      options.hostname = parsed.hostname;\n' +
+      '      options.port = parsed.port;\n' +
+      '    }\n' +
+      '\n' +
+      '    var proxy = config.proxy;\n' +
+      '    if (!proxy && proxy !== false) {\n' +
+      "      var proxyEnv = protocol.slice(0, -1) + '_proxy';\n" +
+      '      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];\n' +
+      '      if (proxyUrl) {\n' +
+      '        var parsedProxyUrl = url.parse(proxyUrl);\n' +
+      '        var noProxyEnv = process.env.no_proxy || process.env.NO_PROXY;\n' +
+      '        var shouldProxy = true;\n' +
+      '\n' +
+      '        if (noProxyEnv) {\n' +
+      "          var noProxy = noProxyEnv.split(',').map(function trim(s) {\n" +
+      '            return s.trim();\n' +
+      '          });\n' +
+      '\n' +
+      '          shouldProxy = !noProxy.some(function proxyMatch(proxyElement) {\n' +
+      '            if (!proxyElement) {\n' +
+      '              return false;\n' +
+      '            }\n' +
+      "            if (proxyElement === '*') {\n" +
+      '              return true;\n' +
+      '            }\n' +
+      "            if (proxyElement[0] === '.' &&\n" +
+      '                parsed.hostname.substr(parsed.hostname.length - proxyElement.length) === proxyElement) {\n' +
+      '              return true;\n' +
+      '            }\n' +
+      '\n' +
+      '            return parsed.hostname === proxyElement;\n' +
+      '          });\n' +
+      '        }\n' +
+      '\n' +
+      '\n' +
+      '        if (shouldProxy) {\n' +
+      '          proxy = {\n' +
+      '            host: parsedProxyUrl.hostname,\n' +
+      '            port: parsedProxyUrl.port\n' +
+      '          };\n' +
+      '\n' +
+      '          if (parsedProxyUrl.auth) {\n' +
+      "            var proxyUrlAuth = parsedProxyUrl.auth.split(':');\n" +
+      '            proxy.auth = {\n' +
+      '              username: proxyUrlAuth[0],\n' +
+      '              password: proxyUrlAuth[1]\n' +
+      '            };\n' +
+      '          }\n' +
+      '        }\n' +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    if (proxy) {\n' +
+      '      options.hostname = proxy.host;\n' +
+      '      options.host = proxy.host;\n' +
+      "      options.headers.host = parsed.hostname + (parsed.port ? ':' + parsed.port : '');\n" +
+      '      options.port = proxy.port;\n' +
+      "      options.path = protocol + '//' + parsed.hostname + (parsed.port ? ':' + parsed.port : '') + options.path;\n" +
+      '\n' +
+      '      // Basic proxy authorization\n' +
+      '      if (proxy.auth) {\n' +
+      "        var base64 = Buffer.from(proxy.auth.username + ':' + proxy.auth.password, 'utf8').toString('base64');\n" +
+      "        options.headers['Proxy-Authorization'] = 'Basic ' + base64;\n" +
+      '      }\n' +
+      '    }\n' +
+      '\n' +
+      '    var transport;\n' +
+      '    var isHttpsProxy = isHttpsRequest && (proxy ? isHttps.test(proxy.protocol) : true);\n' +
+      '    if (config.transport) {\n' +
+      '      transport = config.transport;\n' +
+      '    } else if (config.maxRedirects === 0) {\n' +
+      '      transport = isHttpsProxy ? https : http;\n' +
+      '    } else {\n' +
+      '      if (config.maxRedirects) {\n' +
+      '        options.maxRedirects = config.maxRedirects;\n' +
+      '      }\n' +
+      '      transport = isHttpsProxy ? httpsFollow : httpFollow;\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.maxBodyLength > -1) {\n' +
+      '      options.maxBodyLength = config.maxBodyLength;\n' +
+      '    }\n' +
+      '\n' +
+      '    // Create the request\n' +
+      '    var req = transport.request(options, function handleResponse(res) {\n' +
+      '      if (req.aborted) return;\n' +
+      '\n' +
+      '      // uncompress the response body transparently if required\n' +
+      '      var stream = res;\n' +
+      '\n' +
+      '      // return the last request in case of redirects\n' +
+      '      var lastRequest = res.req || req;\n' +
+      '\n' +
+      '\n' +
+      '      // if no content, is HEAD request or decompress disabled we should not decompress\n' +
+      "      if (res.statusCode !== 204 && lastRequest.method !== 'HEAD' && config.decompress !== false) {\n" +
+      "        switch (res.headers['content-encoding']) {\n" +
+      '        /*eslint default-case:0*/\n' +
+      "        case 'gzip':\n" +
+      "        case 'compress':\n" +
+      "        case 'deflate':\n" +
+      '        // add the unzipper to the body stream processing pipeline\n' +
+      '          stream = stream.pipe(zlib.createUnzip());\n' +
+      '\n' +
+      '          // remove the content-encoding in order to not confuse downstream operations\n' +
+      "          delete res.headers['content-encoding'];\n" +
+      '          break;\n' +
+      '        }\n' +
+      '      }\n' +
+      '\n' +
+      '      var response = {\n' +
+      '        status: res.statusCode,\n' +
+      '        statusText: res.statusMessage,\n' +
+      '        headers: res.headers,\n' +
+      '        config: config,\n' +
+      '        request: lastRequest\n' +
+      '      };\n' +
+      '\n' +
+      "      if (config.responseType === 'stream') {\n" +
+      '        response.data = stream;\n' +
+      '        settle(resolve, reject, response);\n' +
+      '      } else {\n' +
+      '        var responseBuffer = [];\n' +
+      "        stream.on('data', function handleStreamData(chunk) {\n" +
+      '          responseBuffer.push(chunk);\n' +
+      '\n' +
+      '          // make sure the content length is not over the maxContentLength if specified\n' +
+      '          if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {\n' +
+      '            stream.destroy();\n' +
+      "            reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',\n" +
+      '              config, null, lastRequest));\n' +
+      '          }\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('error', function handleStreamError(err) {\n" +
+      '          if (req.aborted) return;\n' +
+      '          reject(enhanceError(err, config, null, lastRequest));\n' +
+      '        });\n' +
+      '\n' +
+      "        stream.on('end', function handleStreamEnd() {\n" +
+      '          var responseData = Buffer.concat(responseBuffer);\n' +
+      "          if (config.responseType !== 'arraybuffer') {\n" +
+      '            responseData = responseData.toString(config.responseEncoding);\n' +
+      "            if (!config.responseEncoding || config.responseEncoding === 'utf8') {\n" +
+      '              responseData = utils.stripBOM(responseData);\n' +
+      '            }\n' +
+      '          }\n' +
+      '\n' +
+      '          response.data = responseData;\n' +
+      '          settle(resolve, reject, response);\n' +
+      '        });\n' +
+      '      }\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle errors\n' +
+      "    req.on('error', function handleRequestError(err) {\n" +
+      "      if (req.aborted && err.code !== 'ERR_FR_TOO_MANY_REDIRECTS') return;\n" +
+      '      reject(enhanceError(err, config, null, req));\n' +
+      '    });\n' +
+      '\n' +
+      '    // Handle request timeout\n' +
+      '    if (config.timeout) {\n' +
+      '      // Sometime, the response will be very slow, and does not respond, the connect event will be block by event loop system.\n' +
+      '      // And timer callback will be fired, and abort() will be invoked before connection, then get "socket hang up" and code ECONNRESET.\n' +
+      '      // At this time, if we have a large number of request, nodejs will hang up some socket on background. and the number will up and up.\n' +
+      '      // And then these socket which be hang up will devoring CPU little by little.\n' +
+      '      // ClientRequest.setTimeout will be fired on the specify milliseconds, and can make sure that abort() will be fired after connect.\n' +
+      '      req.setTimeout(config.timeout, function handleRequestTimeout() {\n' +
+      '        req.abort();\n' +
+      "        reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED', req));\n" +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    if (config.cancelToken) {\n' +
+      '      // Handle cancellation\n' +
+      '      config.cancelToken.promise.then(function onCanceled(cancel) {\n' +
+      '        if (req.aborted) return;\n' +
+      '\n' +
+      '        req.abort();\n' +
+      '        reject(cancel);\n' +
+      '      });\n' +
+      '    }\n' +
+      '\n' +
+      '    // Send the request\n' +
+      '    if (utils.isStream(data)) {\n' +
+      "      data.on('error', function handleStreamError(err) {\n" +
+      '        reject(enhanceError(err, config, null, req));\n' +
+      '      }).pipe(req);\n' +
+      '    } else {\n' +
+      '      req.end(data);\n' +
+      '    }\n' +
+      '  });\n' +
+      '}',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: '[function] function validateStatus(status) {\n' +
+      '    return status >= 200 && status < 300;\n' +
+      '  }'
+  }
+}
+02:43:51 (node:14243) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:43:51 (node:14243) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:44:09 ReferenceError: FormData is not defined
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/app.js:152:26
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/index.js:280:10)
+    at /Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express-fileupload/lib/index.js:35:14
+    at Layer.handle [as handle_request] (/Users/josesantiz-dev/Desktop/envio-whatsapp-infinity-academy/node_modules/express/lib/router/layer.js:95:5)
+02:46:43 (node:14425) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:46:43 (node:14425) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:47:05 media ID 1020664652449501
+02:56:31 (node:14587) DeprecationWarning: file property is deprecated and will be removed in v5.
+02:56:31 (node:14587) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+02:56:50 media ID 249446374726962
+03:09:28 (node:14763) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:09:28 (node:14763) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:09:47 media ID 268076839325786
+03:10:47 (node:14826) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:10:47 (node:14826) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:11:06 media ID 1760957360989888
+03:11:57 (node:14886) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:11:57 (node:14886) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:12:15 media ID 164782879982230
+03:16:34 No esta conectado...
+03:17:14 No esta conectado...
+03:17:15 conectado...
+03:17:15 Conectando...
+03:45:41 media ID 322177883599436
+03:53:17 (node:15625) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:53:17 (node:15625) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:54:59 (node:15695) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:54:59 (node:15695) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:56:32 (node:15755) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:56:32 (node:15755) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:57:41 (node:15804) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:57:41 (node:15804) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:57:58 Hola, 🖐.
+03:58:32 (node:15858) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:58:32 (node:15858) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+03:58:50 {
+  number: '529612168345',
+  message: 'Hola, 🖐.',
+  imagenes: '/Users/josesantiz-dev/Desktop/grado-academico-icon.png',
+  token: 'EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD',
+  identificador: '109968958451061'
+}
+03:59:59 (node:15922) DeprecationWarning: file property is deprecated and will be removed in v5.
+03:59:59 (node:15922) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+04:00:19 EAALmvAYZCq0wBO2QUpWUH8vWtZBP9x1EfnMVcEfIZCJEl0vJz1m1ImFZBiyGoDRjQZB6FGcvYG300EhVIhDS0PJennpdoKxofjmBqYde8oc8JCvTx3MAmzvj4nWWQqQ1zVB4o0V3rjTp2jqsvpPyPBXwlZAAkKlUqXRbE19UaPG0mJqQqPxG7xoofyByyZAiNA3vk2BFgbuvbAHhJwRPFgZD
+04:01:05 (node:15984) DeprecationWarning: file property is deprecated and will be removed in v5.
+04:01:05 (node:15984) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+04:01:25 109968958451061
+04:02:42 (node:16060) DeprecationWarning: file property is deprecated and will be removed in v5.
+04:02:42 (node:16060) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+04:03:36 media ID 263243643202929

@@ -148,6 +148,7 @@ function fnDelContactos(value) {
 
 
 btnGuardarGrupos.addEventListener('click', async function (e) {
+    
     let data = []
     if(excelInputGroup.files.length > 0){
         const filePath = excelInputGroup.files[0].path;
@@ -491,6 +492,7 @@ function fnGuardarMasivoContacto(data){
 }
 
 btnExportarContactos.addEventListener('click', async function (e) {
+    console.log("exportar")
     let contactosActuales = obtenerListaContactos();
     if(contactosActuales.length > 0){
         exportarJSONExcel(contactosActuales,"Lista-Contactos");
